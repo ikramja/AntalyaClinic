@@ -1,0 +1,31 @@
+.menu-card-image {
+	object-fit: cover;
+	transition: transform 0.9s ease-out;
+}
+.menu-card-image:hover {
+	transform: scale(1.2);
+}
+.menu-card {
+	text-align: left;
+}
+.menu-card-title {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 33px;
+}
+.menu-card-article {
+	font-size: 18px;
+
+	line-height: 39px;
+	text-decoration: none;
+	color: #323334;
+}
+.menu-card-article:hover {
+	color: grey;
+}
+.menu-card-image-container {
+	position: relative;
+	overflow: hidden;
+	height: 320px;
+	box-shadow: 1px 8px 8px rgba(0, 0, 0, 0.2);
+}

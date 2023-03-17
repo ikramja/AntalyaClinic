@@ -1,0 +1,14 @@
+.doctor-info-content {
+	text-align: justify;
+	text-justify: inter-word;
+}
+.doctor-info-name {
+	justify-content: center;
+}
+
+.doctor-info-button {
+	text-align: center;
+	background-color: white;
+}
+.doctor-info-button-container {
+}

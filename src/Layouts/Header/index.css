@@ -1,0 +1,9 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.menu-icon {
+	font-size: 4rem !important;
+	height: 0.5rem !important;
+	width: 0.5rem !important;
+}
