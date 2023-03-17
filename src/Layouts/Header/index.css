@@ -1,6 +1,7 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
 }
 .menu-icon {
 	font-size: 4rem !important;

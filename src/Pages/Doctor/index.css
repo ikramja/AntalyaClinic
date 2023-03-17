@@ -10,5 +10,11 @@
 	text-align: center;
 	background-color: white;
 }
+/* 
+.doctor-image {
+	max-width: 500px;
+} */
 .doctor-info-button-container {
+	display: flex;
+	justify-content: space-between;
 }
