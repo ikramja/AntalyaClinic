@@ -66,7 +66,13 @@ const MenuTabs = () => {
 	};
 
 	return (
-		<Tabs defaultActiveKey="3" items={menuItems} animated={{ inkBar: false }} />
+		<Tabs
+			defaultActiveKey="3"
+			items={menuItems}
+			animated={{ inkBar: false }}
+			className="menu-tabs"
+
+		/>
 	);
 };
 export default MenuTabs;
