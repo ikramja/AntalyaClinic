@@ -46,15 +46,15 @@ export default function AboutOurDoctor() {
 					<img src={doctor1} className="doctor-image w-100"></img>
 				</Col>
 			</Row>
-			<div className="doctor-info-button-container mx-3 mb-3">
-				<Button className="doctor-info-button">
+			<div className="doctor-info-button-container  mb-3">
+				<Button className="doctor-info-button mx-2">
 					<div className="center-div">
 						<ArrowLeftOutlined />
 						ВСЕХ ВРАЧЕЙ
 					</div>
 				</Button>
 				<Button>
-					<div className="center-div">
+					<div className="center-div mx-2">
 						КОНСУЛЬТАЦИЮ
 						<ArrowRightOutlined />
 					</div>
