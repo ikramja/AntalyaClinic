@@ -1,0 +1,55 @@
+.title-cover {
+	height: 100vh;
+	position: relative;
+	object-fit: cover;
+	z-index: 1;
+}
+.cover-text-container {
+	position: absolute;
+	z-index: 2;
+}
+
+.center-title-cover-name {
+	font-size: 6rem;
+	font-weight: bold;
+
+	text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.5);
+
+	color: #ffffff;
+}
+
+.center-title-cover-specialty {
+	font-size: 3rem;
+	color: #ffffff;
+	text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.5);
+}
+.logo-left {
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	top: auto;
+	width: 15%;
+}
+.cover-text-container {
+	height: 100% !important;
+}
+@media only screen and (max-width: 1000px) {
+	.title-cover {
+		height: auto;
+	}
+	.cover-text-container {
+		height: auto !important;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.center-title-cover-specialty,
+	.center-title-cover-name {
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.center-title-cover-specialty,
+	.center-title-cover-name {
+		font-size: 2rem;
+	}
+}

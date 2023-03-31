@@ -1,0 +1,22 @@
+.flex-container {
+	display: flex;
+}
+.flex-element {
+	margin-bottom: 0 !important;
+	margin-right: 5px;
+	color: black;
+	z-index: 99;
+	font-size: 0.75rem;
+	font-weight: 700;
+}
+.ant-anchor-link-title {
+	text-decoration: none !important;
+}
+.ant-anchor-link-title-active,
+.ant-anchor-link-active * {
+	color: aliceblue;
+}
+
+.ant-anchor-ink.ant-anchor-ink-visible {
+	display: none !important;
+}

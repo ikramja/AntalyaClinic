@@ -1,0 +1,21 @@
+.Brief-description {
+	text-align: left;
+}
+
+.Brief-description-header {
+	font-weight: bold;
+}
+.brief-description-button {
+	border-radius: 105px;
+	display: flex;
+	font-weight: 700;
+	align-items: center;
+	border: 2px solid black;
+}
+.section::before {
+	content: "";
+	display: block;
+	height: 70px; /* The same height as your navbar */
+	margin-top: -70px; /* The same negative value as the height */
+	visibility: hidden;
+}

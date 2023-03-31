@@ -1,0 +1,20 @@
+.standard-card {
+	width: 240px;
+	border: none;
+	border-radius: 0 !important;
+}
+.standard-card-image {
+	border-radius: 0 !important;
+	/* height: 320px; */
+	object-fit: cover;
+}
+
+.standard-card-big-info-div {
+	background-color: #f0f0f0;
+	height: 100% !important;
+	border: 1px solid #ccc;
+}
+.ant-card-meta-title {
+	margin: 0 !important;
+	font-weight: bold !important;
+}

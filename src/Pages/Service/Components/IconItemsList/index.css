@@ -1,0 +1,14 @@
+.icon-items-list-header {
+	font-weight: bold;
+}
+.text-under-icon {
+	text-align: justify;
+}
+.icon-items-row {
+	margin: 20px 0 20px 0;
+}
+.icon-items-list {
+	justify-content: center;
+	display: grid;
+	grid-row-gap: 10px;
+}

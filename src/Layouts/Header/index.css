@@ -1,7 +1,12 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	position: fixed;
+	top: 0;
 	width: 100%;
+	background-color: lightgrey;
+	opacity: 0.8;
+	z-index: 100;
 }
 .menu-icon {
 	font-size: 4rem !important;

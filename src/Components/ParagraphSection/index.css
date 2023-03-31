@@ -1,0 +1,11 @@
+.paragraph-section {
+	text-align: justify;
+	text-justify: inter-word;
+}
+.paragraph-section-container {
+	max-width: 1000px !important;
+	line-height: 2rem;
+}
+.Paragraph-Section {
+	background-image: url("../../Assets/Home/ParagraphSection.png");
+}

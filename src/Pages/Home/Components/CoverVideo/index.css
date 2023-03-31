@@ -1,0 +1,56 @@
+.left-title-home-cover-text {
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	width: 50%;
+}
+.left-title-home-cover {
+	height: 90vh;
+	position: relative;
+	object-fit: cover;
+}
+.clinic-name {
+	font-size: 2rem;
+}
+.clinic-specialty {
+	font-size: 3rem;
+}
+.home-cover-button {
+	background-color: transparent;
+	border-radius: 0;
+	border: 1px solid black;
+	font-weight: bold;
+}
+@media only screen and (max-width: 1000px) {
+	.clinic-name {
+		font-size: 2rem;
+	}
+
+	.clinic-specialty {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 820px) {
+	.left-title-home-cover-container {
+		height: auto;
+		position: relative;
+	}
+
+	.left-title-home-cover {
+		height: 70vh;
+	}
+
+	.left-title-home-cover-text {
+		height: 100%;
+		width: 100%;
+	}
+
+	.clinic-name {
+		font-size: 1.4rem;
+	}
+
+	.clinic-specialty {
+		font-size: 2rem;
+	}
+}
