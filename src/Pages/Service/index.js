@@ -8,17 +8,20 @@ import ScrollSpySection from "./Components/ScrollSpySection";
 import ServicePageCover from "../../Assets/Covers/ServicePageCover.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Service() {
 	const [articleData, setArticleData] = useState(null);
+	const { serviceName } = useParams();
 	useEffect(() => {
 		axios
 			.get(
-				process.env.REACT_APP_BACKEND_BASE_URL + "/api/get/surgery-services/"
+				process.env.REACT_APP_BACKEND_BASE_URL +
+					`/api/get/service/${serviceName}/`
 			)
 			.then((Response) => {
 				console.log(Response);
-				setArticleData(Response.data[0]);
+				setArticleData(Response.data);
 			});
 	}, []);
 	return (

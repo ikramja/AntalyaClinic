@@ -30,7 +30,12 @@ export default function Header(props) {
 					/>
 				</div>
 			</header>
-			{showMenu && <MenuTabs style={{ flex: 1 }} />}
+			{showMenu && (
+				<MenuTabs
+					setShowMenu={setShowMenu}
+					setShowContent={props.setShowContent}
+				/>
+			)}
 		</div>
 	);
 }
