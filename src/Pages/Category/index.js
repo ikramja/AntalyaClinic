@@ -28,9 +28,7 @@ export default function Category() {
 						title={categoryData.cover_header}
 						subtitle={categoryData.cover_sub_header}
 						titleAlign="center"
-						Cover={
-							process.env.REACT_APP_BACKEND_BASE_URL + categoryData.cover_image
-						}
+						Cover={categoryData.cover_image}
 					/>
 					<CategoryList
 						category_articles={[

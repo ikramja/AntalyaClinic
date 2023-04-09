@@ -14,10 +14,7 @@ export default function CategoryList(props) {
 							<Col md="3" className="d-flex justify-content-center p-0">
 								<StandardCard
 									height={180}
-									cardImage={
-										process.env.REACT_APP_BACKEND_BASE_URL +
-										article.article_category_image
-									}
+									cardImage={article.article_category_image}
 									cardTitle={article.cover_header}
 									cardDescription={article.cover_sub_header}
 									cardDescriptionStyle={{

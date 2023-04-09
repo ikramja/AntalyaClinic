@@ -27,10 +27,7 @@ const MenuTabs = (props) => {
 						categoryData.map((category) => (
 							<Col key={category.cover_sub_header} md={3}>
 								<Card
-									cardImage={
-										process.env.REACT_APP_BACKEND_BASE_URL +
-										category.category_image
-									}
+									cardImage={category.category_image}
 									cardTitle={category.cover_sub_header}
 									cardLink={`/category/${category.cover_header}/`}
 									setShowMenu={props.setShowMenu}

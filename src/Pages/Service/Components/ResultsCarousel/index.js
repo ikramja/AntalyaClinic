@@ -54,7 +54,7 @@ export default function ResultsCarousel(props) {
 							<div key={image}>
 								<Image
 									className="result-carousel-image"
-									src={process.env.REACT_APP_BACKEND_BASE_URL + image.image}
+									src={image.image}
 									alt={getFilenameWithoutExtension(image.image)}
 								/>
 							</div>
