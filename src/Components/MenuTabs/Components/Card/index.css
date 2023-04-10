@@ -1,6 +1,8 @@
 .menu-card-image {
 	object-fit: cover;
 	transition: transform 0.9s ease-out;
+	width: 100%;
+	height: 100%;
 }
 .menu-card-image:hover {
 	transform: scale(1.2);
@@ -12,6 +14,7 @@
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 33px;
+	color: black;
 }
 .menu-card-article {
 	font-size: 18px;
@@ -24,8 +27,8 @@
 	color: grey;
 }
 .menu-card-image-container {
-	position: relative;
+	/* position: relative; */
 	overflow: hidden;
-	height: 320px;
 	box-shadow: 1px 8px 8px rgba(0, 0, 0, 0.2);
+	height: 400px;
 }

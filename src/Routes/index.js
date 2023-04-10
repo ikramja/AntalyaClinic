@@ -31,9 +31,9 @@ export default function Main() {
 			<Route exact path="/" element={<Home />} />
 			<Route exact path="/doctor" element={<Doctor />} />
 			<Route exact path="/our-doctors" element={<OurDoctors />} />
-			<Route exact path="/Service" element={<Service />} />
-			<Route exact path="/Category" element={<Category />} />
-			<Route exact path="/Excursion" element={<Excursion />} />
+			<Route exact path="/service/:serviceName" element={<Service />} />
+			<Route exact path="/category/:categoryName" element={<Category />} />
+      <Route exact path="/Excursion" element={<Excursion />} />
 		</Routes>
 	);
 }

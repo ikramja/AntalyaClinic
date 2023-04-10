@@ -7,7 +7,7 @@ const { Meta } = Card;
 const StandardCard = (props) => {
 	const { height } = props;
 	return (
-		<Link className="link-no-text-decoration" to="/">
+		<Link className="link-no-text-decoration" to={props.link}>
 			<Card
 				className="standard-card"
 				cover={
