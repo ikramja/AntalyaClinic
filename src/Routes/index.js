@@ -28,7 +28,7 @@ export default function Main() {
 	return (
 		<Routes>
 			<Route exact path="/" element={<Home />} />
-			<Route exact path="/doctor" element={<Doctor />} />
+			<Route exact path="/doctor/:doctorName" element={<Doctor />} />
 			<Route exact path="/our-doctors" element={<OurDoctors />} />
 			<Route exact path="/service/:serviceName" element={<Service />} />
 			<Route exact path="/category/:categoryName" element={<Category />} />

@@ -19,7 +19,10 @@ const StandardCard = (props) => {
 				}
 			>
 				<Meta
-					title={props.cardTitle}
+					title=<div>
+						<h5>{props.cardTitle}</h5>
+						<h5>{props.cardTitle2}</h5>
+					</div>
 					description=<div style={props.cardDescriptionStyle}>
 						{props.cardDescription}
 					</div>

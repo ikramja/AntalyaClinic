@@ -1,0 +1,30 @@
+.swiper {
+	width: 80%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: 50%;
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 350px !important;
+	height: 300px !important;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+
+	box-shadow: 0 8px 4px rgba(0, 0, 0, 0.24), 0 8px 6px rgba(0, 0, 0, 0.12);
+}
+
+.ant-image {
+	height: 100%;
+}
+.ant-image img {
+	height: 100% !important;
+}
+.swiper-pagination-bullet-active {
+	background-color: grey !important;
+}

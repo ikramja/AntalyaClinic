@@ -1,20 +1,15 @@
-.doctor-info-content {
-	text-align: justify;
-	text-justify: inter-word;
-}
-.doctor-info-name {
-	justify-content: center;
-}
-
 .doctor-info-button {
 	text-align: center;
 	background-color: white;
+}
+.our-doctors-button {
+	border-radius: 15px !important;
 }
 /* 
 .doctor-image {
 	max-width: 500px;
 } */
-.doctor-info-button-container {
+/* .doctor-info-button-container {
 	display: flex;
 	justify-content: center;
-}
+} */

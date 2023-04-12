@@ -1,0 +1,13 @@
+.doctor-info-name {
+	justify-content: center;
+}
+.doctor-info-content {
+	text-align: left;
+}
+.doctor-image {
+	border-radius: 5px !important;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
+}
+.doctor-info-name-russian {
+	font-weight: 400;
+}
