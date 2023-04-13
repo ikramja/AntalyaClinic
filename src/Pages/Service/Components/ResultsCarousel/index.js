@@ -31,8 +31,8 @@ export default function ResultsCarousel(props) {
 
 	return (
 		<div id={props.id} className="section">
-			<h1 className="my-5 results-carousel-header">РЕЗУЛЬТАТ</h1>
-
+			<h1 className="results-carousel-header">РЕЗУЛЬТАТ</h1>
+			<h2 className="mb-5">До/После</h2>
 			<div className="w-100 center-div my-5">
 				<div className="result-carousel-image-container">
 					<LeftOutlined
