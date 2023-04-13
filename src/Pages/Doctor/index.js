@@ -9,6 +9,7 @@ import { Link, useParams } from "react-router-dom";
 import DoctorDescription from "./Components/DoctorDescription";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Container } from "react-bootstrap";
 export default function AboutOurDoctor() {
 	const [doctorData, setDoctorData] = useState(null);
 	const { doctorName } = useParams();
@@ -33,21 +34,24 @@ export default function AboutOurDoctor() {
 					titleAlign="center"
 					Cover={Doctor_Cover}
 				/>
-				<DoctorDescription
-					nameTurkish={doctorData.name_turkish}
-					nameRussian={doctorData.name_russian}
-					image={doctorData.image}
-					aboutDoctor={doctorData.about_doctor}
-				/>
-				<DoctorCertificatesCarousel certificates={doctorData.certificates} />
-				{/* <div className="doctor-info-button-container  mb-3"></div> */}
-				<div className="center-div m-4">
-					<Link to="/our-doctors">
-						<Button className="our-doctors-button">
-							<div className="center-div">ПОСМОТРЕТЬ ВСЕХ ВРАЧЕЙ</div>
-						</Button>
-					</Link>
-				</div>
+
+				<Container>
+					<DoctorDescription
+						nameTurkish={doctorData.name_turkish}
+						nameRussian={doctorData.name_russian}
+						image={doctorData.image}
+						aboutDoctor={doctorData.about_doctor}
+					/>
+					<DoctorCertificatesCarousel certificates={doctorData.certificates} />
+					{/* <div className="doctor-info-button-container  mb-3"></div> */}
+					<div className="center-div m-4">
+						<Link to="/our-doctors">
+							<Button className="our-doctors-button">
+								<div className="center-div">ПОСМОТРЕТЬ ВСЕХ ВРАЧЕЙ</div>
+							</Button>
+						</Link>
+					</div>
+				</Container>
 			</div>
 		)
 	);
