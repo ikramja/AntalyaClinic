@@ -21,7 +21,7 @@ export default function DoctorDescription(props) {
 				</Col>
 
 				<Col md={4} className="p-0 d-flex flex-column align-items-end m-0">
-					<img src={doctor1} className="doctor-image w-100"></img>
+					<img src={props.image} className="doctor-image w-100"></img>
 				</Col>
 			</Row>
 		</div>

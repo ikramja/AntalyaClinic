@@ -31,8 +31,12 @@ export default function CenterTitleCover(props) {
 					style={{ textAlign: "center" }}
 					className="center-title-cover-text"
 				>
-					<h3 className="center-title-cover-name">{props.title}</h3>
-					<h5 className="center-title-cover-specialty">{props.subtitle}</h5>
+					<h1>
+						<span className="center-title-cover-name">{props.title}</span>
+						<span className="center-title-cover-specialty">
+							{props.subtitle}
+						</span>
+					</h1>
 				</div>
 				<img className="logo-left" src={Logo}></img>
 			</div>

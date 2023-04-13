@@ -7,6 +7,7 @@
 .doctor-image {
 	border-radius: 5px !important;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
+	object-fit: cover;
 }
 .doctor-info-name-russian {
 	font-weight: 400;

@@ -8,7 +8,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { Zoom, EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination } from "swiper";
 import { Image } from "antd";
 
 export default function DoctorCertificatesCarousel(props) {
@@ -16,11 +16,6 @@ export default function DoctorCertificatesCarousel(props) {
 
 	const handleClick = (index) => {
 		swiper.slideTo(index);
-	};
-	const handleSlideChange = () => {
-		if (swiper) {
-			swiper.slideToLoop(swiper.activeIndex);
-		}
 	};
 
 	return (
@@ -31,7 +26,6 @@ export default function DoctorCertificatesCarousel(props) {
 					onSwiper={setSwiper}
 					effect={"coverflow"}
 					grabCursor={true}
-					zoom={true}
 					centeredSlides={true}
 					slidesPerView={"auto"}
 					coverflowEffect={{
@@ -42,8 +36,7 @@ export default function DoctorCertificatesCarousel(props) {
 						slideShadows: true,
 					}}
 					pagination={true}
-					modules={[EffectCoverflow, Pagination, Zoom]}
-					onSlideChange={handleSlideChange}
+					modules={[EffectCoverflow, Pagination]}
 					initialSlide={2}
 					className="mySwiper"
 				>

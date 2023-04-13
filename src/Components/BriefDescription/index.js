@@ -1,14 +1,18 @@
 import "./index.css";
 import { Button } from "antd";
 
-export default function BriefDescription({id, title, subtitle, description, button}) {
+export default function BriefDescription({
+	id,
+	title,
+	subtitle,
+	description,
+	button,
+}) {
 	return (
 		<div id={id} className="section">
 			<div className="my-5">
 				<h1 className=" my-2 Brief-description-header">{title}</h1>
-				{subtitle && (
-					<h4 className=" font-weight-bold">{subtitle}</h4>
-				)}
+				{subtitle && <h4 className="font-weight-bold">{subtitle}</h4>}
 			</div>
 			<div
 				className="Brief-description px-4"
