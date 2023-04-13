@@ -31,13 +31,7 @@ export default function Category() {
 						Cover={categoryData.cover_image}
 					/>
 					<CategoryList
-						category_articles={[
-							categoryData.category_articles[0],
-							categoryData.category_articles[0],
-							categoryData.category_articles[0],
-							categoryData.category_articles[0],
-							categoryData.category_articles[0],
-						]}
+						category_articles={[categoryData.category_articles[0]]}
 					/>
 				</>
 			)}
