@@ -32,6 +32,7 @@ export default function PriceAccordionList(props) {
 				}`}
 			>
 				<Collapse
+					accordion
 					ghost
 					onChange={handlePanelChange}
 					expandIconPosition="end"
