@@ -7,6 +7,9 @@
 	background-size: cover;
 	background-position: center;
 }
+.price-accordion-list ul {
+	list-style-type: disc;
+}
 .price-accordion-list::before {
 	content: "";
 	position: absolute;
