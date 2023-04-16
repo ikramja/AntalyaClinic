@@ -5,7 +5,7 @@ import PriceCover from "../../Assets/Covers/Price.png";
 import React, { useState, useEffect } from "react";
 import TitleCover from "../../Components/TitleCover";
 
-export default function Price() {
+export default function Prices() {
 	const [PricesData, setPricesData] = useState(null);
 	useEffect(() => {
 		axios
