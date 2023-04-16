@@ -2,10 +2,10 @@ import "./index.css";
 import { Link } from "react-router-dom";
 export default function Card(props) {
 	return (
-		<div className="menu-card w-100 p-2">
+		<div className="menu-card p-2">
 			<Link to={props.cardLink} style={{ textDecoration: "none" }}>
 				<div
-					class="menu-card-image-container w-100 mb-4"
+					class="menu-card-image-container mb-3"
 					onClick={() => {
 						props.setShowMenu(false);
 						props.setShowContent(true);

@@ -6,6 +6,7 @@ import OurDoctors from "../Pages/OurDoctors";
 import Service from "../Pages/Service";
 import Category from "../Pages/Category";
 import Excursion from "../Pages/Excursion";
+import Price from "../Pages/Price";
 
 export default function Main() {
 	const { pathname, hash, key } = useLocation();
@@ -33,7 +34,8 @@ export default function Main() {
 			<Route exact path="/our-doctors" element={<OurDoctors />} />
 			<Route exact path="/service/:serviceName" element={<Service />} />
 			<Route exact path="/category/:categoryName" element={<Category />} />
-      <Route exact path="/Excursion" element={<Excursion />} />
+			<Route exact path="/Price" element={<Price />} />
+			<Route exact path="/Excursion" element={<Excursion />} />
 		</Routes>
 	);
 }

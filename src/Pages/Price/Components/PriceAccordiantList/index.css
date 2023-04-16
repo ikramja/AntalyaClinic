@@ -1,0 +1,46 @@
+.price-accordion-list {
+	background-image: url("../../../../Assets/Price/PriceCover.png");
+	min-height: 85vh;
+	padding-left: 3rem !important;
+	padding-right: 3rem;
+	position: relative;
+}
+.price-accordion-list::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	pointer-events: none;
+}
+
+.price-accordion-list.bg-dark::before {
+	opacity: 1;
+}
+.panel-1 {
+	z-index: 1;
+	position: relative;
+}
+
+.my-header {
+	font-size: 1rem;
+	font-weight: 500;
+	text-align: left;
+}
+.price-accordion-text {
+	text-align: left;
+	color: white;
+}
+.price-accordion-list .ant-collapse-header {
+	max-width: 200px;
+}
+@media only screen and (max-width: 880px) {
+	.price-accordion-list {
+		height: auto;
+		padding-left: 0 !important ;
+	}
+}
