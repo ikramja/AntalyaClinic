@@ -9,12 +9,7 @@ const PriceCategoryMenu = (props) => {
 	const [selectedKey, setSelectedKey] = useState(
 		Object.keys(props.PriceMenuData)[0]
 	);
-	console.log(
-		"frfff",
-		selectedKey,
-		props.PriceMenuData[selectedKey],
-		props.PriceMenuData
-	);
+
 	const handleClick = (e) => {
 		setSelectedKey(e.key);
 	};

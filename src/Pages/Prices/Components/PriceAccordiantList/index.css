@@ -4,6 +4,8 @@
 	padding-left: 3rem !important;
 	padding-right: 3rem;
 	position: relative;
+	background-size: cover;
+	background-position: center;
 }
 .price-accordion-list::before {
 	content: "";
