@@ -2,6 +2,9 @@
 	flex: 1;
 	display: block;
 }
+.footer-column h5 {
+	font-weight: bold;
+}
 .footer-right-content {
 	display: flex;
 	justify-content: flex-end;
@@ -18,27 +21,29 @@ ul {
 }
 .footer-social-media-container {
 	display: block;
-	width: 155px;
+	width: 170px;
+	font-weight: bold;
 }
 
 .footer-social-media-icon {
 	font-size: 1.25rem;
+	color: #016245;
 }
 
 .footer-bar {
 	text-align: center;
 
-	background-color: #222222;
+	background-color: #d9d9d9;
 }
 
 .footer {
-	background-color: #323334;
+	background-color: #ffffff;
 	text-align: left;
 	padding-bottom: 0% !important;
 }
 .footer-link {
 	text-decoration: none;
-	color: #ffffff;
+	color: #323334;
 }
 .footer-link:hover {
 	color: #b9b7b7;
@@ -46,5 +51,5 @@ ul {
 .footer-description-title {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 25px;
+	font-size: 1.4rem;
 }

@@ -6,7 +6,7 @@ export default function FrameParagraph() {
 		<div className="w-100 ">
 			<Container className="center-div">
 				<div className="frame-paragraph py-3 px-5">
-					<h1>ВАЖНО ОБРАТИТЬ ВНИМАНИЕ</h1>
+					<h1 style={{ fontWeight: "bold" }}>ВАЖНО ОБРАТИТЬ ВНИМАНИЕ</h1>
 					<div className="frame-paragraph-text">
 						<p>
 							Перед операцией важно бросить курить и употреблять алкоголь, так
