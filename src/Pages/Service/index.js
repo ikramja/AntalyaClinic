@@ -32,7 +32,7 @@ export default function Service() {
 					title={articleData.cover_header}
 					subtitle={articleData.cover_sub_header}
 					titleAlign="center"
-					Cover={ServicePageCover}
+					Cover={articleData.cover_image}
 				/>
 				<BriefDescription
 					button="УЗНАТЬ ЦЕНУ УСЛУГИ"
