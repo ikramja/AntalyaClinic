@@ -19,7 +19,7 @@ th {
 	background-color: white;
 }
 .table-analyses td {
-	font-weight: 200;
+	font-weight: 400;
 }
 .table-analyses tr:last-child td:first-child {
 	border-bottom-left-radius: 10px; /* Adjust the border radius */
