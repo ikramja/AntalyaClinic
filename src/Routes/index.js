@@ -7,6 +7,7 @@ import Service from "../Pages/Service";
 import Category from "../Pages/Category";
 import Excursion from "../Pages/Excursion";
 import Prices from "../Pages/Prices";
+import ForPatients from "../Pages/ForPatients";
 
 export default function Main() {
 	const { pathname, hash, key } = useLocation();
@@ -35,6 +36,7 @@ export default function Main() {
 			<Route exact path="/service/:serviceName" element={<Service />} />
 			<Route exact path="/category/:categoryName" element={<Category />} />
 			<Route exact path="/Prices" element={<Prices />} />
+			<Route exact path="/for-patients" element={<ForPatients />} />
 			<Route exact path="/Excursion" element={<Excursion />} />
 		</Routes>
 	);
