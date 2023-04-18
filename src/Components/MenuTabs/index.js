@@ -28,7 +28,7 @@ const MenuTabs = (props) => {
 							<Col key={category.cover_sub_header} md={3}>
 								<Card
 									cardImage={category.category_image}
-									cardTitle={category.cover_sub_header}
+									cardTitle={category.category_name_in_menu}
 									cardLink={`/category/${category.cover_header}/`}
 									setShowMenu={props.setShowMenu}
 									setShowContent={props.setShowContent}
