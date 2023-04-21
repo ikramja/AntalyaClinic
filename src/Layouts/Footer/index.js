@@ -13,9 +13,9 @@ const { Footer } = Layout;
 
 const App = () => {
 	return (
-		<Footer className="text-white footer px-0 w-100">
+		<Footer className="text-dark footer px-0 w-100">
 			<Container>
-				<Row className="gx-5 w-100">
+				<Row className=" w-100">
 					<Col sm="3">
 						<h5 className="footer-description-title">EL ARTE CLINIC</h5>
 

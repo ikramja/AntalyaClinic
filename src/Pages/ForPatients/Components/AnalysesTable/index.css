@@ -1,0 +1,46 @@
+.table-analyses-cover {
+	object-fit: cover;
+}
+.table-analyses {
+	border-collapse: separate;
+}
+.AnalysesTable {
+	background-image: url("../../../../Assets/ForPatients/AnalysesTableBackgroundHalf.png");
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.table-analyses td,
+th {
+	border: 1px solid #f7f5f5 !important;
+	border-right: none !important;
+	border-top: none !important;
+	box-shadow: 0px 4px 1px rgba(62, 62, 62, 0.5);
+	background-color: white;
+}
+.table-analyses td {
+	font-weight: 400;
+}
+.table-analyses tr:last-child td:first-child {
+	border-bottom-left-radius: 10px; /* Adjust the border radius */
+}
+
+.table-analyses tr:last-child td:last-child {
+	border-bottom-right-radius: 10px; /* Adjust the border radius */
+}
+.table-analyses th {
+	border-top-right-radius: 10px !important;
+	border-top-left-radius: 10px !important;
+}
+.analyses-table-container {
+	background-color: rgba(255, 255, 255, 0.694);
+	box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.description-under-analyses-table {
+	border-radius: 10px;
+	background: rgba(1, 97, 69, 0.95);
+	box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2);
+	color: white;
+	text-align: left;
+}

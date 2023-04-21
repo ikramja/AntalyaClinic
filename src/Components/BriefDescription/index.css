@@ -1,5 +1,6 @@
 .Brief-description {
-	text-align: left;
+	text-align: justify;
+	hyphens: auto;
 }
 
 .Brief-description-header {

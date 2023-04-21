@@ -5,6 +5,7 @@ import IconItemsList from "./Components/IconItemsList";
 import ResultsCarousel from "./Components/ResultsCarousel";
 import RecoveryIconList from "./Components/RecoveryIconList";
 import ScrollSpySection from "./Components/ScrollSpySection";
+import PriceCover from "../../Assets/Covers/Price.png";
 import ServicePageCover from "../../Assets/Covers/ServicePageCover.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -28,7 +29,7 @@ export default function Service() {
 					title={articleData.cover_header}
 					subtitle={articleData.cover_sub_header}
 					titleAlign="center"
-					Cover={ServicePageCover}
+					Cover={articleData.cover_image}
 				/>
 				<BriefDescription
 					button="УЗНАТЬ ЦЕНУ УСЛУГИ"

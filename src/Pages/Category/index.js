@@ -27,9 +27,7 @@ export default function Category() {
 						titleAlign="center"
 						Cover={categoryData.cover_image}
 					/>
-					<CategoryList
-						category_articles={[categoryData.category_articles[0]]}
-					/>
+					<CategoryList category_articles={categoryData.category_articles} />
 				</>
 			)}
 		</div>

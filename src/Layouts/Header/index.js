@@ -18,7 +18,7 @@ export default function Header(props) {
 			<header>
 				<div className="header px-4 py-2">
 					<Link to="/" className="link-no-text-decoration">
-						<h1 className="my-auto ">EL ARTE</h1>
+						<h1 className="my-auto header-text">EL ARTE CLINIC</h1>
 					</Link>
 					<Hamburger
 						className="menu-icon"
