@@ -15,10 +15,7 @@ export default function Service() {
 	const { serviceName } = useParams();
 	useEffect(() => {
 		axios
-			.get(
-				process.env.REACT_APP_BACKEND_BASE_URL +
-					`/api/get/service/${serviceName}/`
-			)
+			.get(`/get/service/${serviceName}/`)
 			.then((Response) => {
 				console.log(Response);
 				setArticleData(Response.data);

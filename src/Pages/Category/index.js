@@ -11,13 +11,10 @@ export default function Category() {
 	const { categoryName } = useParams();
 	useEffect(() => {
 		axios
-			.get(
-				process.env.REACT_APP_BACKEND_BASE_URL +
-					`/api/get/category/${categoryName}/`
-			)
-			.then((response) => {
-				console.log(response);
-				setCategoryData(response.data);
+			.get(`/get/category/${categoryName}/`)
+			.then(({data}) => {
+				console.log(data);
+				setCategoryData(data);
 			});
 	}, []);
 	return (

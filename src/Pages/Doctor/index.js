@@ -15,13 +15,10 @@ export default function AboutOurDoctor() {
 	const { doctorName } = useParams();
 	useEffect(() => {
 		axios
-			.get(
-				process.env.REACT_APP_BACKEND_BASE_URL +
-					`/api/get/doctor/${doctorName}/`
-			)
-			.then((response) => {
-				console.log(response.data);
-				setDoctorData(response.data);
+			.get(`/get/doctor/${doctorName}/`)
+			.then(({data}) => {
+				console.log(data);
+				setDoctorData(data);
 			});
 	}, []);
 

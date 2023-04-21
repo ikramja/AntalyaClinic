@@ -11,9 +11,9 @@ export default function DoctorsList() {
 	const [showAllDoctors, setShowAllDoctors] = useState(false);
 	useEffect(() => {
 		axios
-			.get(process.env.REACT_APP_BACKEND_BASE_URL + "/api/get/doctors/")
-			.then((response) => {
-				setDoctors(response.data);
+			.get('/get/doctors/')
+			.then(({data}) => {
+				setDoctors(data);
 			});
 	}, []);
 	return (

@@ -11,10 +11,10 @@ const MenuTabs = (props) => {
 	const [categoryData, setCategoryData] = useState(null);
 	useEffect(() => {
 		axios
-			.get(process.env.REACT_APP_BACKEND_BASE_URL + `/api/get/categories/`)
-			.then((response) => {
-				console.log(response);
-				setCategoryData(response.data);
+			.get('/get/categories/')
+			.then(({data}) => {
+				console.log(data);
+				setCategoryData(data);
 			});
 	}, []);
 	const menuItems = [
