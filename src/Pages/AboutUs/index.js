@@ -24,7 +24,6 @@ export default function AboutUs() {
 				style={{
 					paddingTop: "2rem",
 					backgroundImage: `url(${AnalysesTableBackground})`,
-
 					backgroundRepeat: "no-repeat",
 					backgroundPosition: "right",
 				}}
@@ -36,7 +35,7 @@ export default function AboutUs() {
 			</div>
 			<div className="px-3 grey-frame-about-us-first">
 				<GreyFrame
-					width="360px"
+					width="400px"
 					title="ТРАНСФЕР"
 					text="Трансфер от аэропорта до отеля и клиники. "
 				/>
