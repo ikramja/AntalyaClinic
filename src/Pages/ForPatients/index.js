@@ -33,9 +33,9 @@ export default function ForPatients() {
 					style={{
 						paddingTop: "8rem",
 						backgroundImage: `url(${AnalysesTableBackground})`,
-
+						backgroundSize: "auto 100%",
 						backgroundRepeat: "no-repeat",
-						backgroundPosition: "center",
+						backgroundPosition: "left",
 					}}
 				>
 					<FrameParagraph
