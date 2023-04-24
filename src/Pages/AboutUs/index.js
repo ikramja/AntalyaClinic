@@ -24,7 +24,7 @@ export default function AboutUs() {
 				style={{
 					paddingTop: "2rem",
 					backgroundImage: `url(${AnalysesTableBackground})`,
-					backgroundSize: "auto 100%",
+
 					backgroundRepeat: "no-repeat",
 					backgroundPosition: "right",
 				}}
