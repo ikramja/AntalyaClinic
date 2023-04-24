@@ -35,7 +35,7 @@ export default function ForPatients() {
 						backgroundImage: `url(${AnalysesTableBackground})`,
 
 						backgroundRepeat: "no-repeat",
-						backgroundPosition: "left",
+						backgroundPosition: "center",
 					}}
 				>
 					<FrameParagraph

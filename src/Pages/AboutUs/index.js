@@ -25,7 +25,7 @@ export default function AboutUs() {
 					paddingTop: "2rem",
 					backgroundImage: `url(${AnalysesTableBackground})`,
 					backgroundRepeat: "no-repeat",
-					backgroundPosition: "right",
+					backgroundPosition: "right top",
 				}}
 			>
 				<FrameParagraph
