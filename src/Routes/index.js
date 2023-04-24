@@ -7,6 +7,7 @@ import Service from "../Pages/Service";
 import Category from "../Pages/Category";
 import Excursion from "../Pages/Excursion";
 import Prices from "../Pages/Prices";
+import AboutUs from "../Pages/AboutUs";
 import ForPatients from "../Pages/ForPatients";
 
 export default function Main() {
@@ -38,6 +39,7 @@ export default function Main() {
 			<Route exact path="/Prices" element={<Prices />} />
 			<Route exact path="/for-patients" element={<ForPatients />} />
 			<Route exact path="/Excursion" element={<Excursion />} />
+			<Route exact path="/about-us" element={<AboutUs />} />
 		</Routes>
 	);
 }

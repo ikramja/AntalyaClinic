@@ -1,0 +1,12 @@
+.about-us-grey-frame {
+	background-color: #e9ebec;
+	box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	text-align: left;
+}
+.about-us-grey-frame span {
+	font-size: 3rem;
+}
+.about-us-grey-frame-text {
+	max-width: 600px;
+}

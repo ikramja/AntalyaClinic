@@ -22,7 +22,13 @@ export default function BriefDescription({
 						>
 							{title}
 						</h1>
-						{subtitle && <h4 className="font-weight-bold">{subtitle}</h4>}
+
+						{subtitle && (
+							<div>
+								<br />
+								<h4 className="font-weight-bold">{subtitle}</h4>
+							</div>
+						)}
 					</div>
 					<div
 						className="Brief-description px-4"
