@@ -36,7 +36,7 @@ export default function AboutUs() {
 			</div>
 			<div className="px-3 grey-frame-about-us-first">
 				<GreyFrame
-					width="300px"
+					width="360px"
 					title="ТРАНСФЕР"
 					text="Трансфер от аэропорта до отеля и клиники. "
 				/>
