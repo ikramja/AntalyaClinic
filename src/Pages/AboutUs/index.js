@@ -123,12 +123,12 @@ export default function AboutUs() {
 						</div>
 					</div>
 					<img
-						className="left-half-image-about-us mb-5"
+						className="left-half-image-about-us mb-4"
 						src={LeftHalfImage}
 					></img>
 				</div>
 
-				<div className="carousel-about w-100 mb-4">
+				<div className="carousel-about w-100">
 					<Carousel
 						dots={true}
 						autoplay
