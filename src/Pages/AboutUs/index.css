@@ -106,6 +106,9 @@
 	/* .about-us-frame-paragraph {
 		display: none;
 	} */
+	.right-half-image-about-us {
+		display: none;
+	}
 	.grey-frame-about-us-image .image {
 		display: none;
 	}
