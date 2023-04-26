@@ -6,7 +6,7 @@ import AnalysesTableBackground from "../../Assets/ForPatients/AnalysesTableBackg
 import GreyFrame from "./Components/AboutUsGreyFrame";
 import aboutUs from "../../Assets/AboutUs/AboutUs.png";
 import LeftHalfImage from "../../Assets/AboutUs/leftHalf.png";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "antd";
 import ImageCarouselAboutUs1 from "../../Assets/AboutUs/carousel1.png";
 import ImageCarouselAboutUs2 from "../../Assets/AboutUs/carousel2.png";
@@ -14,8 +14,33 @@ import ImageCarouselAboutUs3 from "../../Assets/AboutUs/carousel3.png";
 import ImageCarouselAboutUs4 from "../../Assets/AboutUs/carousel4.png";
 import RightHalfImage from "../../Assets/AboutUs/rightHalf.png";
 import GreenContainerImage from "../../Assets/AboutUs/GreenContainer.png";
+import { Container } from "react-bootstrap";
 
 export default function AboutUs() {
+	const getSlidesToShow = () => {
+		const screenWidth = window.innerWidth;
+
+		if (screenWidth > 1200) {
+			return 4;
+		} else if (screenWidth > 992) {
+			return 3;
+		} else if (screenWidth > 768) {
+			return 2;
+		} else {
+			return 1;
+		}
+	};
+	const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+	useEffect(() => {
+		const handleResize = () => {
+			setSlidesToShow(getSlidesToShow());
+		};
+
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 	return (
 		<div className="about-us-services">
 			<TitleCover title="СЕРВИС" titleAlign="center" Cover={AboutUsCover} />
@@ -25,7 +50,10 @@ export default function AboutUs() {
 					paddingTop: "2rem",
 					backgroundImage: `url(${AnalysesTableBackground})`,
 					backgroundRepeat: "no-repeat",
-					backgroundPosition: "right top",
+					backgroundSize: "auto 180%",
+					backgroundPositionX: "right",
+					backgroundPositionY: "top",
+					// backgroundPosition: "right top",
 				}}
 			>
 				<FrameParagraph
@@ -33,29 +61,31 @@ export default function AboutUs() {
 					text="После госпитализации в клинику большинство процедур требуют регулярных осмотров у хирурга и обязательного пребывания под наблюдением. Мы в клинике El Arte заботимся о наших пациентах и предоставляем услуги по транспортировке и проживанию во время лечения.  Наша главная задача - помочь нашим клиентам в их выздоровлении, создавая спокойную и комфортную обстановку."
 				/>
 			</div>
-			<div className="px-3 grey-frame-about-us-first">
-				<GreyFrame
-					width="400px"
-					title="ТРАНСФЕР"
-					text="Трансфер от аэропорта до отеля и клиники. "
-				/>
-				<div className="grey-frame-about-us-image me-5 px-5">
-					<img className="image" src={aboutUs}></img>
+			<Container>
+				<div className="px-3 grey-frame-about-us-first">
+					<GreyFrame
+						width="400px"
+						title="ТРАНСФЕР"
+						text="Трансфер от аэропорта до отеля и клиники. "
+					/>
+					<div className="grey-frame-about-us-image me-5 px-5">
+						<img className="image" src={aboutUs}></img>
+					</div>
 				</div>
-			</div>
 
-			<div className="mx-3 grey-frame-about-us-second">
-				<GreyFrame
-					style={{ paddingBottom: "10rem" }}
-					width="100%"
-					subtitle="персональное сопровождение"
-					title="ПЕРЕВОДЧИК"
-					text="Пациенты из-за рубежа могут воспользоваться услугами переводчика — клиника обеспечивает переводчиков английского и русского языка."
-				/>
-				<div className="grey-frame-about-us-image-mobile me-5 px-5">
-					<img className="image-mobile" src={aboutUs}></img>
+				<div className="mx-3 grey-frame-about-us-second">
+					<GreyFrame
+						style={{ paddingBottom: "10rem" }}
+						width="100%"
+						subtitle="персональное сопровождение"
+						title="ПЕРЕВОДЧИК"
+						text="Пациенты из-за рубежа могут воспользоваться услугами переводчика — клиника обеспечивает переводчиков английского и русского языка."
+					/>
+					<div className="grey-frame-about-us-image-mobile me-5 px-5">
+						<img className="image-mobile" src={aboutUs}></img>
+					</div>
 				</div>
-			</div>
+			</Container>
 			<img className="right-half-image-about-us" src={RightHalfImage}></img>
 			<div className="about-us-green-carousel-container">
 				<div className="green-container-about-us pt-5">
@@ -100,7 +130,7 @@ export default function AboutUs() {
 						dots={true}
 						autoplay
 						className="carousel-about-us"
-						slidesToShow={4}
+						slidesToShow={slidesToShow}
 						touchMove={true}
 						centerMode={true}
 					>

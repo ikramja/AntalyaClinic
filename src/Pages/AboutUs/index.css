@@ -100,9 +100,9 @@
 	}
 } */
 @media only screen and (max-width: 1050px) {
-	.about-us-frame-paragraph {
+	/* .about-us-frame-paragraph {
 		display: none;
-	}
+	} */
 	.grey-frame-about-us-image .image {
 		display: none;
 	}

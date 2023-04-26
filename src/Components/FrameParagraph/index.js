@@ -3,7 +3,7 @@ import "./index.css";
 
 export default function FrameParagraph(props) {
 	return (
-		<div className="w-100 ">
+		<div className="w-100">
 			<Container className="center-div">
 				<div className="frame-paragraph py-3 px-5">
 					<h1 style={{ fontWeight: "bold" }}>{props.title}</h1>
