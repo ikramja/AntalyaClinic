@@ -71,6 +71,7 @@
 	position: absolute;
 	right: 0;
 	width: 50%;
+	z-index: 1;
 }
 .green-frame-about-us-content {
 	color: white;
