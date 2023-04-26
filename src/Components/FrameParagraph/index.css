@@ -8,3 +8,9 @@
 	text-align: justify;
 	hyphens: auto;
 }
+
+@media only screen and (max-width: 1013px) {
+	.frame-paragraph {
+		width: 100%;
+	}
+}

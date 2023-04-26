@@ -1,5 +1,6 @@
 import "./index.css";
 import TitleCover from "../../Components/TitleCover";
+import { List, Card } from "antd";
 import AboutUsCover from "../../Assets/Covers/AboutUs.png";
 import FrameParagraph from "../../Components/FrameParagraph";
 import AnalysesTableBackground from "../../Assets/ForPatients/AnalysesTableBackground.png";
@@ -44,24 +45,25 @@ export default function AboutUs() {
 	return (
 		<div className="about-us-services">
 			<TitleCover title="СЕРВИС" titleAlign="center" Cover={AboutUsCover} />
-			<div
-				className="about-us-frame-paragraph"
-				style={{
-					paddingTop: "2rem",
-					backgroundImage: `url(${AnalysesTableBackground})`,
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "auto 180%",
-					backgroundPositionX: "right",
-					backgroundPositionY: "top",
-					// backgroundPosition: "right top",
-				}}
-			>
-				<FrameParagraph
-					title="Период Восстановления"
-					text="После госпитализации в клинику большинство процедур требуют регулярных осмотров у хирурга и обязательного пребывания под наблюдением. Мы в клинике El Arte заботимся о наших пациентах и предоставляем услуги по транспортировке и проживанию во время лечения.  Наша главная задача - помочь нашим клиентам в их выздоровлении, создавая спокойную и комфортную обстановку."
-				/>
-			</div>
 			<Container>
+				<div
+					className="about-us-frame-paragraph"
+					style={{
+						paddingTop: "2rem",
+						backgroundImage: `url(${AnalysesTableBackground})`,
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "auto 120%",
+						backgroundPositionX: "right",
+						backgroundPositionY: "top",
+						// backgroundPosition: "right top",
+					}}
+				>
+					<FrameParagraph
+						title="Период Восстановления"
+						text="После госпитализации в клинику большинство процедур требуют регулярных осмотров у хирурга и обязательного пребывания под наблюдением. Мы в клинике El Arte заботимся о наших пациентах и предоставляем услуги по транспортировке и проживанию во время лечения.  Наша главная задача - помочь нашим клиентам в их выздоровлении, создавая спокойную и комфортную обстановку."
+					/>
+				</div>
+
 				<div className="px-3 grey-frame-about-us-first">
 					<GreyFrame
 						width="400px"
@@ -162,14 +164,14 @@ export default function AboutUs() {
 							<img
 								className="carousel-image_about-us"
 								src={ImageCarouselAboutUs2}
-								alt="Slide 2"
+								alt="Slide 4"
 							/>
 						</div>
 						<div>
 							<img
 								className="carousel-image_about-us"
-								src={ImageCarouselAboutUs4}
-								alt="Slide 2"
+								src={ImageCarouselAboutUs3}
+								alt="Slide 5"
 							/>
 						</div>
 					</Carousel>
