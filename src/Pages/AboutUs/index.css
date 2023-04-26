@@ -51,7 +51,9 @@
 	padding-top: auto;
 } */
 .left-half-image-about-us {
-	height: 700px;
+	width: 500px;
+	height: 535px;
+
 	/* margin-bottom: 22%; */
 }
 .carousel-image_about-us {
