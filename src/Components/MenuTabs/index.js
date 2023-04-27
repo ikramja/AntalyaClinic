@@ -10,12 +10,10 @@ import { Link } from "react-router-dom";
 const MenuTabs = (props) => {
 	const [categoryData, setCategoryData] = useState(null);
 	useEffect(() => {
-		axios
-			.get('/get/categories/')
-			.then(({data}) => {
-				console.log(data);
-				setCategoryData(data);
-			});
+		axios.get("/get/categories/").then(({ data }) => {
+			console.log(data);
+			setCategoryData(data);
+		});
 	}, []);
 	const menuItems = [
 		{
@@ -101,16 +99,15 @@ const MenuTabs = (props) => {
 
 	return (
 		categoryData && (
-			<div style={{ zIndex: "1" }}>
-				{" "}
-				<Affix offsetTop={64}>
+			<div>
+				<div style={{ marginTop: "64px" }}>
 					<Tabs
 						defaultActiveKey="3"
 						items={menuItems}
 						animated={{ inkBar: false }}
 						className="menu-tabs"
 					/>
-				</Affix>
+				</div>
 			</div>
 		)
 	);
