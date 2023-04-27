@@ -46,11 +46,10 @@ export default function Service() {
 					title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 					description={articleData.surgery_for_whom}
 					source={articleData.surgery_for_whom_left_image}
-					borderRight={{ borderRight: "15px solid #016245" }}
 				/>
 
 				<div
-					className="py-2 my-5"
+					className="my-5 py-2"
 					style={{
 						background: "#4D917E",
 						// paddingTop: "2rem",
@@ -58,6 +57,9 @@ export default function Service() {
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "auto 100%",
 						backgroundPosition: "right bottom, left top",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "space-around",
 						// backgroundPosition: "right top",
 					}}
 				>

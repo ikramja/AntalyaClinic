@@ -12,7 +12,13 @@ const ScrollSpy = () => {
 	const handleScroll = (href) => {
 		const element = document.querySelector(href);
 		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
+			const elementPosition = element.getBoundingClientRect();
+			const offsetPosition = elementPosition.top + window.pageYOffset - 120;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth",
+			});
 		}
 	};
 
