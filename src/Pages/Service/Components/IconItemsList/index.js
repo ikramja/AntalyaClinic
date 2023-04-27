@@ -45,7 +45,7 @@ export default function IconItemsList(props) {
 										icon={AnesthesiaIcon}
 									/>
 								</Col>
-								<Col md="6" className=" my-2">
+								<Col md="6" className="my-2">
 									<IconItems
 										title="ДЛИТЕЛЬНОСТЬ ОПЕРАЦИИ"
 										description={props.duration}

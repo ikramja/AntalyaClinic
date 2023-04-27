@@ -13,7 +13,6 @@ export default function RecoveryIconList(props) {
 		<Container>
 			<div id={props.id} className="section">
 				<div
-					className="my-5 py-3"
 					style={{
 						background: "rgba(255, 255, 255, 0.85)",
 						boxShadow:
@@ -21,6 +20,8 @@ export default function RecoveryIconList(props) {
 						borderRadius: "10px",
 					}}
 				>
+					{" "}
+					<div className="my-5 py-3"></div>
 					<h1 className="mb-5  icon-items-list-header">ВОССТАНОВЛЕНИЕ </h1>
 					<div className="mx-5 icon-items-list">
 						<Row>
@@ -73,11 +74,11 @@ export default function RecoveryIconList(props) {
 						</Row>
 					</div>
 				</div>
-				<h6 className="icon-description-header my-4">
+				<h6 className="icon-description-header my-2">
 					ОСОБЕННОСТИ РЕАБИЛИТАЦИИ
 				</h6>
 				<div
-					className="text-under-icon mx-4 my-5"
+					className="text-under-icon mx-4 "
 					dangerouslySetInnerHTML={{ __html: props.description }}
 				></div>
 			</div>
