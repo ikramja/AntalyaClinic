@@ -46,11 +46,10 @@ export default function Service() {
 					title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 					description={articleData.surgery_for_whom}
 					source={articleData.surgery_for_whom_left_image}
-					borderRight={{ borderRight: "15px solid #016245" }}
 				/>
 
 				<div
-					className="my-5"
+					className="my-5 py-2"
 					style={{
 						background: "#4D917E",
 						// paddingTop: "2rem",
@@ -58,6 +57,9 @@ export default function Service() {
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "auto 100%",
 						backgroundPosition: "right bottom, left top",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "space-around",
 						// backgroundPosition: "right top",
 					}}
 				>
@@ -94,7 +96,14 @@ export default function Service() {
 					description={articleData.recovery_description}
 				/>
 				<ResultsCarousel id="section6" images={articleData.results_images} />
-				<div>
+				<div
+					style={{
+						background: "rgba(255, 255, 255, 0.79)",
+						boxShadow:
+							"-2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
+						borderRadius: "10px",
+					}}
+				>
 					<BriefDescription
 						id="section3"
 						title="ПРОТИВОПАКАЗАНИЯ"

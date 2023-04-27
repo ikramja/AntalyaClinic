@@ -15,12 +15,17 @@ export default function BriefDescription({
 	borderRight,
 }) {
 	return (
-		<div style={containerStyle ? containerStyle : {}} className="mt-5">
+		<div
+			style={
+				(containerStyle ? containerStyle : {}, briefStyle ? briefStyle : {})
+			}
+			className="brief-description my-3 mx-3"
+		>
 			<Container>
 				<div id={id} className="section">
 					<div>
 						<h1
-							className="Brief-description-header "
+							className="Brief-description-header mt-2"
 							style={headerStyle ? headerStyle : {}}
 						>
 							{title}

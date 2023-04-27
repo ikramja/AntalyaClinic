@@ -13,13 +13,13 @@
 	align-items: center;
 	border: 2px solid black;
 }
-.section::before {
+/* .brief-description::before {
 	content: "";
 	display: block;
 	height: 70px;
 	margin-top: -70px;
 	visibility: hidden;
-}
+} */
 .font-weight-bold {
 	font-size: 1.8rem;
 }
