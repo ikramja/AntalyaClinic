@@ -50,7 +50,7 @@ export default function Service() {
 				/>
 
 				<div
-					className="py-2 my-5"
+					className="my-5"
 					style={{
 						background: "#4D917E",
 						// paddingTop: "2rem",
@@ -74,11 +74,7 @@ export default function Service() {
 						}}
 					/>
 				</div>
-				<BriefDescription
-					id="section3"
-					title="ПРОТИВОПАКАЗАНИЯ"
-					description={articleData.side_effects}
-				/>
+
 				<IconItemsList
 					id="section4"
 					hospitalization={articleData.day_of_surgery_hospitalization}
@@ -98,6 +94,13 @@ export default function Service() {
 					description={articleData.recovery_description}
 				/>
 				<ResultsCarousel id="section6" images={articleData.results_images} />
+				<div>
+					<BriefDescription
+						id="section3"
+						title="ПРОТИВОПАКАЗАНИЯ"
+						description={articleData.side_effects}
+					/>
+				</div>
 				<BriefDescription
 					id="section7"
 					title="ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ"

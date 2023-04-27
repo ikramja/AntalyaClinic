@@ -74,14 +74,16 @@ export default function RecoveryIconList(props) {
 					</div>
 				</div>
 				<div
+					className="pb-3"
 					style={{
 						background: "rgba(1, 97, 69, 0.95)",
 						boxShadow:
 							" -4px 4px 8px rgba(0, 0, 0, 0.25), 4px 4px 8px rgba(0, 0, 0, 0.2)",
 						borderRadius: "10px",
+						color: "#FFFFFF",
 					}}
 				>
-					<h6 className="icon-description-header mt-5  ">
+					<h6 className="icon-description-header mt-5 pt-2 ">
 						ОСОБЕННОСТИ РЕАБИЛИТАЦИИ
 					</h6>
 					<div

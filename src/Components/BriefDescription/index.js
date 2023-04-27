@@ -15,12 +15,7 @@ export default function BriefDescription({
 	borderRight,
 }) {
 	return (
-		<div
-			style={
-				(containerStyle ? containerStyle : {}, briefStyle ? briefStyle : {})
-			}
-			className="mt-5"
-		>
+		<div style={containerStyle ? containerStyle : {}} className="mt-5">
 			<Container>
 				<div id={id} className="section">
 					<div>

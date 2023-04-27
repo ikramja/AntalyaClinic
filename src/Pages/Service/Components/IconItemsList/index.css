@@ -3,6 +3,7 @@
 }
 .text-under-icon {
 	text-align: justify;
+	hyphens: auto;
 }
 .icon-items-row {
 	margin: 20px 0 20px 0;
