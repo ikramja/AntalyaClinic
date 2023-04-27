@@ -20,9 +20,9 @@ export default function IconItemsList(props) {
 				>
 					<div className="my-5 py-2">
 						<h1 className="mb-5 icon-items-list-header">ДЕНЬ ОПЕРАЦИИ</h1>
-						<div className="mx-5  icon-items-list">
+						<div className="mx-5 icon-items-list">
 							<Row>
-								<Col md="6" className="my-2  ps-md-2">
+								<Col md="6" className="my-2 ps-md-2">
 									<IconItems
 										title="ГОСПИТАЛИЗАЦИЯ"
 										description={props.hospitalization}
@@ -38,7 +38,7 @@ export default function IconItemsList(props) {
 								</Col>
 							</Row>
 							<Row>
-								<Col md="6" className="my-2  ps-md-2">
+								<Col md="6" className="my-2 ps-md-2">
 									<IconItems
 										title="НАРКОЗ"
 										description={props.anesthesia}
