@@ -4,6 +4,26 @@ import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
+const StandardCardTitle = (props) => {
+	return (
+		<h1>
+			<span
+				className="px-0"
+				style={{
+					fontSize: "1.25rem",
+					display: "inline-block",
+					maxWidth: "220px",
+					wordWrap: "break-word",
+					whiteSpace: "normal !important",
+				}}
+			>
+				{props.cardTitle}
+			</span>
+			<span>{props.cardTitle2}</span>
+		</h1>
+	);
+};
+
 const StandardCard = (props) => {
 	const { height } = props;
 	return (
@@ -19,16 +39,21 @@ const StandardCard = (props) => {
 				}
 			>
 				<Meta
-					title=<div>
-						<h5>{props.cardTitle}</h5>
-						<h5>{props.cardTitle2}</h5>
-					</div>
-					description=<div style={props.cardDescriptionStyle}>
-						{props.cardDescription}
-					</div>
+					title={
+						<StandardCardTitle
+							cardTitle={props.cardTitle}
+							cardTitle2={props.cardTitle2}
+						/>
+					}
+					description={
+						<div style={props.cardDescriptionStyle}>
+							{props.cardDescription}
+						</div>
+					}
 				/>
 			</Card>
 		</Link>
 	);
 };
+
 export default StandardCard;

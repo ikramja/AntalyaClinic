@@ -1,4 +1,6 @@
 import "./index.css";
+import BriefRight from "../../Assets/briefDescription/BriefRight.png";
+import BriefLeft from "../../Assets/briefDescription/BriefLeft.png";
 import TitleCover from "../../Components/TitleCover";
 import BriefDescription from "../../Components/BriefDescription";
 import IconItemsList from "./Components/IconItemsList";
@@ -15,12 +17,10 @@ export default function Service() {
 	const [articleData, setArticleData] = useState(null);
 	const { serviceName } = useParams();
 	useEffect(() => {
-		axios
-			.get(`/get/service/${serviceName}/`)
-			.then((Response) => {
-				console.log(Response);
-				setArticleData(Response.data);
-			});
+		axios.get(`/get/service/${serviceName}/`).then((Response) => {
+			console.log(Response);
+			setArticleData(Response.data);
+		});
 	}, []);
 	return (
 		articleData && (
@@ -31,25 +31,48 @@ export default function Service() {
 					titleAlign="center"
 					Cover={articleData.cover_image}
 				/>
-				<BriefDescription
-					button="УЗНАТЬ ЦЕНУ УСЛУГИ"
-					title={articleData.brief_header}
-					description={articleData.brief_description}
-				/>
+				{articleData.brief_header && articleData.brief_description && (
+					<BriefDescription
+						button="УЗНАТЬ ЦЕНУ УСЛУГИ"
+						title={articleData.brief_header}
+						description={articleData.brief_description}
+					/>
+				)}
 				<ScrollSpySection />
+
 				<BriefDescription
 					id="section1"
 					subtitle="(ПОКАЗАНИЯ К ОПЕРАЦИИ)"
 					title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 					description={articleData.surgery_for_whom}
+					source={articleData.surgery_for_whom_left_image}
 				/>
 
-				<BriefDescription
-					id="section2"
-					title="КАК ПРОХОДИТ ОПЕРАЦИЯ"
-					description={articleData.how_surgery_works}
-				/>
-
+				<div
+					className="py-2 my-5"
+					style={{
+						background: "#4D917E",
+						// paddingTop: "2rem",
+						backgroundImage: `url(${BriefRight}), url(${BriefLeft})`,
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "auto 100%",
+						backgroundPosition: "right bottom, left top",
+						// backgroundPosition: "right top",
+					}}
+				>
+					<BriefDescription
+						id="section2"
+						title="КАК ПРОХОДИТ ОПЕРАЦИЯ"
+						description={articleData.how_surgery_works}
+						briefStyle={{
+							backgroundColor: " #016245BF",
+							color: "white",
+							borderRadius: "10px",
+							boxShadow:
+								" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
+						}}
+					/>
+				</div>
 				<BriefDescription
 					id="section3"
 					title="ПРОТИВОПАКАЗАНИЯ"

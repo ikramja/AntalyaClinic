@@ -20,3 +20,12 @@
 	margin-top: -70px; /* The same negative value as the height */
 	visibility: hidden;
 }
+.font-weight-bold {
+	font-size: 1.8rem;
+}
+.Brief-description-image {
+	height: 400px;
+	max-width: 350px;
+	object-fit: cover;
+	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.381));
+}
