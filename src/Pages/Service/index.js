@@ -46,6 +46,7 @@ export default function Service() {
 					title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 					description={articleData.surgery_for_whom}
 					source={articleData.surgery_for_whom_left_image}
+					borderRight={{ borderRight: "15px solid #016245" }}
 				/>
 
 				<div

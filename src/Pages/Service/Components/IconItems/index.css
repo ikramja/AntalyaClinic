@@ -11,7 +11,7 @@
 	width: 80px;
 }
 .icon-text {
-	max-width: 350px;
+	width: 350px;
 }
 
 @media only screen and (max-width: 500px) {
