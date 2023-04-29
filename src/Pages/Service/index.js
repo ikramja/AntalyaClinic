@@ -42,6 +42,7 @@ export default function Service() {
 
 				<BriefDescription
 					id="section1"
+					borderRight={{ borderRight: " 10px solid #016245" }}
 					subtitle="(ПОКАЗАНИЯ К ОПЕРАЦИИ)"
 					title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 					description={articleData.surgery_for_whom}
@@ -96,18 +97,18 @@ export default function Service() {
 					description={articleData.recovery_description}
 				/>
 				<ResultsCarousel id="section6" images={articleData.results_images} />
-				<div
-					style={{
-						background: "rgba(255, 255, 255, 0.79)",
-						boxShadow:
-							"-2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
-						borderRadius: "10px",
-					}}
-				>
+				<div>
 					<BriefDescription
 						id="section3"
 						title="ПРОТИВОПАКАЗАНИЯ"
 						description={articleData.side_effects}
+						briefStyle={{
+							backgroundColor: " #016245BF",
+							color: "white",
+							borderRadius: "10px",
+							boxShadow:
+								" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
+						}}
 					/>
 				</div>
 				<BriefDescription

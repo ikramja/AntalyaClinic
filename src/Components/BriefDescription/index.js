@@ -19,7 +19,7 @@ export default function BriefDescription({
 			style={
 				(containerStyle ? containerStyle : {}, briefStyle ? briefStyle : {})
 			}
-			className="brief-description my-3 mx-3"
+			className="brief-description my-3 "
 		>
 			<Container>
 				<div id={id} className="section">
@@ -41,8 +41,8 @@ export default function BriefDescription({
 				</div>
 			</Container>
 			<div style={borderRight ? borderRight : {}}>
-				<Container className="my-4 w-100">
-					<div className="py-2 w-100">
+				<Container className="my-4">
+					<div className="py-2">
 						<Row>
 							{source && (
 								<Col md={4}>
