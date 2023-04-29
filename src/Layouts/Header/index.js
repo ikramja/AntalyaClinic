@@ -25,9 +25,9 @@ export default function Header(props) {
 			}}
 		>
 			<header className="web-app-header">
-				<div className={`header px-4 py-2 ${small ? "scroller" : ""}`}>
+				<div className={`header px-4 py-1 ${small ? "scroller" : ""}`}>
 					<Link to="/" className="link-no-text-decoration">
-						<h1 className="my-auto header-text">EL ARTE CLINIC</h1>
+						<h1 className="header-text pt-2">EL ARTE CLINIC</h1>
 					</Link>
 					<Hamburger
 						className="menu-icon"
