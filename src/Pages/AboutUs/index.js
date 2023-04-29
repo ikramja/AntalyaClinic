@@ -104,11 +104,14 @@ export default function AboutUs() {
 					</div>
 
 					<div className="green-container-image-div-about-us my-4">
-						<img
-							className="green-container-image-about-us"
-							src={GreenContainerImage}
-						></img>
-						<div className="white-container-about-us px-4 py-4">
+						<div className="middle-image-container">
+							<img
+								className="green-container-image-about-us"
+								src={GreenContainerImage}
+							/>
+						</div>
+
+						<div className="white-container-about-us px-4 py-4 my-4">
 							<h1>
 								<h5>комфортабельные номера</h5>
 								<span className="white-container-about-us-title">ОТЕЛЬ</span>

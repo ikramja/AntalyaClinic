@@ -15,10 +15,6 @@
 	flex-direction: column;
 } */
 
-ul {
-	list-style: none;
-	padding: 0 !important;
-}
 .footer-social-media-container {
 	display: block;
 	width: 170px;
