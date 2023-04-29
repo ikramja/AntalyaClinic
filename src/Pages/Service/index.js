@@ -4,10 +4,12 @@ import BriefLeft from "../../Assets/briefDescription/BriefLeft.png";
 import TitleCover from "../../Components/TitleCover";
 import BriefDescription from "../../Components/BriefDescription";
 import IconItemsList from "./Components/IconItemsList";
+import beforeLastBackground from "../../Assets/ServicesIcons/beforeLastBackground.png";
 import ResultsCarousel from "./Components/ResultsCarousel";
 import RecoveryIconList from "./Components/RecoveryIconList";
 import ScrollSpySection from "./Components/ScrollSpySection";
 import PriceCover from "../../Assets/Covers/Price.png";
+import articleLeftTree from "../../Assets/ServicesIcons/articleLeftTree.png";
 import ServicePageCover from "../../Assets/Covers/ServicePageCover.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -78,34 +80,61 @@ export default function Service() {
 						}}
 					/>
 				</div>
+				<div
+					style={{
+						// paddingTop: "2rem",
+						backgroundImage: `url(${articleLeftTree})`,
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "auto 70%",
+						backgroundPosition: "left top",
 
-				<IconItemsList
-					id="section4"
-					hospitalization={articleData.day_of_surgery_hospitalization}
-					preparation={articleData.surgery_preparation}
-					anesthesia={articleData.anesthesia}
-					duration={articleData.surgery_duration}
-					description={articleData.day_of_surgery_description}
-				/>
-				<RecoveryIconList
-					id="section5"
-					recoveryPeriod={articleData.recovery_period}
-					hospitalization={articleData.recovery_hospitalization}
-					stitchesRemovalPeriod={articleData.stitches_removal_period}
-					numberOfPostSurgeryVisits={articleData.number_of_post_surgery_visits}
-					medicines={articleData.medicines}
-					attention={articleData.attention}
-					description={articleData.recovery_description}
-				/>
+						// backgroundPosition: "right top",
+					}}
+				>
+					<IconItemsList
+						id="section4"
+						hospitalization={articleData.day_of_surgery_hospitalization}
+						preparation={articleData.surgery_preparation}
+						anesthesia={articleData.anesthesia}
+						duration={articleData.surgery_duration}
+						description={articleData.day_of_surgery_description}
+					/>
+
+					<RecoveryIconList
+						id="section5"
+						recoveryPeriod={articleData.recovery_period}
+						hospitalization={articleData.recovery_hospitalization}
+						stitchesRemovalPeriod={articleData.stitches_removal_period}
+						numberOfPostSurgeryVisits={
+							articleData.number_of_post_surgery_visits
+						}
+						medicines={articleData.medicines}
+						attention={articleData.attention}
+						description={articleData.recovery_description}
+					/>
+				</div>
 				<ResultsCarousel id="section6" images={articleData.results_images} />
-				<Container>
+				<Container
+					style={{
+						// paddingTop: "2rem",
+						backgroundImage: `url(${beforeLastBackground})`,
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "auto 100%",
+						backgroundPosition: "right top",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "space-around",
+						// backgroundPosition: "right top",
+					}}
+				>
 					<BriefDescription
 						id="section3"
 						title="ПРОТИВОПАКАЗАНИЯ"
 						description={articleData.side_effects}
 						containerStyle={{
-							backgroundColor: " #016245BF",
-							color: "white",
+							background: "rgba(255, 255, 255, 0.79)",
+
+							color: "black",
 							borderRadius: "10px",
 							boxShadow:
 								" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
