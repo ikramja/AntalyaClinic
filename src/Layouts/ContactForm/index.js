@@ -70,7 +70,7 @@ export default function ContactForm() {
 								/>
 							</Form.Item>
 						</Col>
-						<Col md={2}>
+						<Col md={3}>
 							<Form.Item
 								name="phone"
 								rules={[
@@ -78,7 +78,8 @@ export default function ContactForm() {
 										required: true,
 										message: "Пожалуйста введите номер телефона!",
 										pattern: /^\+?[0-9]{1,}$/,
-										message: "Please input a valid phone number!",
+										message:
+											"Пожалуйста, введите номер телефона в правильном формате",
 									},
 								]}
 							>
@@ -94,7 +95,7 @@ export default function ContactForm() {
 								rules={[
 									{
 										type: "email",
-										message: "The input is not valid E-mail!",
+										message: "Введен неверный адрес электронной почты",
 									},
 									{
 										required: true,
@@ -108,7 +109,7 @@ export default function ContactForm() {
 								/>
 							</Form.Item>
 						</Col>
-						<Col md={4}>
+						<Col md={3}>
 							<Form.Item>
 								<Input
 									className="contact-form-input"
@@ -135,7 +136,13 @@ export default function ContactForm() {
 						<Form.Item
 							name="terms_and_conditions"
 							valuePropName="checked"
-							rules={[{ validator: checkboxValidator }]}
+							rules={[
+								{
+									validator: checkboxValidator,
+									message:
+										"Пожалуйста, согласитесь на обработку персональных данных, чтобы оставить заявку на консультацию",
+								},
+							]}
 						>
 							<Checkbox>
 								Я даю согласие <a href="#">на обработку персональных данных</a>{" "}
