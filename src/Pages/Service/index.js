@@ -12,6 +12,7 @@ import ServicePageCover from "../../Assets/Covers/ServicePageCover.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 export default function Service() {
 	const [articleData, setArticleData] = useState(null);
@@ -97,7 +98,7 @@ export default function Service() {
 					description={articleData.recovery_description}
 				/>
 				<ResultsCarousel id="section6" images={articleData.results_images} />
-				<div>
+				<Container>
 					<BriefDescription
 						id="section3"
 						title="ПРОТИВОПАКАЗАНИЯ"
@@ -110,7 +111,7 @@ export default function Service() {
 								" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
 						}}
 					/>
-				</div>
+				</Container>
 				<BriefDescription
 					id="section7"
 					title="ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ"
