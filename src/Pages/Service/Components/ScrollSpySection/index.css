@@ -13,6 +13,18 @@
 	display: flex;
 	justify-content: center;
 }
+
+.slick-initialized {
+	background-color: #c4c4c4 !important;
+	display: flex;
+	justify-content: center;
+	padding: 10px 5px 10px 5px;
+}
+
+.slick-track {
+	width: 100%;
+}
+
 .menu-item {
 	display: flex;
 	align-items: center;
@@ -41,7 +53,7 @@
 	color: white !important;
 }
 
-.ant-menu-item-active {
+.menu-item-active * {
 	color: white !important;
 	border: none !important;
 }
@@ -78,4 +90,15 @@
 	overflow-y: hidden;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
+}
+
+.menu-wrapper {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.slick-slide {
+	display: flex !important;
+	justify-content: center;
+	cursor: pointer;
 }

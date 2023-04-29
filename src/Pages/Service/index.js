@@ -92,7 +92,7 @@ export default function Service() {
 					}}
 				>
 					<IconItemsList
-						id="section4"
+						id="section3"
 						hospitalization={articleData.day_of_surgery_hospitalization}
 						preparation={articleData.surgery_preparation}
 						anesthesia={articleData.anesthesia}
@@ -101,7 +101,7 @@ export default function Service() {
 					/>
 
 					<RecoveryIconList
-						id="section5"
+						id="section4"
 						recoveryPeriod={articleData.recovery_period}
 						hospitalization={articleData.recovery_hospitalization}
 						stitchesRemovalPeriod={articleData.stitches_removal_period}
@@ -113,7 +113,7 @@ export default function Service() {
 						description={articleData.recovery_description}
 					/>
 				</div>
-				<ResultsCarousel id="section6" images={articleData.results_images} />
+				<ResultsCarousel id="section5" images={articleData.results_images} />
 				<Container
 					style={{
 						// paddingTop: "2rem",
@@ -128,7 +128,7 @@ export default function Service() {
 					}}
 				>
 					<BriefDescription
-						id="section3"
+						id="section6"
 						title="ПРОТИВОПАКАЗАНИЯ"
 						description={articleData.side_effects}
 						containerStyle={{
