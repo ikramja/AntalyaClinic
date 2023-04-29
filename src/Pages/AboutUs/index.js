@@ -96,7 +96,7 @@ export default function AboutUs() {
 						<div className="px-5 green-frame-about-us-content">
 							<h1 className="pt-4 my-0">
 								<h5 className="my-0">размещение в стационаре</h5>
-								<h1 className="green-frame-about-us-title my-0">ПАЛАТЫ</h1>
+								<h2 className="green-frame-about-us-title my-0">ПАЛАТЫ</h2>
 							</h1>
 							<p>
 								Стандартным вариантом размещения являются комфортабельные
