@@ -8,11 +8,6 @@
 	font-size: 1.1rem;
 	font-weight: 700;
 }
-.ant-menu-horizontal {
-	background-color: #c4c4c4 !important;
-	display: flex;
-	justify-content: center;
-}
 
 .slick-initialized {
 	background-color: #c4c4c4 !important;
@@ -38,17 +33,6 @@
 	text-decoration: none !important;
 }
 
-:global(.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover) {
-	color: white !important;
-}
-
-:where(.css-dev-only-do-not-override-1me4733).ant-menu-light.ant-menu-horizontal
-	> .ant-menu-item-selected::after,
-:where(.css-dev-only-do-not-override-1me4733).ant-menu-light.ant-menu-horizontal
-	> .ant-menu-submenu-selected::after {
-	display: none;
-}
-
 .ant-menu-item-selected {
 	color: white !important;
 }
@@ -58,29 +42,11 @@
 	border: none !important;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after {
-	border: none !important;
-}
-
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover {
-	color: white !important;
-}
-
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected:hover {
-	color: white !important;
-}
-
 .arrow-down {
 	transform: rotate(90deg);
 }
 
 .menu-item:hover p {
-	color: white !important;
-}
-
-.ant-menu-item-selected .flex-element {
 	color: white !important;
 }
 
