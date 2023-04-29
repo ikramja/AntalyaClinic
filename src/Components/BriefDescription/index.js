@@ -9,16 +9,13 @@ export default function BriefDescription({
 	description,
 	button,
 	source,
-	briefStyle,
 	containerStyle,
 	headerStyle,
 	borderRight,
 }) {
 	return (
 		<div
-			style={
-				(containerStyle ? containerStyle : {}, briefStyle ? briefStyle : {})
-			}
+			style={containerStyle ? containerStyle : {}}
 			className="brief-description my-3 "
 		>
 			<Container>

@@ -68,7 +68,7 @@ export default function Service() {
 						id="section2"
 						title="КАК ПРОХОДИТ ОПЕРАЦИЯ"
 						description={articleData.how_surgery_works}
-						briefStyle={{
+						containerStyle={{
 							backgroundColor: " #016245BF",
 							color: "white",
 							borderRadius: "10px",
@@ -102,7 +102,7 @@ export default function Service() {
 						id="section3"
 						title="ПРОТИВОПАКАЗАНИЯ"
 						description={articleData.side_effects}
-						briefStyle={{
+						containerStyle={{
 							backgroundColor: " #016245BF",
 							color: "white",
 							borderRadius: "10px",
