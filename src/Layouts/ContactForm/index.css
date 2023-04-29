@@ -1,0 +1,56 @@
+.contact-form-paragraph {
+	text-align: justify;
+	hyphens: auto;
+	font-weight: 400;
+}
+.contact-form-header {
+	font-size: 2rem;
+	font-weight: 400;
+}
+.contact-form {
+	background: #e9ebec;
+}
+.form-contact-check-box {
+	text-align: left;
+	max-width: 620px;
+	font-weight: 500;
+}
+.form-contact-check-box a {
+	color: #000000;
+	border-bottom: 1.5px solid black;
+	text-decoration: none;
+}
+.form-contact-check-box a:hover {
+	color: #1d6a6a;
+}
+.contact-form-button {
+	border-radius: 12px;
+	display: flex;
+	background: #f5f4f4;
+	font-weight: 500;
+	align-items: center;
+	border: 1.5px solid #000000;
+}
+.form-contact-check-box .ant-checkbox-checked .ant-checkbox-inner {
+	background-color: #1d6a6a !important;
+}
+.form-contact-check-box .ant-checkbox .ant-checkbox-inner {
+	border-width: 1px;
+	border-color: black;
+	background-color: #e9ebec;
+}
+.contact-form .contact-form-input {
+	background: rgba(245, 244, 244, 0.8);
+	border: 1px solid black;
+	box-shadow: 0px 1.2px 1px rgba(31, 31, 31, 0.5);
+	border-radius: 10px;
+}
+.contact-form-button-container {
+	display: flex;
+	justify-content: flex-end;
+}
+@media only screen and (max-width: 400px) {
+	.contact-form-button-container {
+		justify-content: center !important;
+	}
+}

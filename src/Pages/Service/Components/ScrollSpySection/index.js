@@ -88,17 +88,7 @@ const ScrollSpy = () => {
 										</div>
 									),
 								},
-								{
-									key: "#section3",
-									href: "#section3",
-									title: (
-										<div className="flex-container">
-											<div className="center-div">
-												<p className="flex-element">ПРОТИВОПОКАЗАНИЯ</p>
-											</div>
-										</div>
-									),
-								},
+
 								{
 									key: "#section4",
 									href: "#section4",
@@ -128,6 +118,17 @@ const ScrollSpy = () => {
 										<div className="flex-container">
 											<div className="center-div">
 												<p className="flex-element">РЕЗУЛЬТАТ</p>
+											</div>
+										</div>
+									),
+								},
+								{
+									key: "#section3",
+									href: "#section3",
+									title: (
+										<div className="flex-container">
+											<div className="center-div">
+												<p className="flex-element">ПРОТИВОПОКАЗАНИЯ</p>
 											</div>
 										</div>
 									),
