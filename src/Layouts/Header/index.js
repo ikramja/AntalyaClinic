@@ -11,7 +11,7 @@ export default function Header(props) {
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				height: showMenu ? "100vh" : "auto",
+				minHeight: showMenu ? "100vh" : "auto",
 				margin: "0",
 			}}
 		>
