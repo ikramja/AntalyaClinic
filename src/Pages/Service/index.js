@@ -118,33 +118,32 @@ export default function Service() {
 						/>
 					</div>
 					<ResultsCarousel id="section5" images={articleData.results_images} />
-					<div
-						className="w-100"
+
+					<Container
+						className="pe-0"
 						style={{
 							paddingTop: "1rem",
-
 							backgroundImage: `url(${beforeLastBackground})`,
 							backgroundRepeat: "no-repeat",
-							backgroundSize: "auto 110%",
-							backgroundPosition: "right bottom",
+							backgroundSize: "auto 160% ",
+							backgroundPosition: "right",
 						}}
 					>
-						<Container>
-							<BriefDescription
-								id="section6"
-								title="ПРОТИВОПАКАЗАНИЯ"
-								description={articleData.side_effects}
-								containerStyle={{
-									background: "rgba(255, 255, 255, 0.79)",
+						<BriefDescription
+							id="section6"
+							title="ПРОТИВОПАКАЗАНИЯ"
+							description={articleData.side_effects}
+							containerStyle={{
+								background: "rgba(255, 255, 255, 0.79)",
 
-									color: "black",
-									borderRadius: "10px",
-									boxShadow:
-										" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
-								}}
-							/>
-						</Container>
-					</div>
+								color: "black",
+								borderRadius: "10px",
+								boxShadow:
+									" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
+							}}
+						/>
+					</Container>
+
 					<BriefDescription
 						id="section7"
 						title="ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ"
