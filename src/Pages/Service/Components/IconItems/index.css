@@ -14,6 +14,12 @@
 	width: 350px;
 }
 
+@media only screen and (max-width: 1200px) {
+	.icon-text {
+		width: auto;
+	}
+}
+
 @media only screen and (max-width: 538px) {
 	.icon-text {
 		font-size: 0.8rem;
