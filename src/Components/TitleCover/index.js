@@ -1,28 +1,28 @@
 import "./index.css";
 import Logo from "../../Assets/Logo/Logo.png";
 
-export default function CenterTitleCover(props) {
+export default function CenterTitleCover({title, titleAlign, subtitle, Cover}) {
 	return (
 		<div className="h-100 d-flex align-items-end">
 			<div
 				className={
 					"cover-text-container w-100" +
-					(props.titleAlign === "center"
+					(titleAlign === "center"
 						? " pb-4"
-						: props.titleAlign === "left"
+						: titleAlign === "left"
 						? ""
-						: props.titleAlign === "right"
+						: titleAlign === "right"
 						? ""
 						: "")
 				}
 				style={{
 					display: "flex",
 
-					alignItems: props.titleAlign === "center" ? "flex-end" : "",
+					alignItems: titleAlign === "center" ? "flex-end" : "",
 					justifyContent:
-						props.titleAlign === "left"
+						titleAlign === "left"
 							? ""
-							: props.titleAlign === "right"
+							: titleAlign === "right"
 							? "flex-end"
 							: "center",
 				}}
@@ -32,16 +32,16 @@ export default function CenterTitleCover(props) {
 					className="center-title-cover-text"
 				>
 					<h1>
-						<span className="center-title-cover-name">{props.title}</span>
+						<span className="center-title-cover-name">{title}</span>
 						<span className="center-title-cover-specialty">
-							{props.subtitle}
+							{subtitle}
 						</span>
 					</h1>
 				</div>
 				<img className="logo-left" src={Logo}></img>
 			</div>
 
-			<img className="w-100 title-cover" src={props.Cover} />
+			<img className="w-100 title-cover" src={Cover} />
 		</div>
 	);
 }

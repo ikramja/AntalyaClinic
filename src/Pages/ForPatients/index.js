@@ -12,7 +12,7 @@ export default function ForPatients() {
 	const [surgeriesData, setSurgeriesData] = useState(null);
 	useEffect(() => {
 		axios
-			.get(process.env.REACT_APP_BACKEND_BASE_URL + `/api/get/services/`)
+			.get('/get/services/')
 			.then((Response) => {
 				console.log(Response);
 				setSurgeriesData(Response.data);
