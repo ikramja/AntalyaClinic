@@ -30,47 +30,51 @@ export default function ResultsCarousel(props) {
 	};
 
 	return (
-		<div id={props.id} className="section">
-			<h1 className="results-carousel-header">РЕЗУЛЬТАТ</h1>
-			<h2 className="mb-5">До/После</h2>
-			<div className="w-100 center-div my-5">
-				<div className="result-carousel-image-container">
-					<LeftOutlined
-						className="prev-arrow"
-						onClick={() => {
-							setCurrentSlide(
-								currentSlide === 0 ? images.length - 1 : currentSlide - 1
-							);
-							carouselRef.current.prev();
-						}}
-					/>
-					<Carousel
-						{...settings}
-						ref={carouselRef}
-						className="custom-carousel"
-						afterChange={(current) => setCurrentSlide(current)}
-					>
-						{props.images.map((image) => (
-							<div key={image}>
-								<Image
-									className="result-carousel-image"
-									src={image.image}
-									alt={getFilenameWithoutExtension(image.image)}
-								/>
-							</div>
-						))}
-					</Carousel>
-					<RightOutlined
-						className="next-arrow"
-						onClick={() => {
-							setCurrentSlide(
-								currentSlide === images.length - 1 ? 0 : currentSlide + 1
-							);
-							carouselRef.current.next();
-						}}
-					/>
+		<div>
+			{props.images.length > 0 && (
+				<div id={props.id} className="section">
+					<h1 className="results-carousel-header mt-5">РЕЗУЛЬТАТ</h1>
+					<h2 className="mb-5">До/После</h2>
+					<div className="w-100 center-div my-5">
+						<div className="result-carousel-image-container">
+							<LeftOutlined
+								className="prev-arrow"
+								onClick={() => {
+									setCurrentSlide(
+										currentSlide === 0 ? images.length - 1 : currentSlide - 1
+									);
+									carouselRef.current.prev();
+								}}
+							/>
+							<Carousel
+								{...settings}
+								ref={carouselRef}
+								className="custom-carousel"
+								afterChange={(current) => setCurrentSlide(current)}
+							>
+								{props.images.map((image) => (
+									<div key={image}>
+										<Image
+											className="result-carousel-image"
+											src={image.image}
+											alt={getFilenameWithoutExtension(image.image)}
+										/>
+									</div>
+								))}
+							</Carousel>
+							<RightOutlined
+								className="next-arrow"
+								onClick={() => {
+									setCurrentSlide(
+										currentSlide === images.length - 1 ? 0 : currentSlide + 1
+									);
+									carouselRef.current.next();
+								}}
+							/>
+						</div>
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 }

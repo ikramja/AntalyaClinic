@@ -8,11 +8,18 @@
 	font-size: 1.1rem;
 	font-weight: 700;
 }
-.ant-menu-horizontal {
+
+.menu-wrapper .slick-initialized {
 	background-color: #c4c4c4 !important;
 	display: flex;
 	justify-content: center;
+	padding: 10px 5px 10px 5px;
 }
+
+.slick-track {
+	width: 100%;
+}
+
 .menu-item {
 	display: flex;
 	align-items: center;
@@ -26,38 +33,13 @@
 	text-decoration: none !important;
 }
 
-:global(.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover) {
-	color: white !important;
-}
-
-:where(.css-dev-only-do-not-override-1me4733).ant-menu-light.ant-menu-horizontal
-	> .ant-menu-item-selected::after,
-:where(.css-dev-only-do-not-override-1me4733).ant-menu-light.ant-menu-horizontal
-	> .ant-menu-submenu-selected::after {
-	display: none;
-}
-
 .ant-menu-item-selected {
 	color: white !important;
 }
 
-.ant-menu-item-active {
+.menu-item-active * {
 	color: white !important;
 	border: none !important;
-}
-
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after {
-	border: none !important;
-}
-
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover {
-	color: white !important;
-}
-
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected:hover {
-	color: white !important;
 }
 
 .arrow-down {
@@ -68,14 +50,21 @@
 	color: white !important;
 }
 
-.ant-menu-item-selected .flex-element {
-	color: white !important;
-}
-
 .scrollable-menu {
 	display: flex;
 	overflow-x: auto;
 	overflow-y: hidden;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
+}
+
+.menu-wrapper {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.slick-slide {
+	display: flex !important;
+	justify-content: center;
+	cursor: pointer;
 }

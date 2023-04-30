@@ -13,54 +13,67 @@ const { Footer } = Layout;
 
 const App = () => {
 	return (
-		<Footer className="text-dark footer px-0 w-100">
-			<Container>
-				<Row className=" w-100">
-					<Col sm="3">
-						<h5 className="footer-description-title">EL ARTE CLINIC</h5>
-
-						<p>contact @здесь будет почта</p>
+		<div>
+			<Footer className="text-dark footer">
+				<Row>
+					<Col sm="3" className="mb-3">
+						<h1 className="footer-description-title">EL ARTE CLINIC</h1>
+						<p className="footer-description-paragraph">
+							contact @здесь будет почта
+						</p>
 					</Col>
-					<Col sm="3" className=" footer-col">
-						<div className="footer-column">
-							<h5>ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ</h5>
-							<ul>
-								<li className="my-2 ">
+					<Col sm="6" className="mb-3">
+						<div className="footer-col1">
+							<h1>ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ</h1>
+							<div
+								className="footer-list"
+								style={{
+									listStyle: "none !important",
+								}}
+							>
+								<p
+									className="my-2 "
+									style={{ fontWeight: "400", color: "#323334" }}
+								>
 									<a className="footer-link" href="#">
 										Соглашение об обработке персональных данных
 									</a>
-								</li>
-								<li className="my-2 ">
+								</p>
+								<p
+									className="my-2"
+									style={{ fontWeight: "400", color: "#323334" }}
+								>
 									<a className="footer-link" href="#">
 										Публичная Оферта
 									</a>
-								</li>
-								<li className="my-2">
+								</p>
+								<p
+									className="my-2"
+									style={{ fontWeight: "400", color: "#323334" }}
+								>
 									<a className="footer-link" href="#">
 										Политика Конфиденциальности
 									</a>
-								</li>
-							</ul>
+								</p>
+							</div>
 						</div>
 					</Col>
-					<Col sm="6" className=" footer-col">
-						<div className="footer-column">
-							<div className="footer-right-content">
-								<div className="footer-right">
-									<h5>ГРАФИК РАБОТЫ</h5>
-									<p>
-										<span>Понедельник - Пятница с 9:00 до 19:00 </span>
-										<br />
-										<span>Суббота с 10:00 до 17:00</span>
-									</p>
-								</div>
-							</div>
+					<Col sm="3">
+						<div className="footer-col2">
+							<h1>ГРАФИК РАБОТЫ</h1>
+							<p style={{ fontWeight: "400", color: "#323334" }}>
+								<span>Понедельник - Пятница с 9:00 до 19:00 </span>
+								<br />
+								<span style={{ fontWeight: "400", color: "#323334" }}>
+									Суббота с 10:00 до 17:00
+								</span>
+							</p>
 						</div>
 					</Col>
 				</Row>
 				<Row>
 					<Col sm="3">
-						<div className="footer-column">
+						<div>
 							<div className="my-3">
 								<p className="my-1 footer-social-media-container">
 									Мы в социальных сетях
@@ -75,11 +88,11 @@ const App = () => {
 						</div>
 					</Col>
 				</Row>
-			</Container>
+			</Footer>
 			<div className="footer-bar py-1">
 				<p className="m-0">© 2023 EL ARTE CLINIC All Rights Reserved</p>
 			</div>
-		</Footer>
+		</div>
 	);
 };
 

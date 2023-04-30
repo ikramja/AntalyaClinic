@@ -1,24 +1,35 @@
 import "./index.css";
 import { Sling as Hamburger } from "hamburger-react";
 import MenuTabs from "../../Components/MenuTabs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import HeaderLogo from "../../Assets/Logo/headerLogo/HeaderLogo.png";
 export default function Header(props) {
 	const [showMenu, setShowMenu] = useState(false);
+	const [small, setSmall] = useState(false);
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			window.addEventListener("scroll", () =>
+				setSmall(window.pageYOffset > 100)
+			);
+		}
+	}, []);
 	return (
 		<div
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				height: showMenu ? "100vh" : "auto",
+				minHeight: showMenu ? "100vh" : "auto",
 				margin: "0",
 			}}
 		>
-			<header>
-				<div className="header px-4 py-2">
+			<header className="web-app-header">
+				<div className={`header px-4 py-1 ${small ? "scroller" : ""}`}>
 					<Link to="/" className="link-no-text-decoration">
-						<h1 className="my-auto header-text">EL ARTE CLINIC</h1>
+						<div className="h-100 header-text-background">
+							<h1 className="header-text pt-2">EL ARTE CLINIC</h1>
+						</div>
 					</Link>
 					<Hamburger
 						className="menu-icon"

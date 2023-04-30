@@ -9,7 +9,9 @@ function App() {
 	return (
 		<div className="App">
 			<Header setShowContent={setShowContent} />
-			{showContent && <Main />}
+
+			<div className="content">{showContent && <Main />}</div>
+
 			<Footer />
 		</div>
 	);

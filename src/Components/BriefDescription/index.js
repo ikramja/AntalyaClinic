@@ -1,6 +1,6 @@
 import "./index.css";
 import { Button } from "antd";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function BriefDescription({
 	id,
@@ -8,35 +8,62 @@ export default function BriefDescription({
 	subtitle,
 	description,
 	button,
+	source,
 	containerStyle,
 	headerStyle,
 }) {
 	return (
-		<div style={containerStyle ? containerStyle : {}}>
-			<Container className="mb-5">
-				<div id={id} className="section">
-					<div className="my-5 center-div">
-						<h1
-							className=" my-2 Brief-description-header"
-							style={headerStyle ? headerStyle : {}}
-						>
-							{title}
-						</h1>
-						{subtitle && <h4 className="font-weight-bold">{subtitle}</h4>}
-					</div>
-					<div
-						className="Brief-description px-4"
-						dangerouslySetInnerHTML={{ __html: description }}
-					/>
-					{button && (
-						<div className="w-100 d-flex justify-content-end px-4">
-							<Button className="brief-description-button px-4 py-4 my-4">
-								{button}
-							</Button>
+		<div
+			style={containerStyle ? containerStyle : {}}
+			className="brief-description my-3 "
+		>
+			<div>
+				<Container>
+					<div id={id} className="section">
+						<div>
+							<h1
+								className="Brief-description-header mt-2"
+								style={headerStyle ? headerStyle : {}}
+							>
+								{title}
+							</h1>
+
+							{subtitle && (
+								<div>
+									<br />
+									<h2 className="font-weight-bold pb-3">{subtitle}</h2>
+								</div>
+							)}
 						</div>
-					)}
-				</div>
-			</Container>
+					</div>
+				</Container>
+
+				<Container className="my-4">
+					<div className="py-2">
+						<Row>
+							{source && (
+								<Col md={4}>
+									<img className="Brief-description-image" src={source}></img>
+								</Col>
+							)}
+							<Col md={source ? 8 : 12}>
+								<div
+									className="Brief-description px-4 "
+									dangerouslySetInnerHTML={{ __html: description }}
+								/>
+							</Col>
+						</Row>
+
+						{button && (
+							<div className="w-100 d-flex justify-content-end px-4">
+								<Button className="brief-description-button px-4 py-4 my-4">
+									{button}
+								</Button>
+							</div>
+						)}
+					</div>
+				</Container>
+			</div>
 		</div>
 	);
 }
