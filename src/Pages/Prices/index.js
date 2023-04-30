@@ -4,6 +4,7 @@ import axios from "axios";
 import PriceCover from "../../Assets/Covers/Price.png";
 import React, { useState, useEffect } from "react";
 import TitleCover from "../../Components/TitleCover";
+import ContactForm from "../../Layouts/ContactForm";
 
 export default function Prices() {
 	const [PricesData, setPricesData] = useState(null);
@@ -16,11 +17,18 @@ export default function Prices() {
 			});
 	}, []);
 	return (
-		PricesData && (
-			<div>
-				<TitleCover title="СТОИМОСТЬ" titleAlign="center" Cover={PriceCover} />
-				<PriceCategoryMenu PriceMenuData={PricesData} />
-			</div>
-		)
+		<div>
+			{PricesData && (
+				<div>
+					<TitleCover
+						title="СТОИМОСТЬ"
+						titleAlign="center"
+						Cover={PriceCover}
+					/>
+					<PriceCategoryMenu PriceMenuData={PricesData} />
+				</div>
+			)}
+			<ContactForm />
+		</div>
 	);
 }

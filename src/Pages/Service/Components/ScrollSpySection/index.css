@@ -14,7 +14,7 @@
 	justify-content: center;
 }
 
-.slick-initialized {
+.menu-wrapper .slick-initialized {
 	background-color: #c4c4c4 !important;
 	display: flex;
 	justify-content: center;

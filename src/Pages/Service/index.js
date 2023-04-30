@@ -13,6 +13,7 @@ import articleLeftTree from "../../Assets/ServicesIcons/articleLeftTree.png";
 import ServicePageCover from "../../Assets/Covers/ServicePageCover.png";
 import axios from "axios";
 import ContactForm from "../../Layouts/ContactForm";
+import ImageBriefDescription from "../../Components/ImageBriefDescription";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -46,9 +47,9 @@ export default function Service() {
 					)}
 					<ScrollSpySection />
 
-					<BriefDescription
+					<ImageBriefDescription
 						id="section1"
-						borderRight={{ borderRight: " 10px solid #016245" }}
+						borderRight={{ borderRight: " 30px solid #016245" }}
 						subtitle="(ПОКАЗАНИЯ К ОПЕРАЦИИ)"
 						title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 						description={articleData.surgery_for_whom}
