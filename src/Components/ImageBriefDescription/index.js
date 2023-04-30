@@ -23,7 +23,7 @@ export default function ImageBriefDescription(props) {
 						{props.subtitle && (
 							<div>
 								<br />
-								<h2 className="font-weight-bold image-brief-description-subtitle pb-3 pe-5">
+								<h2 className="image-brief-description-subtitle pb-3">
 									{props.subtitle}
 								</h2>
 							</div>
