@@ -15,6 +15,9 @@
 .prev-arrow {
 	left: -50px;
 }
+.slick-active Button {
+	display: none;
+}
 
 .next-arrow {
 	right: -50px;

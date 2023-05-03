@@ -18,7 +18,6 @@ export default function PriceAccordionList(props) {
 
 	const handlePanelChange = (activeKey) => {
 		setActivePanel(activeKey);
-		console.log("hh", activeKey);
 	};
 
 	const isAnyPanelActive = () => {

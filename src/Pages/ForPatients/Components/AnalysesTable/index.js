@@ -20,9 +20,13 @@ export default function AnalysesTable(props) {
 		<div>
 			<div className="AnalysesTable">
 				<Container>
-					<div className="my-4 w-100 ">
-						<h1 className="for-patients-header mb-5">
-							Список анализов и диагностические исследования, срок их действия
+					<div className="my-4 w-100">
+						<h1
+							className="for-patients-header mb-5"
+							style={{ display: "flex", flexDirection: "column" }}
+						>
+							<span>Список анализов и диагностические </span>
+							<span>исследования, срок их действия</span>
 						</h1>
 						<div className="analyses-table-container">
 							<Row className="w-100 p-3">
@@ -61,7 +65,7 @@ export default function AnalysesTable(props) {
 				</Container>
 			</div>
 			<Container>
-				<div className="description-under-analyses-table mb-3 px-4 py-2">
+				<div className="description-under-analyses-table mb-5 px-4 py-2 ">
 					Если у пациента есть какие-либо системные заболевания, то необходим
 					осмотр профильных врачей. При выборе общего наркоза потребуется
 					консультация анестезиолога и терапевта, а также проведение
@@ -75,8 +79,10 @@ export default function AnalysesTable(props) {
 					backgroundPosition: "center right",
 					backgroundSize: "auto 100%",
 				}}
-				headerStyle={{ maxWidth: "600px" }}
-				title="Подготовка к операции: рекомендации и ограничения"
+				title=<div style={{ display: "flex", flexDirection: "column" }}>
+					<span>Подготовка к операции:</span>
+					<span> рекомендации и ограничения</span>
+				</div>
 				description={
 					props.surgeriesData.find(
 						(item) => item.cover_header === selectedSurgery

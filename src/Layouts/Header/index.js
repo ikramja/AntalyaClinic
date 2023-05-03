@@ -4,6 +4,7 @@ import MenuTabs from "../../Components/MenuTabs";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../../Assets/Logo/headerLogo/HeaderLogo.png";
+import MenuDropDowns from "../../Components/MenuDropDowns";
 export default function Header(props) {
 	const [showMenu, setShowMenu] = useState(false);
 	const [small, setSmall] = useState(false);
@@ -47,6 +48,7 @@ export default function Header(props) {
 					setShowContent={props.setShowContent}
 				/>
 			)}
+			{/* <MenuDropDowns /> */}
 		</div>
 	);
 }

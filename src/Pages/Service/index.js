@@ -125,13 +125,14 @@ export default function Service() {
 							paddingTop: "1rem",
 							backgroundImage: `url(${beforeLastBackground})`,
 							backgroundRepeat: "no-repeat",
-							backgroundSize: "auto 160% ",
-							backgroundPosition: "right",
+							backgroundSize: "auto 119% ",
+							backgroundPosition: "right center",
 						}}
 					>
 						<BriefDescription
 							id="section6"
 							title="ПРОТИВОПАКАЗАНИЯ"
+							headerStyle={{ color: "#016245" }}
 							description={articleData.side_effects}
 							containerStyle={{
 								background: "rgba(255, 255, 255, 0.79)",

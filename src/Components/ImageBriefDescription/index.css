@@ -11,9 +11,6 @@
 	font-weight: 400;
 }
 .image-Brief-description-image {
-	/* height: 380px; */
-	max-width: 350px;
-	object-fit: cover;
 	float: left;
 	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.381));
 }

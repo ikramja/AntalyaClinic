@@ -62,16 +62,7 @@ const MenuTabs = (props) => {
 			key: "О НАС",
 			children: (
 				<Row className="px-3">
-					<Col>
-						<Card />
-					</Col>
-					<Col>
-						<Card />
-					</Col>
-					<Col>
-						<Card />
-					</Col>
-					<Col>
+					<Col md={3}>
 						<Card />
 					</Col>
 				</Row>

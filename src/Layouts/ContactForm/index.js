@@ -128,7 +128,7 @@ export default function ContactForm() {
 						</Form.Item>
 					</Row>
 					<Row className="form-contact-check-box">
-						<Form.Item>
+						<Form.Item className="mb-3">
 							<Checkbox>
 								Хочу получать информацию о специальных предложениях и акциях
 							</Checkbox>
