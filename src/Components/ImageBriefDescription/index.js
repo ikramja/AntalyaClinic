@@ -16,7 +16,7 @@ export default function ImageBriefDescription(props) {
 								src={props.source}
 							></img>
 						</Col>
-						<Col lg={7} className="px-1">
+						<Col lg={7} className="ps-4 image-brief-description-text-column">
 							<div id={props.id} className="section">
 								<h1 className="image-brief-description-header mt-2 mb-0">
 									{props.title}

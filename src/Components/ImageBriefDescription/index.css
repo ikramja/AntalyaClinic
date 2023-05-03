@@ -13,3 +13,9 @@
 .image-Brief-description-image {
 	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.381));
 }
+/*  */
+@media only screen and (max-width: 1992px) {
+	.image-brief-description-text-column {
+		padding-left: 0 !important;
+	}
+}
