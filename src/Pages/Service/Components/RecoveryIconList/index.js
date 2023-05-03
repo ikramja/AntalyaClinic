@@ -24,14 +24,14 @@ export default function RecoveryIconList(props) {
 					<h1 className="mb-5 pt-3 icon-items-list-header">ВОССТАНОВЛЕНИЕ</h1>
 					<div className="mx-5 icon-items-list">
 						<Row>
-							<Col md="6" className="my-2 ps-md-2">
+							<Col lg="6" className="my-2 ps-md-2">
 								<IconItems
 									title="ПЕРИОД ВОССТАНОВЛЕНИЯ"
 									description={props.recoveryPeriod}
 									icon={DurationIcon}
 								/>
 							</Col>
-							<Col md="6" className="my-2 ps-md-2">
+							<Col lg="6" className="my-2 ps-md-2">
 								<IconItems
 									title="ГОСПИТАЛИЗАЦИЯ"
 									description={props.hospitalization}
@@ -40,14 +40,14 @@ export default function RecoveryIconList(props) {
 							</Col>
 						</Row>
 						<Row>
-							<Col md="6" className="my-2 ps-md-2">
+							<Col lg="6" className="my-2 ps-md-2">
 								<IconItems
 									title="СНЯТИЕ ШВОВ"
 									description={props.stitchesRemovalPeriod}
 									icon={SuturesRemoveIcon}
 								/>
 							</Col>
-							<Col md="6" className="my-2 ps-md-2">
+							<Col lg="6" className="my-2 ps-md-2">
 								<IconItems
 									title="ПОДГОТОВКА К ОПЕРАЦИИ"
 									description={props.numberOfPostSurgeryVisits}
@@ -56,14 +56,14 @@ export default function RecoveryIconList(props) {
 							</Col>
 						</Row>
 						<Row>
-							<Col md="6" className="my-2 ps-md-2">
+							<Col lg="6" className="my-2 ps-md-2">
 								<IconItems
 									title="ЛЕКАРСТВА"
 									description={props.medicines}
 									icon={MedicinesIcon}
 								/>
 							</Col>
-							<Col md="6" className=" my-2">
+							<Col lg="6" className=" my-2">
 								<IconItems
 									title="ВНИМАНИЕ!!!"
 									description={props.attention}
