@@ -3,7 +3,7 @@ import "./index.css";
 export default function IconItems(props) {
 	return (
 		<div
-			className="icon-items-data px-3 py-3"
+			className="icon-items-data px-3 py-3 h-100"
 			style={{
 				background: "#FFFFFF",
 				boxShadow:
