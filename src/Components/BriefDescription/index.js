@@ -15,31 +15,31 @@ export default function BriefDescription({
 	return (
 		<div
 			style={containerStyle ? containerStyle : {}}
-			className="brief-description my-3 "
+			className="brief-description my-3"
 		>
 			<div>
 				<Container>
 					<div id={id} className="section">
 						<div>
 							<h1
-								className="Brief-description-header mt-2"
+								className="Brief-description-header mt-2 my-1"
 								style={headerStyle ? headerStyle : {}}
 							>
 								{title}
 							</h1>
 
-							{subtitle && (
+							{/* {subtitle && (
 								<div>
 									<br />
 									<h2 className="font-weight-bold pb-3">{subtitle}</h2>
 								</div>
-							)}
+							)} */}
 						</div>
 					</div>
 				</Container>
 
-				<Container className="my-4">
-					<div className="py-2">
+				<Container className="mb-4">
+					<div>
 						<Row>
 							{source && (
 								<Col md={4}>

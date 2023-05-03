@@ -83,7 +83,7 @@ export default function RecoveryIconList(props) {
 						color: "#FFFFFF",
 					}}
 				>
-					<h6 className="icon-description-header mt-5 pt-2 ">
+					<h6 className="icon-description-header mt-5 pt-2 mb-2">
 						ОСОБЕННОСТИ РЕАБИЛИТАЦИИ
 					</h6>
 					<div
