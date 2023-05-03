@@ -22,14 +22,14 @@ export default function IconItemsList(props) {
 						<h1 className="mb-5 pt-3 icon-items-list-header">ДЕНЬ ОПЕРАЦИИ</h1>
 						<div className="mx-5 icon-items-list">
 							<Row>
-								<Col md="6" className="my-2 ps-md-2">
+								<Col lg="6" className="my-2 ps-md-2">
 									<IconItems
 										title="ГОСПИТАЛИЗАЦИЯ"
 										description={props.hospitalization}
 										icon={HospitalizationIcon}
 									/>
 								</Col>
-								<Col md="6" className="my-2 ps-md-2">
+								<Col lg="6" className="my-2 ps-md-2">
 									<IconItems
 										title="ПОДГОТОВКА К ОПЕРАЦИИ"
 										description={props.preparation}
@@ -38,14 +38,14 @@ export default function IconItemsList(props) {
 								</Col>
 							</Row>
 							<Row>
-								<Col md="6" className="my-2 ps-md-2">
+								<Col lg="6" className="my-2 ps-md-2">
 									<IconItems
 										title="НАРКОЗ"
 										description={props.anesthesia}
 										icon={AnesthesiaIcon}
 									/>
 								</Col>
-								<Col md="6" className="my-2">
+								<Col lg="6" className="my-2">
 									<IconItems
 										title="ДЛИТЕЛЬНОСТЬ ОПЕРАЦИИ"
 										description={props.duration}
