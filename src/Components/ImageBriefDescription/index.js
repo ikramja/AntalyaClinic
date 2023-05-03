@@ -5,7 +5,7 @@ export default function ImageBriefDescription(props) {
 	return (
 		<Container>
 			<div
-				className=" my-5 w-100"
+				className=" my-5 "
 				style={props.borderRight ? props.borderRight : {}}
 			>
 				<Row className="w-100">
