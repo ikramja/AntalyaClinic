@@ -9,13 +9,13 @@ export default function ImageBriefDescription(props) {
 				style={props.borderRight ? props.borderRight : {}}
 			>
 				<Row className="w-100">
-					<Col md={5} className="px-0">
+					<Col lg={5} className="px-0">
 						<img
 							className="image-Brief-description-image w-100 h-100"
 							src={props.source}
 						></img>
 					</Col>
-					<Col md={7} className="px-1">
+					<Col lg={7} className="px-1">
 						<div id={props.id} className="section">
 							<h1 className="image-brief-description-header mt-2 mb-0">
 								{props.title}
