@@ -13,7 +13,7 @@ export default function ImageBriefDescription(props) {
 				</Col>
 				<Col lg={8} className="image-brief-description-text-column ">
 					<div id={props.id} className="section px-5">
-						<h1 className="image-brief-description-header mt-2 mb-2 ">
+						<h1 className="image-brief-description-header mt-2 mb-1 ">
 							{props.title}
 						</h1>
 
