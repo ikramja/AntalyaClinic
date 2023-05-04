@@ -14,7 +14,7 @@ export default function Card(props) {
 					<img src={props.cardImage} className="menu-card-image" />
 				</div>
 				<div
-					className="menu-card-title my-1"
+					className="menu-card-title my-1 "
 					onClick={() => {
 						props.setShowMenu(false);
 						props.setShowContent(true);

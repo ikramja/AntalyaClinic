@@ -49,7 +49,10 @@ export default function Service() {
 
 					<ImageBriefDescription
 						id="section1"
-						borderRight={{ borderRight: " 30px solid #016245" }}
+						borderRight={{
+							borderRight: " 50px solid #016245",
+							paddingRight: "3rem",
+						}}
 						subtitle="(ПОКАЗАНИЯ К ОПЕРАЦИИ)"
 						title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 						description={articleData.surgery_for_whom}
