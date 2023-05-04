@@ -7,7 +7,7 @@ export default function ImageBriefDescription(props) {
 			<Row className="w-100 mx-5">
 				<Col lg={6} className="px-0">
 					<img
-						className="image-Brief-description-image w-100 "
+						className="image-Brief-description-image w-100"
 						src={props.source}
 					></img>
 				</Col>

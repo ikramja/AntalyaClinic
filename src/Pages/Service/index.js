@@ -134,7 +134,7 @@ export default function Service() {
 					>
 						<BriefDescription
 							id="section6"
-							title="ПРОТИВОПАКАЗАНИЯ"
+							title="ПРОТИВОПОКАЗАНИЯ"
 							headerStyle={{ color: "#016245" }}
 							description={articleData.side_effects}
 							containerStyle={{
