@@ -77,6 +77,15 @@ const MenuTabs = (props) => {
 					<Col md={3}>
 						<Card cardImage={about} cardTitle="НАШИ ДОКТОРА" />
 					</Col>
+					<Col md={3}>
+						<Card cardImage={blog} cardTitle="БЛОГ" />
+					</Col>
+					<Col md={3}>
+						<Card cardImage={forPatient} cardTitle="СЕРВИС" />
+					</Col>
+					<Col md={3}>
+						<Card cardImage={service} cardTitle="ДЛЯ ПАЦИЕНТОВ" />
+					</Col>
 				</Row>
 			),
 		},

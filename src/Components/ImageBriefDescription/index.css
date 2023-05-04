@@ -14,8 +14,8 @@
 	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.381));
 }
 .image-brief-description-text-column {
-	padding-left: 4rem;
-	padding-right: 2rem;
+	padding-left: 4rem !important;
+	padding-right: 2rem !important;
 }
 /*  */
 @media only screen and (max-width: 992px) {
