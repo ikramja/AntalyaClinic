@@ -4,17 +4,16 @@ import { Button } from "antd";
 import StandardCard from "../../../../Components/StandardCard";
 import Doctor_1_Image from "../../../../Assets/AboutOurDoctors/Doctor_1.png";
 import { useEffect, useState } from "react";
+
 import axios from "axios";
 import { Link } from "react-router-dom";
 export default function DoctorsList() {
 	const [doctors, setDoctors] = useState(null);
 	const [showAllDoctors, setShowAllDoctors] = useState(false);
 	useEffect(() => {
-		axios
-			.get('/get/doctors/')
-			.then(({data}) => {
-				setDoctors(data);
-			});
+		axios.get("/get/doctors/").then(({ data }) => {
+			setDoctors(data);
+		});
 	}, []);
 	return (
 		doctors && (

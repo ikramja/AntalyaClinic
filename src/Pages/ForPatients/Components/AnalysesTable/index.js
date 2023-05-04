@@ -21,13 +21,11 @@ export default function AnalysesTable(props) {
 			<div className="AnalysesTable">
 				<Container>
 					<div className="my-4 w-100">
-						<h1
-							className="for-patients-header mb-5"
-							style={{ display: "flex", flexDirection: "column" }}
-						>
-							<span>Список анализов и диагностические </span>
-							<span>исследования, срок их действия</span>
-						</h1>
+						<div className="center-div">
+							<h1 className="for-patients-header mb-5">
+								Список анализов и диагностические исследования, срок их действия
+							</h1>
+						</div>
 						<div className="analyses-table-container">
 							<Row className="w-100 p-3">
 								<Col md={8}>

@@ -2,13 +2,25 @@ import { Affix, Tabs } from "antd";
 import Card from "./Components/Card";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+
 import "./index.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import about from "../../Assets/MenuTab/about.PNG";
+import service from "../../Assets/MenuTab/service.png";
+import forPatient from "../../Assets/MenuTab/forPatient.png";
+import blog from "../../Assets/MenuTab/blog.png";
 
 const MenuTabs = (props) => {
+	const [doctors, setDoctors] = useState(null);
 	const [categoryData, setCategoryData] = useState(null);
+	const [showAllDoctors, setShowAllDoctors] = useState(false);
+	useEffect(() => {
+		axios.get("/get/doctors/").then(({ data }) => {
+			setDoctors(data);
+		});
+	}, []);
 	useEffect(() => {
 		axios.get("/get/categories/").then(({ data }) => {
 			console.log(data);
@@ -61,9 +73,9 @@ const MenuTabs = (props) => {
 			label: <div className="menu-tab-title">О НАС</div>,
 			key: "О НАС",
 			children: (
-				<Row className="px-3">
+				<Row className="w-100">
 					<Col md={3}>
-						<Card />
+						<Card cardImage={about} cardTitle="НАШИ ДОКТОРА" />
 					</Col>
 				</Row>
 			),
@@ -71,17 +83,44 @@ const MenuTabs = (props) => {
 		{
 			label: <div className="menu-tab-title">ГИД ПО ОТДЫХУ</div>,
 			key: "ГИД ПО ОТДЫХУ",
-			children: `ГИД ПО ОТДЫХУ`,
+			children: (
+				<Row className="w-100">
+					<Col md={3}>
+						<Card cardImage={blog} cardTitle="БЛОГ" />
+					</Col>
+				</Row>
+			),
 		},
 		{
-			label: <div className="menu-tab-title">ЦЕНЫ</div>,
+			label: (
+				<div className="menu-tab-title">
+					<Link to="/">ЦЕНЫ</Link>
+				</div>
+			),
 			key: "ЦЕНЫ",
-			children: `ЦЕНЫ`,
+			children: (
+				<Row className="w-100">
+					<Col md={3}>
+						<Card cardImage={forPatient} cardTitle="СЕРВИС" />
+					</Col>
+				</Row>
+			),
 		},
+
 		{
-			label: <div className="menu-tab-title">КОНТАКТЫ</div>,
+			label: (
+				<div className="menu-tab-title">
+					<Link to="/">КОНТАКТЫ</Link>
+				</div>
+			),
 			key: "КОНТАКТЫ",
-			children: "f",
+			children: (
+				<Row className="w-100">
+					<Col md={3}>
+						<Card cardImage={service} cardTitle="ДЛЯ ПАЦИЕНТОВ" />
+					</Col>
+				</Row>
+			),
 		},
 	];
 	const onChange = (key) => {

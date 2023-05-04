@@ -1,6 +1,9 @@
 .table-analyses-cover {
 	object-fit: cover;
 }
+.for-patients-header {
+	max-width: 800px;
+}
 .table-analyses {
 	border-collapse: separate;
 }
