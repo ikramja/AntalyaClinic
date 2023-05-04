@@ -9,8 +9,8 @@
 	text-align: justify;
 	hyphens: auto;
 	font-weight: 400;
-	max-height: 700px;
 }
+
 .image-Brief-description-image {
 	max-height: 700px;
 	object-fit: cover;
