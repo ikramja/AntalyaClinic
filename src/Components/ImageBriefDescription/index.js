@@ -13,17 +13,14 @@ export default function ImageBriefDescription(props) {
 				</Col>
 				<Col lg={6} className="image-brief-description-text-column ">
 					<div id={props.id} className="section px-5">
-						<h1 className="image-brief-description-header mt-2 mb-0">
+						<h1 className="image-brief-description-header mt-2 mb-2 ">
 							{props.title}
 						</h1>
 
 						{props.subtitle && (
-							<div>
-								<br />
-								<h2 className="image-brief-description-subtitle mb-3">
-									{props.subtitle}
-								</h2>
-							</div>
+							<h2 className="image-brief-description-subtitle mb-3">
+								{props.subtitle}
+							</h2>
 						)}
 
 						<div
