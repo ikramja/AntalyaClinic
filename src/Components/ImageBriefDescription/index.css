@@ -11,6 +11,7 @@
 	font-weight: 400;
 }
 .image-Brief-description-image {
+	max-height: 800px;
 	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.381));
 }
 .image-brief-description-text-column {

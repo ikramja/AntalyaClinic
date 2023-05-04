@@ -92,13 +92,6 @@ const MenuTabs = (props) => {
 		{
 			label: <div className="menu-tab-title">ГИД ПО ОТДЫХУ</div>,
 			key: "ГИД ПО ОТДЫХУ",
-			children: (
-				<Row className="w-100">
-					<Col md={3}>
-						<Card cardImage={blog} cardTitle="БЛОГ" />
-					</Col>
-				</Row>
-			),
 		},
 		{
 			label: (
@@ -107,13 +100,6 @@ const MenuTabs = (props) => {
 				</div>
 			),
 			key: "ЦЕНЫ",
-			children: (
-				<Row className="w-100">
-					<Col md={3}>
-						<Card cardImage={forPatient} cardTitle="СЕРВИС" />
-					</Col>
-				</Row>
-			),
 		},
 
 		{
@@ -123,13 +109,6 @@ const MenuTabs = (props) => {
 				</div>
 			),
 			key: "КОНТАКТЫ",
-			children: (
-				<Row className="w-100">
-					<Col md={3}>
-						<Card cardImage={service} cardTitle="ДЛЯ ПАЦИЕНТОВ" />
-					</Col>
-				</Row>
-			),
 		},
 	];
 	const onChange = (key) => {
