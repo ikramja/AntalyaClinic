@@ -1,8 +1,13 @@
 .home-carousel-image {
 	object-fit: cover;
-	max-height: 500px;
+	max-height: 800px;
+	filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.2));
+	border-radius: 10px;
 }
 .home-carousel-text {
 	padding-left: 4rem !important;
 	padding-right: 2rem !important;
+}
+.image-Brief-description {
+	font-size: 1.5rem;
 }

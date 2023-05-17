@@ -71,14 +71,14 @@ export default function HomeCarousel() {
 				}}
 			>
 				<Row className="w-100">
-					<Col lg={5} className="px-0">
+					<Col lg={4} className="px-0">
 						<img
 							className="home-carousel-image w-100"
 							src={carouselData[currentSlide].img}
 							alt="carousel"
 						/>
 					</Col>
-					<Col lg={7} className="home-carousel-text">
+					<Col lg={8} className="home-carousel-text">
 						<div
 							className="mb-4"
 							style={{
