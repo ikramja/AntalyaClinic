@@ -1,0 +1,24 @@
+.card-doctor-home-container {
+	background-color: #ffffff;
+	box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.card-doctor-home-row {
+	--bs-gutter-x: 0 !important;
+}
+.home-doctors-animation-text-container {
+	flex-direction: row;
+	align-items: center;
+	bottom: 0;
+	padding-bottom: 6rem;
+	padding-right: 10rem !important;
+	font-size: 1.5rem;
+	font-weight: bold;
+	justify-content: end;
+}
+@media only screen and (max-width: 880px) {
+	.home-doctors-animation-text-container {
+		padding-right: 0 !important;
+		justify-content: center;
+	}
+}

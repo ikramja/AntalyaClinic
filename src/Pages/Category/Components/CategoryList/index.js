@@ -4,14 +4,13 @@ import { Col } from "react-bootstrap";
 import StandardCard from "../../../../Components/StandardCard";
 
 export default function CategoryList(props) {
-	console.log("hahah", props.category_articles[0]);
 	return (
 		<div>
 			<Row className="my-5 mx-0">
 				{props.category_articles[0] &&
 					props.category_articles.map((article) => {
 						return (
-							<Col md="3" className="d-flex justify-content-center p-0">
+							<Col md="4" lg="3" className="d-flex justify-content-center p-0">
 								<StandardCard
 									height={180}
 									cardImage={article.article_category_image}

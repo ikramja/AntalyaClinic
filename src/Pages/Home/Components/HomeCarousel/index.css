@@ -1,0 +1,8 @@
+.home-carousel-image {
+	object-fit: cover;
+	max-height: 500px;
+}
+.home-carousel-text {
+	padding-left: 4rem !important;
+	padding-right: 2rem !important;
+}

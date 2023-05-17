@@ -48,7 +48,11 @@ export default function Header(props) {
 					setShowContent={props.setShowContent}
 				/>
 			)}
-			{/* <MenuDropDowns /> */}
+
+			{/* <MenuDropDowns
+				setShowMenu={setShowMenu}
+				setShowContent={props.setShowContent}
+			/> */}
 		</div>
 	);
 }

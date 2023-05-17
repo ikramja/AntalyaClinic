@@ -1,3 +1,6 @@
 .hard-cover-row {
 	background-image: url("../../Assets/Home/ParagraphSection.png");
 }
+.home .container-description {
+	padding-left: 0 !important;
+}

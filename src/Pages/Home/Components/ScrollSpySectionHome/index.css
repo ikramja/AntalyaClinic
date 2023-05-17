@@ -1,0 +1,72 @@
+.home-scroll-spy .flex-container {
+	display: flex;
+}
+.home-scroll-spy .flex-element {
+	margin-bottom: 0 !important;
+	margin-right: 5px;
+	color: #323334;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.home-scroll-spy .menu-wrapper .slick-initialized {
+	background-color: transparent !important;
+	display: flex;
+	justify-content: center;
+	padding: 10px 5px 10px 5px;
+}
+
+.home-scroll-spy .slick-track {
+	width: 100%;
+}
+
+.home-scroll-spy .menu-item {
+	display: flex;
+	align-items: center;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #323334;
+}
+
+.home-scroll-spy .menu-item:hover {
+	color: #323334 !important;
+	text-decoration: none !important;
+}
+
+.home-scroll-spy .ant-menu-item-selected {
+	color: #323334 !important;
+}
+
+.home-scroll-spy .menu-item-active * {
+	color: #323334 !important;
+	border: none !important;
+}
+
+.home-scroll-spy .arrow-down {
+	transform: rotate(90deg);
+}
+
+.home-scroll-spy .menu-item:hover p {
+	color: #323334 !important;
+}
+.home-scroll-spy .slick-list {
+	width: 90%;
+}
+.home-scroll-spy .scrollable-menu {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+.home-scroll-spy .menu-wrapper {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.home-scroll-spy .slick-slide {
+	display: flex !important;
+	justify-content: center;
+	cursor: pointer;
+}

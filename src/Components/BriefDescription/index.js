@@ -1,6 +1,8 @@
 import "./index.css";
+
 import { Button } from "antd";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function BriefDescription({
 	id,
@@ -11,6 +13,7 @@ export default function BriefDescription({
 	source,
 	containerStyle,
 	headerStyle,
+	text,
 }) {
 	return (
 		<div
@@ -59,6 +62,20 @@ export default function BriefDescription({
 								<Button className="brief-description-button px-4 py-4 my-4">
 									{button}
 								</Button>
+							</div>
+						)}
+						{text && (
+							<div className="w-100 d-flex  mt-3 home-doctors-animation-text-container pb-2">
+								<Link
+									to="/Excursion"
+									style={{ textDecoration: "none", color: "black" }}
+								>
+									<p className="home-image-animation-text mb-0">ПОДРОБНЕЕ...</p>
+								</Link>
+								<div className="arrow-container">
+									<Button shape="circle" className="circle-button" />
+									<div className="button-arrow" />
+								</div>
 							</div>
 						)}
 					</div>

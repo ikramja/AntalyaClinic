@@ -1,0 +1,25 @@
+.menu-drop-down .ant-collapse-header {
+	text-align: left;
+	font-size: 1rem;
+}
+
+.menu-drop-down .ant-collapse-content-box h1 {
+	text-align: left;
+	font-size: 0.9rem !important;
+}
+/* .menu-drop-down .ant-collapse-header {
+	max-width: 220px;
+} */
+
+.menu-collapse .ant-collapse-header {
+	padding-left: 0 !important;
+}
+.menu-drop-down .ant-collapse-arrow {
+	font-size: 1.2rem !important;
+}
+.menu-collapse .ant-collapse-arrow {
+	font-size: 0.9rem !important;
+}
+.menu-drop-down .m .ant-collapse-arrow svg {
+	display: none;
+}

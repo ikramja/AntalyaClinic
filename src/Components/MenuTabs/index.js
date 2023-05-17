@@ -15,16 +15,14 @@ import blog from "../../Assets/MenuTab/blog.png";
 const MenuTabs = (props) => {
 	const [doctors, setDoctors] = useState(null);
 	const [categoryData, setCategoryData] = useState(null);
-	const [showAllDoctors, setShowAllDoctors] = useState(false);
-	useEffect(() => {
-		axios.get("/get/doctors/").then(({ data }) => {
-			setDoctors(data);
-		});
-	}, []);
+
 	useEffect(() => {
 		axios.get("/get/categories/").then(({ data }) => {
 			console.log(data);
 			setCategoryData(data);
+		});
+		axios.get("/get/doctors/").then(({ data }) => {
+			setDoctors(data);
 		});
 	}, []);
 	const menuItems = [
@@ -32,7 +30,7 @@ const MenuTabs = (props) => {
 			label: <div className="menu-tab-title">УСЛУГИ</div>,
 			key: "УСЛУГИ",
 			children: (
-				<Row className="m-0 w-100 px-2">
+				<Row className="m-0 w-100 px-2 mb-5">
 					{categoryData &&
 						categoryData.map((category) => (
 							<Col key={category.cover_sub_header} md={3}>
@@ -73,18 +71,162 @@ const MenuTabs = (props) => {
 			label: <div className="menu-tab-title">О НАС</div>,
 			key: "О НАС",
 			children: (
-				<Row className="w-100">
+				<Row className="w-100 px-3 mb-5">
 					<Col md={3}>
-						<Card cardImage={about} cardTitle="НАШИ ДОКТОРА" />
+						<Card
+							cardImage={about}
+							cardTitle="НАШИ ДОКТОРА"
+							cardLink={`/our-doctors`}
+							setShowMenu={props.setShowMenu}
+							setShowContent={props.setShowContent}
+						/>
+						{doctors &&
+							doctors.map((doctor) => (
+								<Link
+									key={doctor.id}
+									style={{ textDecoration: "none" }}
+									to={`/doctor/${doctor.name_english}/`}
+									onClick={() => {
+										props.setShowMenu(false);
+										props.setShowContent(true);
+									}}
+								>
+									<h6
+										style={{
+											textAlign: "left",
+											color: "black",
+											fontWeight: "bold",
+										}}
+										className="p-2"
+									>
+										{doctor.name_russian}
+									</h6>
+								</Link>
+							))}
 					</Col>
+
 					<Col md={3}>
 						<Card cardImage={blog} cardTitle="БЛОГ" />
+						<Link
+							style={{ textDecoration: "none" }}
+							to=""
+							onClick={() => {
+								props.setShowMenu(false);
+								props.setShowContent(true);
+							}}
+						>
+							<h6
+								style={{
+									textAlign: "left",
+									color: "black",
+									fontWeight: "bold",
+								}}
+								className="p-2"
+							>
+								Новости
+							</h6>
+						</Link>
+						<Link
+							style={{ textDecoration: "none" }}
+							to=""
+							onClick={() => {
+								props.setShowMenu(false);
+								props.setShowContent(true);
+							}}
+						>
+							<h6
+								style={{
+									textAlign: "left",
+									color: "black",
+									fontWeight: "bold",
+								}}
+								className="p-2"
+							>
+								Статьи
+							</h6>
+						</Link>
 					</Col>
 					<Col md={3}>
 						<Card cardImage={forPatient} cardTitle="СЕРВИС" />
+						<Link
+							style={{ textDecoration: "none" }}
+							to=""
+							onClick={() => {
+								props.setShowMenu(false);
+								props.setShowContent(true);
+							}}
+						>
+							<h6
+								style={{
+									textAlign: "left",
+									color: "black",
+									fontWeight: "bold",
+								}}
+								className="p-2"
+							>
+								Трансфер
+							</h6>
+						</Link>
+						<Link
+							style={{ textDecoration: "none" }}
+							to=""
+							onClick={() => {
+								props.setShowMenu(false);
+								props.setShowContent(true);
+							}}
+						>
+							<h6
+								style={{
+									textAlign: "left",
+									color: "black",
+									fontWeight: "bold",
+								}}
+								className="p-2"
+							>
+								Отели
+							</h6>
+						</Link>
+						<Link
+							style={{ textDecoration: "none" }}
+							to=""
+							onClick={() => {
+								props.setShowMenu(false);
+								props.setShowContent(true);
+							}}
+						>
+							<h6
+								style={{
+									textAlign: "left",
+									color: "black",
+									fontWeight: "bold",
+								}}
+								className="p-2"
+							>
+								Переводчик
+							</h6>
+						</Link>
 					</Col>
 					<Col md={3}>
 						<Card cardImage={service} cardTitle="ДЛЯ ПАЦИЕНТОВ" />
+						<Link
+							style={{ textDecoration: "none" }}
+							to=""
+							onClick={() => {
+								props.setShowMenu(false);
+								props.setShowContent(true);
+							}}
+						>
+							<h6
+								style={{
+									textAlign: "left",
+									color: "black",
+									fontWeight: "bold",
+								}}
+								className="p-2"
+							>
+								Памятки пациентам
+							</h6>
+						</Link>
 					</Col>
 				</Row>
 			),
@@ -95,18 +237,40 @@ const MenuTabs = (props) => {
 		},
 		{
 			label: (
-				<div className="menu-tab-title">
-					<Link to="/">ЦЕНЫ</Link>
-				</div>
+				<Link
+					to="/Prices"
+					onClick={() => {
+						props.setShowMenu(false);
+						props.setShowContent(true);
+					}}
+					style={{
+						textDecoration: "none",
+						color: "black",
+						fontWeight: "bold",
+					}}
+				>
+					<div className="menu-tab-title">ЦЕНЫ</div>
+				</Link>
 			),
 			key: "ЦЕНЫ",
 		},
 
 		{
 			label: (
-				<div className="menu-tab-title">
-					<Link to="/">КОНТАКТЫ</Link>
-				</div>
+				<Link
+					to="/Contact"
+					onClick={() => {
+						props.setShowMenu(false);
+						props.setShowContent(true);
+					}}
+					style={{
+						textDecoration: "none",
+						color: "black",
+						fontWeight: "bold",
+					}}
+				>
+					<div className="menu-tab-title">КОНТАКТЫ</div>
+				</Link>
 			),
 			key: "КОНТАКТЫ",
 		},
