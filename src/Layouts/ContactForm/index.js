@@ -1,7 +1,7 @@
 import "./index.css";
 import ContactFormBackground from "../../Assets/contactForm/ContactFormBackground.png";
 import React from "react";
-import { Button, Form, Input, InputNumber } from "antd";
+import { Button, Form, Input } from "antd";
 import { Col, Container, Row } from "react-bootstrap";
 import { Checkbox } from "antd";
 

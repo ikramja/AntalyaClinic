@@ -2,61 +2,101 @@ import "./index.css";
 import TitleCover from "../../Components/TitleCover";
 import { List, Card } from "antd";
 import AboutUsCover from "../../Assets/Covers/AboutUs.png";
+import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 import FrameParagraph from "../../Components/FrameParagraph";
-import AnalysesTableBackground from "../../Assets/ForPatients/AnalysesTableBackground.png";
+import AnalysesTableBackground from "../../Assets/ForPatients/iko.png";
 import GreyFrame from "./Components/AboutUsGreyFrame";
-import aboutUs from "../../Assets/AboutUs/AboutUs.png";
-import LeftHalfImage from "../../Assets/AboutUs/leftHalf.png";
-import React, { useEffect, useState } from "react";
+import aboutUs from "../../Assets/AboutUs/aboutUs.png";
+import backgroundAbout from "../../Assets/AboutUs/background.png";
+import Block2 from "../../Assets/AboutUs/block2.jpg";
+import Block3 from "../../Assets/AboutUs/block3.png";
+import backgroundAbout2 from "../../Assets/AboutUs/background2.png";
+import React, { useEffect, useState, useRef } from "react";
 import { Carousel } from "antd";
 import ImageCarouselAboutUs1 from "../../Assets/AboutUs/carousel1.png";
 import ImageCarouselAboutUs2 from "../../Assets/AboutUs/carousel2.png";
 import ImageCarouselAboutUs3 from "../../Assets/AboutUs/carousel3.png";
 import ImageCarouselAboutUs4 from "../../Assets/AboutUs/carousel4.png";
-import RightHalfImage from "../../Assets/AboutUs/rightHalf.png";
-import GreenContainerImage from "../../Assets/AboutUs/GreenContainer.png";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import ContactForm from "../../Layouts/ContactForm";
 
 export default function AboutUs() {
-	const getSlidesToShow = () => {
-		const screenWidth = window.innerWidth;
+	const carouselRef = React.useRef(null);
 
-		if (screenWidth > 1200) {
-			return 4;
-		} else if (screenWidth > 992) {
-			return 3;
-		} else if (screenWidth > 768) {
-			return 2;
-		} else {
-			return 1;
-		}
+	const handleNext = () => carouselRef.current.next();
+	const handlePrev = () => carouselRef.current.prev();
+	const settings = {
+		dots: true,
+
+		slidesToShow: 4,
+		touchMove: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: true,
+				},
+			},
+			{
+				breakpoint: 975,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					initialSlide: 2,
+				},
+			},
+			{
+				breakpoint: 632,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+		slidesToScroll: 1,
+		nextArrow: <BiRightArrowAlt style={{ fontSize: "2rem", color: "black" }} />,
+		prevArrow: <BiLeftArrowAlt style={{ fontSize: "2rem", color: "black" }} />,
 	};
-	const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
-	useEffect(() => {
-		const handleResize = () => {
-			setSlidesToShow(getSlidesToShow());
-		};
+	// const getSlidesToShow = () => {
+	// 	const screenWidth = window.innerWidth;
 
-		window.addEventListener("resize", handleResize);
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+	// 	if (screenWidth > 1200) {
+	// 		return 4;
+	// 	} else if (screenWidth > 992) {
+	// 		return 3;
+	// 	} else if (screenWidth > 768) {
+	// 		return 2;
+	// 	} else {
+	// 		return 1;
+	// 	}
+	// };
+	// const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+	// useEffect(() => {
+	// 	const handleResize = () => {
+	// 		setSlidesToShow(getSlidesToShow());
+	// 	};
+
+	// 	window.addEventListener("resize", handleResize);
+	// 	return () => {
+	// 		window.removeEventListener("resize", handleResize);
+	// 	};
+	// }, []);
 	return (
 		<div>
 			<div className="about-us-services">
 				<TitleCover title="СЕРВИС" titleAlign="center" Cover={AboutUsCover} />
 				<Container>
 					<div
-						className="about-us-frame-paragraph"
 						style={{
-							paddingTop: "2rem",
+							paddingTop: "1rem",
 							backgroundImage: `url(${AnalysesTableBackground})`,
 							backgroundRepeat: "no-repeat",
-							backgroundSize: "auto 120%",
+							backgroundSize: "auto 117%",
 							backgroundPositionX: "right",
-							backgroundPositionY: "top",
+							backgroundPositionY: "bottom",
 							// backgroundPosition: "right top",
 						}}
 					>
@@ -65,125 +105,202 @@ export default function AboutUs() {
 							text="После госпитализации в клинику большинство процедур требуют регулярных осмотров у хирурга и обязательного пребывания под наблюдением. Мы в клинике El Arte заботимся о наших пациентах и предоставляем услуги по транспортировке и проживанию во время лечения.  Наша главная задача - помочь нашим клиентам в их выздоровлении, создавая спокойную и комфортную обстановку."
 						/>
 					</div>
-
-					<div className="px-3 grey-frame-about-us-first">
-						<GreyFrame
-							width="400px"
-							title="ТРАНСФЕР"
-							text="Трансфер от аэропорта до отеля и клиники. "
-						/>
-						<div className="grey-frame-about-us-image me-5 px-5">
-							<img className="image" src={aboutUs}></img>
-						</div>
-					</div>
-
-					<div className="mx-3 grey-frame-about-us-second">
-						<GreyFrame
-							style={{ paddingBottom: "10rem" }}
-							width="100%"
-							subtitle="персональное сопровождение"
-							title="ПЕРЕВОДЧИК"
-							text="Пациенты из-за рубежа могут воспользоваться услугами переводчика — клиника обеспечивает переводчиков английского и русского языка."
-						/>
-						<div className="grey-frame-about-us-image-mobile me-5 px-5">
-							<img className="image-mobile" src={aboutUs}></img>
-						</div>
-					</div>
 				</Container>
-				<img className="right-half-image-about-us" src={RightHalfImage}></img>
-				<div className="about-us-green-carousel-container">
-					<div className="green-container-about-us pt-5">
-						<div className="px-5 green-frame-about-us-content">
-							<h1 className="pt-4 my-0">
-								<h5 className="my-0">размещение в стационаре</h5>
-								<h2 className="green-frame-about-us-title my-0">ПАЛАТЫ</h2>
-							</h1>
-							<p>
-								Стандартным вариантом размещения являются комфортабельные
-								одноместные палаты, каждая из которых располагает отдельным
-								санузлом. В клинике есть кафетерий и банкоматы.
-							</p>
-						</div>
-
-						<div className="green-container-image-div-about-us my-4">
-							<div className="middle-image-container">
-								<img
-									className="green-container-image-about-us"
-									src={GreenContainerImage}
-								/>
-							</div>
-
-							<div className="white-container-about-us px-4 py-4 my-4">
-								<h1>
-									<h5>комфортабельные номера</h5>
-									<span className="white-container-about-us-title">ОТЕЛЬ</span>
+				<div
+					className="mt-4"
+					style={{
+						paddingTop: "1rem",
+						backgroundImage: `url(${backgroundAbout})`,
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "cover",
+					}}
+				>
+					<Container>
+						<Row className="center-div about-block-space">
+							<Col lg={5}>
+								<img src={aboutUs} className="about-us-Block-1 w-100"></img>
+							</Col>
+							<Col lg={6}>
+								<p
+									style={{
+										display: "flex",
+										justifyContent: "flex-end",
+										fontSize: "5rem",
+										fontWeight: "bold",
+										marginBottom: "0",
+									}}
+								>
+									01
+								</p>
+								<div className="about-us-Block-1-content">
+									<h1 style={{ fontWeight: "bold" }}>Переводчик</h1>
+									<p>
+										Пациенты из-за рубежа могут воспользоваться услугами
+										переводчика — клиника <br />
+										обеспечивает переводчиков английского и русского языка.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row
+							className="center-div about-block-space"
+							style={{ paddingTop: "4rem" }}
+						>
+							<Col lg={6}>
+								<p
+									style={{
+										display: "flex",
+										justifyContent: "flex-end",
+										fontSize: "5rem",
+										fontWeight: "bold",
+										marginBottom: "0",
+									}}
+								>
+									02
+								</p>
+								<div className="about-us-Block-1-content">
+									<h1 style={{ fontWeight: "bold" }}>Трансфер</h1>
+									<p>Трансфер от аэропорта до отеля и клиники.</p>
+								</div>
+							</Col>
+							<Col lg={5}>
+								<img src={Block2} className="about-us-Block-2 w-100"></img>
+							</Col>
+						</Row>
+					</Container>
+				</div>
+				<Container>
+					<div>
+						<Row
+							className="about-block-space center-div"
+							style={{ paddingTop: "5rem" }}
+						>
+							<Col lg={5}>
+								<img src={Block3} className="about-us-Block-3 w-100"></img>
+							</Col>
+							<Col lg={6}>
+								<p
+									className="me-5"
+									style={{
+										display: "flex",
+										justifyContent: "flex-end",
+										fontSize: "5rem",
+										fontWeight: "bold",
+										marginBottom: "0",
+									}}
+								>
+									03
+								</p>
+								<div className="about-us-Block-1-content ">
+									<h1 style={{ fontWeight: "bold" }}>Палаты</h1>
+									<p>
+										Стандартным вариантом размещения являются комфортабельные
+										одноместные палаты, каждая из которых располагает отдельным
+										санузлом. В клинике есть кафетерий и банкоматы.
+									</p>
+								</div>
+							</Col>
+						</Row>
+					</div>
+					<div>
+						<Row className="about-block-space center-div">
+							<div className="d-flex ps-5">
+								<p
+									className="me-4"
+									style={{
+										fontSize: "5rem",
+										fontWeight: "bold",
+										marginBottom: "0",
+									}}
+								>
+									04
+								</p>
+								<h1
+									className="mb-0"
+									style={{
+										fontWeight: "bold",
+										display: "flex",
+										alignItems: "center",
+									}}
+								>
+									Отель
 								</h1>
-								<p>
+							</div>
+							<div className="about-us-Block-1-content px-5">
+								<p className=" mb-0">
 									В отелях для размещения наших пациентов комфортные и уютные
 									номера. Все они включают в себя необходимую мебель, просторные
 									спальные места, телевизор, а также холодильник. В собственной
 									ванной комнате обязательно есть душ, туалет, раковина и фен.
 									Из окон и балконов вы сможете любоваться потрясающим видом на
-									город и море. В стоимость включено пребывание члена семьи,
-									сопровождающего пациента.
+									город и море.
 								</p>
+								<strong>
+									В стоимость включено пребывание члена семьи, сопровождающего
+									пациента.
+								</strong>
 							</div>
-						</div>
-						<img
-							className="left-half-image-about-us mb-4"
-							src={LeftHalfImage}
-						></img>
+						</Row>
 					</div>
+				</Container>
 
-					<div className="carousel-about w-100">
-						<Carousel
-							dots={true}
-							autoplay
-							className="carousel-about-us"
-							slidesToShow={slidesToShow}
-							touchMove={true}
-							centerMode={true}
-						>
-							<div>
-								<img
-									className="carousel-image_about-us"
-									src={ImageCarouselAboutUs1}
-									alt="Slide 1"
-								/>
-							</div>
-							<div>
-								<img
-									className="carousel-image_about-us"
-									src={ImageCarouselAboutUs2}
-									alt="Slide 2"
-								/>
-							</div>
-							<div>
-								<img
-									className="carousel-image_about-us"
-									src={ImageCarouselAboutUs3}
-									alt="Slide 3"
-								/>
-							</div>
-							<div>
-								<img
-									className="carousel-image_about-us"
-									src={ImageCarouselAboutUs2}
-									alt="Slide 4"
-								/>
-							</div>
-							<div>
-								<img
-									className="carousel-image_about-us"
-									src={ImageCarouselAboutUs3}
-									alt="Slide 5"
-								/>
-							</div>
-						</Carousel>
-					</div>
+				<div
+					className="carousel-about w-100"
+					style={{
+						backgroundImage: `url(${backgroundAbout2})`,
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "cover",
+						height: "55vh",
+						paddingBottom: "3rem",
+						position: "relative",
+					}}
+				>
+					<Carousel
+						{...settings}
+						className="carousel-about-us"
+						ref={carouselRef}
+					>
+						<div>
+							<img
+								className="carousel-image_about-us"
+								src={ImageCarouselAboutUs1}
+								alt="Slide 1"
+							/>
+						</div>
+						<div>
+							<img
+								className="carousel-image_about-us"
+								src={ImageCarouselAboutUs2}
+								alt="Slide 2"
+							/>
+						</div>
+						<div>
+							<img
+								className="carousel-image_about-us"
+								src={ImageCarouselAboutUs3}
+								alt="Slide 3"
+							/>
+						</div>
+						<div>
+							<img
+								className="carousel-image_about-us"
+								src={ImageCarouselAboutUs4}
+								alt="Slide 4"
+							/>
+						</div>
+						<div>
+							<img
+								className="carousel-image_about-us"
+								src={ImageCarouselAboutUs3}
+								alt="Slide 5"
+							/>
+						</div>
+					</Carousel>
+					<BiLeftArrowAlt className="about-left-arrow" onClick={handlePrev} />
+					<BiRightArrowAlt className="about-right-arrow" onClick={handleNext} />
 				</div>
 			</div>
-			<ContactForm />
+			{/* <ContactForm /> */}
 		</div>
 	);
 }

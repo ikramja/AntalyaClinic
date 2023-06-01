@@ -65,16 +65,20 @@ export default function BriefDescription({
 							</div>
 						)}
 						{text && (
-							<div className="w-100 d-flex  mt-3 home-doctors-animation-text-container pb-2">
-								<Link
-									to="/Excursion"
-									style={{ textDecoration: "none", color: "black" }}
-								>
-									<p className="home-image-animation-text mb-0">ПОДРОБНЕЕ...</p>
-								</Link>
-								<div className="arrow-container">
-									<Button shape="circle" className="circle-button" />
-									<div className="button-arrow" />
+							<div className="w-100 mt-3">
+								<div className="d-flex home-doctors-animation-text-container button-text-container">
+									<Link
+										to="/Excursion"
+										style={{ textDecoration: "none", color: "black" }}
+									>
+										<p className="home-image-animation-text mb-0">
+											ПОДРОБНЕЕ...
+										</p>
+									</Link>
+									<div className="arrow-container">
+										<Button shape="circle" className="circle-button" />
+										<div className="button-arrow" />
+									</div>
 								</div>
 							</div>
 						)}

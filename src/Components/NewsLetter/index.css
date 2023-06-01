@@ -1,0 +1,37 @@
+.newsletter {
+	background-color: #e6e4e4;
+	font-family: Segoe UI Emoji, Segoe UI Symbol;
+}
+.newsletter-input-item {
+	max-width: 400px !important;
+	margin-left: 1rem;
+}
+.newsletter-form-input {
+	border-radius: 8px;
+	height: 35px;
+}
+.newsletter-form {
+	display: flex;
+}
+.newsletter-button {
+	color: white;
+	border-radius: 8px;
+	background-color: #636363;
+	height: 35px;
+	margin-top: 0.8rem;
+}
+.newsletter-button:hover {
+	color: white;
+	border-radius: 8px;
+	background-color: #636363 !important;
+	height: 35px;
+	margin-top: 0.8rem;
+}
+
+.newsletter .ant-form-item-required {
+	font-size: 1.1rem !important;
+}
+
+.newsletter .ant-form-item-required::before {
+	color: #636363 !important;
+}

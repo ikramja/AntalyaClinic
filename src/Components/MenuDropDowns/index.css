@@ -2,7 +2,15 @@
 	text-align: left;
 	font-size: 1rem;
 }
-
+.menu-drop-down .ant-collapse-header-text {
+	color: #575656;
+}
+.menu-drop-down .ant-collapse-content-box {
+	color: #575656;
+}
+.menu-drop-down {
+	margin-top: 64px !important;
+}
 .menu-drop-down .ant-collapse-content-box h1 {
 	text-align: left;
 	font-size: 0.9rem !important;

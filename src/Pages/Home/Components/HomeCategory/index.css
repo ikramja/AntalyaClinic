@@ -1,8 +1,7 @@
 .category-home-image {
 	height: 400px;
-
 	object-fit: cover;
-
+	max-width: 240px;
 	transition: filter 0.3s;
 }
 
@@ -17,7 +16,7 @@
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
-	width: 180px;
+	max-width: 240px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

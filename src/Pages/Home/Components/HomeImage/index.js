@@ -7,7 +7,7 @@ import { ImArrowRight } from "react-icons/im";
 
 export default function HomeImage() {
 	return (
-		<div className="my-4 ">
+		<div className="mb-4 mt-2 ">
 			<Container>
 				<h1 className="big-image-header mb-4">
 					Добро пожаловать в клинику пластической хирургии EL ARTE Здесь красота
@@ -41,22 +41,24 @@ export default function HomeImage() {
 							</li>
 						</ul>
 					</Container>
-					<div className="w-100 d-flex mt-4 home-image-animation-text-container">
-						<Link
-							to="/Contact"
-							style={{ textDecoration: "none", color: "black" }}
-						>
-							<p className="home-image-animation-text mb-0">ПОДРОБНЕЕ...</p>
-						</Link>
-						<div className="arrow-container">
-							<Button shape="circle" className="circle-button" />
-							<div className="button-arrow" />
+					<div className="w-100  mt-4">
+						<div className="button-text-container d-flex home-image-animation-text-container">
+							<Link
+								to="/Contact"
+								style={{ textDecoration: "none", color: "black" }}
+							>
+								<p className="home-image-animation-text mb-0">ПОДРОБНЕЕ...</p>
+							</Link>
+							<div className="arrow-container">
+								<Button shape="circle" className="circle-button" />
+								<div className="button-arrow" />
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<Container className="under-big-image-container mt-3  py-4">
+			<Container className="under-big-image-container mt-4  py-4">
 				<p className="under-big-image-container-paragraph">
 					Клиника эстетической медицины «LE ARTE» открыла свои двери в Турции.
 					Современное инновационное оборудование клиники позволяет гостям

@@ -8,14 +8,45 @@ import MenuDropDowns from "../../Components/MenuDropDowns";
 export default function Header(props) {
 	const [showMenu, setShowMenu] = useState(false);
 	const [small, setSmall] = useState(false);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	// useEffect(() => {
+	// 	if (typeof window !== "undefined") {
+	// 		window.addEventListener("scroll", () =>
+	// 			setSmall(window.pageYOffset > 100)
+	// 		);
+	// 	}
+	// }, []);
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
 			window.addEventListener("scroll", () =>
 				setSmall(window.pageYOffset > 100)
 			);
+
+			// Set windowWidth on initial load
+			setWindowWidth(window.innerWidth);
+
+			// Add an event listener to update windowWidth value when the window is resized
+			const handleResize = () => {
+				setWindowWidth(window.innerWidth);
+			};
+			window.addEventListener("resize", handleResize);
+
+			// Clean up event listener on unmount
+			return () => {
+				window.removeEventListener("resize", handleResize);
+			};
 		}
 	}, []);
+
+	const isMobile = windowWidth <= 990;
+
+	const handleToggle = () => {
+		setShowMenu(!showMenu);
+		props.setShowContent(showMenu);
+	};
+
 	return (
 		<div
 			style={{
@@ -32,24 +63,37 @@ export default function Header(props) {
 							<h1 className="header-text pt-2">EL ARTE CLINIC</h1>
 						</div>
 					</Link>
-					<Hamburger
-						className="menu-icon"
-						toggle={() => {
+					{/* () => {
 							setShowMenu(!showMenu);
 							props.setShowContent(showMenu);
-						}}
+						} */}
+					<Hamburger
+						className="menu-icon"
+						toggle={handleToggle}
 						toggled={showMenu}
 					/>
 				</div>
 			</header>
-			{showMenu && (
+			{showMenu && isMobile && (
+				<MenuDropDowns
+					setShowMenu={setShowMenu}
+					setShowContent={props.setShowContent}
+				/>
+			)}
+			{showMenu && !isMobile && (
+				<MenuTabs
+					setShowMenu={setShowMenu}
+					setShowContent={props.setShowContent}
+				/>
+			)}
+			{/* {showMenu && (
 				<MenuTabs
 					setShowMenu={setShowMenu}
 					setShowContent={props.setShowContent}
 				/>
 			)}
 
-			{/* <MenuDropDowns
+			<MenuDropDowns
 				setShowMenu={setShowMenu}
 				setShowContent={props.setShowContent}
 			/> */}

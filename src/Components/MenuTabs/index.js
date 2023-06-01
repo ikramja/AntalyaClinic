@@ -2,7 +2,6 @@ import { Affix, Tabs } from "antd";
 import Card from "./Components/Card";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
-
 import "./index.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -30,7 +29,7 @@ const MenuTabs = (props) => {
 			label: <div className="menu-tab-title">УСЛУГИ</div>,
 			key: "УСЛУГИ",
 			children: (
-				<Row className="m-0 w-100 px-2 mb-5">
+				<Row className="m-0 w-100  mb-5">
 					{categoryData &&
 						categoryData.map((category) => (
 							<Col key={category.cover_sub_header} md={3}>
@@ -54,9 +53,8 @@ const MenuTabs = (props) => {
 											style={{
 												textAlign: "left",
 												color: "black",
-												fontWeight: "bold",
+												fontSize: "1rem",
 											}}
-											className="p-2"
 										>
 											{article.cover_header}
 										</h6>
@@ -68,10 +66,10 @@ const MenuTabs = (props) => {
 			),
 		},
 		{
-			label: <div className="menu-tab-title">О НАС</div>,
+			label: <div className="menu-tab-title ">О НАС</div>,
 			key: "О НАС",
 			children: (
-				<Row className="w-100 px-3 mb-5">
+				<Row className="w-100 mx-1 mb-5">
 					<Col md={3}>
 						<Card
 							cardImage={about}
@@ -95,9 +93,7 @@ const MenuTabs = (props) => {
 										style={{
 											textAlign: "left",
 											color: "black",
-											fontWeight: "bold",
 										}}
-										className="p-2"
 									>
 										{doctor.name_russian}
 									</h6>
@@ -109,7 +105,7 @@ const MenuTabs = (props) => {
 						<Card cardImage={blog} cardTitle="БЛОГ" />
 						<Link
 							style={{ textDecoration: "none" }}
-							to=""
+							to="/news"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -119,16 +115,14 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
-									fontWeight: "bold",
 								}}
-								className="p-2"
 							>
 								Новости
 							</h6>
 						</Link>
 						<Link
 							style={{ textDecoration: "none" }}
-							to=""
+							to="/blog"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -138,9 +132,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
-									fontWeight: "bold",
 								}}
-								className="p-2"
 							>
 								Статьи
 							</h6>
@@ -160,9 +152,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
-									fontWeight: "bold",
 								}}
-								className="p-2"
 							>
 								Трансфер
 							</h6>
@@ -179,9 +169,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
-									fontWeight: "bold",
 								}}
-								className="p-2"
 							>
 								Отели
 							</h6>
@@ -198,9 +186,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
-									fontWeight: "bold",
 								}}
-								className="p-2"
 							>
 								Переводчик
 							</h6>
@@ -220,9 +206,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
-									fontWeight: "bold",
 								}}
-								className="p-2"
 							>
 								Памятки пациентам
 							</h6>
@@ -234,6 +218,7 @@ const MenuTabs = (props) => {
 		{
 			label: <div className="menu-tab-title">ГИД ПО ОТДЫХУ</div>,
 			key: "ГИД ПО ОТДЫХУ",
+			href: "/Excurtion",
 		},
 		{
 			label: (
@@ -246,13 +231,13 @@ const MenuTabs = (props) => {
 					style={{
 						textDecoration: "none",
 						color: "black",
-						fontWeight: "bold",
 					}}
 				>
 					<div className="menu-tab-title">ЦЕНЫ</div>
 				</Link>
 			),
 			key: "ЦЕНЫ",
+			href: "/Prices",
 		},
 
 		{
@@ -273,17 +258,27 @@ const MenuTabs = (props) => {
 				</Link>
 			),
 			key: "КОНТАКТЫ",
+			href: "/Contact",
 		},
 	];
 	const onChange = (key) => {
 		console.log(key);
 	};
-
+	const handleTabClick = (key, event) => {
+		event.stopPropagation(); // prevent the default tab behavior
+		props.setShowMenu(false);
+		props.setShowContent(true);
+		const item = menuItems.find((item) => item.key === key);
+		if (item && item.href) {
+			window.location.href = item.href;
+		}
+	};
 	return (
 		categoryData && (
 			<div>
 				<div style={{ marginTop: "64px" }}>
 					<Tabs
+						onTabClick={handleTabClick}
 						defaultActiveKey="3"
 						items={menuItems}
 						animated={{ inkBar: false }}

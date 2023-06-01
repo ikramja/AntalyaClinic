@@ -1,0 +1,10 @@
+.blog-title-container {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 4rem;
+}
+.blog-title {
+	font-weight: bold;
+	font-size: 8rem;
+	color: #323334;
+}

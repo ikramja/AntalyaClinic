@@ -34,10 +34,10 @@ export default function Home() {
 			</div>
 
 			<Container
-				className="container-description"
+				className="container-description "
 				style={{
 					paddingLeft: "0 !important",
-					paddingTop: "2rem",
+					paddingTop: "1rem",
 					backgroundImage: `url(${leftCover})`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "auto 110% ",
@@ -53,7 +53,6 @@ export default function Home() {
 					headerStyle={{ color: "#323334", paddingBottom: "1rem" }}
 					containerStyle={{
 						background: "rgba(255, 255, 255, 0.79)",
-
 						paddingTop: "1rem",
 						color: "black",
 						borderRadius: "10px",

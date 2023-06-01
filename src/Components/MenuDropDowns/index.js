@@ -5,7 +5,7 @@ import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { CaretUpOutlined, CaretDownOutlined } from "@ant-design/icons";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const { Panel } = Collapse;
 
 const CustomExpandIcon = (props) => {
@@ -18,9 +18,9 @@ const CustomExpandIcon = (props) => {
 	const iconClassName = isExpanded ? "expand-icon up" : "expand-icon down";
 
 	return isExpanded ? (
-		<CaretUpOutlined className={iconClassName} onClick={handleClick} />
+		<IoIosArrowUp className={iconClassName} onClick={handleClick} />
 	) : (
-		<CaretDownOutlined className={iconClassName} onClick={handleClick} />
+		<IoIosArrowDown className={iconClassName} onClick={handleClick} />
 	);
 };
 
@@ -60,19 +60,20 @@ export default function MenuDropDowns(props) {
 	const panelStyle = {
 		border: "none",
 		fontSize: "1rem",
-		fontWeight: "bold",
+		fontWeight: "600",
+		fontFamily: "'Oswald', sans-serif",
 	};
 	return (
-		<div className="my-3 w-100 menu-drop-down">
+		<div className="mb-3 w-100 menu-drop-down">
 			<Collapse
 				accordion
-				className="my-1 mx-2"
+				className="my-1  px-3"
 				bordered={false}
 				expandIcon={CustomExpandIcon}
 				expandIconPosition="end"
 				style={{
-					background: "#F0F0F0",
 					borderRadius: "0px",
+					background: "#eeeeee",
 					// maxWidth: "200px",
 				}}
 			>
@@ -81,14 +82,18 @@ export default function MenuDropDowns(props) {
 						categoryData.map((category) => (
 							<Collapse
 								accordion
-								className="my-1 mx-2 menu-collapse"
+								className="my-1 mx-2 px-2 menu-collapse"
 								bordered={false}
 								expandIcon={customExpandIcon1}
 								expandIconPosition="end"
 								style={{
-									background: "#F0F0F0",
+									background: "#eeeeee",
 									borderRadius: "0px",
 									textAlign: "left",
+									border: "1px solid  #e0dede",
+									borderTop: "none",
+									borderBottom: "none",
+
 									// maxWidth: "200px",
 								}}
 							>
@@ -108,14 +113,18 @@ export default function MenuDropDowns(props) {
 				<Panel header="О НАС" key="3" style={panelStyle}>
 					<Collapse
 						accordion
-						className="my-1 mx-2 menu-collapse"
+						className="my-1 mx-2 menu-collapse px-2"
 						bordered={false}
 						expandIcon={customExpandIcon1}
 						expandIconPosition="end"
 						style={{
-							background: "#F0F0F0",
+							background: "#eeeeee",
 							borderRadius: "0px",
 							textAlign: "left",
+							border: "1px solid  #e0dede",
+							borderTop: "none",
+							borderBottom: "none",
+
 							// maxWidth: "200px",
 						}}
 					>
@@ -137,7 +146,7 @@ export default function MenuDropDowns(props) {
 						</Panel>
 					</Collapse>
 				</Panel>
-				<div className="ps-3 pb-4">
+				<div className="ps-3 pb-3">
 					<Link to="" style={{ textDecoration: "none", color: "black" }}>
 						<Panel
 							header="ГИД ПО ОТДЫХУ"
@@ -147,7 +156,7 @@ export default function MenuDropDowns(props) {
 						></Panel>
 					</Link>
 				</div>
-				<div className="ps-3 pb-4">
+				<div className="ps-3 pb-3">
 					<Link
 						to="/prices"
 						onClick={() => {

@@ -1,171 +1,91 @@
-.grey-frame-about-us-first {
-	position: relative;
+.about-us-Block-1 {
+	max-height: 390px;
+	/* object-fit: cover; */
+	overflow: hidden;
+	border-top-right-radius: 100px;
+	border-bottom-left-radius: 250px;
 }
-.grey-frame-about-us-image {
-	position: absolute;
-	right: 0;
-	top: 0;
+.about-block-space {
+	margin: 0 7rem !important;
 }
-.grey-frame-about-us-image .image {
-	height: 500px !important;
-	object-fit: cover;
-}
-.green-container-about-us {
-	background: #4d917e;
-	width: 60%;
-	border-radius: 0px 10px 0px 0px;
+.about-us-Block-1-content {
 	text-align: left;
-	position: relative;
+	font-size: 1.14rem;
 }
-.middle-image-container {
-	height: 600px;
-	position: relative;
-}
-
-.green-container-image-about-us {
-	max-height: 600px;
-	position: absolute;
-	right: -15%;
+.about-us-Block-2 {
+	max-height: 350px;
+	border-top-left-radius: 250px;
+	border-bottom-right-radius: 100px;
 	object-fit: cover;
+	overflow: hidden;
 }
-
-.green-container-image-div-about-us {
-	position: relative;
-	padding-left: 2rem !important;
-}
-.white-container-about-us {
-	width: 450px;
-	position: absolute;
-	right: -30%;
-	bottom: -40%;
-	background-color: white;
-	box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-	background: #ffffff;
-}
-
-.about-us-green-carousel-container {
-	position: relative;
-}
-.carousel-about {
-	position: absolute;
-	left: 0;
-	bottom: 1%;
-}
-
-/* .about-us-services .carousel-container {
-	padding-top: auto;
-} */
-.left-half-image-about-us {
-	/* width: 500px; */
-	height: 500px;
-
-	/* margin-bottom: 22%; */
+.about-us-Block-3 {
+	max-height: 350px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 220px;
+	object-fit: cover;
+	overflow: hidden;
 }
 .carousel-image_about-us {
-	width: 290px !important;
-	height: 250px !important;
+	width: 300px;
+	height: 190px;
+	object-fit: cover;
 }
-.green-frame-about-us-title {
-	font-size: 4rem;
+.carousel-about {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
-.white-container-about-us-title {
-	font-size: 3rem;
+
+.ant-carousel .slick-dots {
+	bottom: -1rem;
 }
-.about-us-services {
-	position: relative;
+
+.carousel-about .ant-carousel .slick-dots li button:before {
+	font-size: 13px;
+	color: #050606 !important; /* Change this to your desired color */
 }
-.right-half-image-about-us {
+
+.carousel-about .ant-carousel .slick-dots li.slick-active button:before {
+	color: #016245 !important; /* Change this to your desired active color */
+}
+.about-left-arrow {
 	position: absolute;
-	right: 0;
-	width: 650px;
-	z-index: 1;
+	left: 42%;
+	bottom: 1rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: black;
 }
-.green-frame-about-us-content {
-	color: white;
+.about-right-arrow {
+	position: absolute;
+	right: 42%;
+	bottom: 1rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: black;
 }
-.carousel-about .ant-carousel .slick-dots li.slick-active button {
-	background: #016245;
-}
-.carousel-about .ant-carousel .slick-dots li button {
-	background: #ffffff;
-}
-.slick-list {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
-@media only screen and (min-width: 1050px) {
-	.grey-frame-about-us-image-mobile .image-mobile {
-		display: none;
+@media only screen and (max-width: 998px) {
+	.about-block-space {
+		margin: 0 4rem !important;
 	}
-	.about-us-grey-frame {
-		padding-bottom: 0 !important;
+	.about-us-Block-1 {
+		object-fit: unset;
 	}
 }
-/* @media screen and (max-width: 1050px) and (min-width: 412px) {
-	.green-container-about-us {
-		margin-top: 350px !important;
+@media only screen and (max-width: 772px) {
+	.about-block-space {
+		margin: 0 !important;
 	}
-} */
-@media only screen and (max-width: 1050px) {
-	/* .about-us-frame-paragraph {
-		display: none;
+	/* .about-us-Block-1 {
+		object-fit: unset;
 	} */
-	.right-half-image-about-us {
-		display: none;
+}
+@media only screen and (max-width: 631px) {
+	.about-right-arrow {
+		right: 100px;
 	}
-	.grey-frame-about-us-image .image {
-		display: none;
-	}
-	.grey-frame-about-us-second {
-		position: relative;
-	}
-	.grey-frame-about-us-image-mobile .image-mobile {
-		position: absolute;
-		top: 55%;
-		max-width: 300px;
-		left: 50%;
-		transform: translateX(-50%);
-		/* width: 70vw; */
-		z-index: 1;
-		max-height: 400px;
-		object-fit: cover;
-	}
-	.grey-frame-about-us-first {
-		width: 100% !important;
-		position: static;
-	}
-	.about-us-grey-frame {
-		width: 100% !important;
-	}
-	.green-container-about-us {
-		width: 100%;
-		margin-top: 160px;
-	}
-	.middle-image-container {
-		height: auto;
-	}
-
-	.green-container-image-about-us {
-		width: 100%;
-		object-fit: cover;
-		position: static !important;
-		height: auto !important;
-		max-height: 600px;
-		padding-left: 0 !important;
-	}
-	.green-container-image-div-about-us {
-		padding-left: 0 !important;
-	}
-
-	.white-container-about-us {
-		position: static !important;
-		width: 100% !important;
-	}
-	.left-half-image-about-us {
-		height: 200px;
-	}
-	.white-container-about-us {
-		padding: 0 !important;
+	.about-left-arrow {
+		left: 100px;
 	}
 }

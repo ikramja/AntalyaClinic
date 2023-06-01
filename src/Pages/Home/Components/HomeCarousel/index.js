@@ -109,7 +109,7 @@ export default function HomeCarousel() {
 						</div>
 						<div className="w-100 d-flex justify-content-start ">
 							<Button className="brief-description-button px-3 py-4 my-4">
-								ПЛАСТИКА ГРУДИ
+								{carouselData[currentSlide].title}
 							</Button>
 						</div>
 					</Col>

@@ -13,8 +13,15 @@ export default function CategoryList(props) {
 							<Col md="4" lg="3" className="d-flex justify-content-center p-0">
 								<StandardCard
 									height={180}
+									width={100}
 									cardImage={article.article_category_image}
 									cardTitle={article.cover_header}
+									cardTitleStyle={{
+										fontSize: "1.15rem",
+										maxWidth: "200px",
+										display: "block",
+										wordWrap: "break-word",
+									}}
 									cardDescription={article.cover_sub_header}
 									cardDescriptionStyle={{
 										fontSize: "1rem",

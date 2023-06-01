@@ -42,7 +42,7 @@ export default function HomeCategory() {
 								<Col lg={3} className="center-div mb-2">
 									<div className="category-home-image-container-column h-100">
 										<img
-											className="category-home-image w-100"
+											className="category-home-image"
 											src={categoryImages[category["category_name_in_menu"]]}
 										></img>
 

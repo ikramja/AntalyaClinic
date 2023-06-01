@@ -1,13 +1,17 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Doctor from "../Pages/Doctor";
+import Blog from "../Pages/Blog";
+import News from "../Pages/News";
 import Home from "../Pages/Home";
 import OurDoctors from "../Pages/OurDoctors";
 import Service from "../Pages/Service";
 import Category from "../Pages/Category";
 import Excursion from "../Pages/Excursion";
 import Contact from "../Pages/Contact";
+import NewsArticle from "../Pages/NewsArticle";
 import Prices from "../Pages/Prices";
+import BlogArticle from "../Pages/BlogArticle";
 import AboutUs from "../Pages/AboutUs";
 import ForPatients from "../Pages/ForPatients";
 
@@ -42,6 +46,10 @@ export default function Main() {
 			<Route exact path="/Excursion" element={<Excursion />} />
 			<Route exact path="/Contact" element={<Contact />} />
 			<Route exact path="/about-us" element={<AboutUs />} />
+			<Route exact path="/blog" element={<Blog />} />
+			<Route exact path="/blogArticle" element={<BlogArticle />} />
+			<Route exact path="/news" element={<News />} />
+			<Route exact path="/newsArticleName" element={<NewsArticle />} />
 		</Routes>
 	);
 }

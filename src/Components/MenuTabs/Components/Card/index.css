@@ -1,8 +1,8 @@
 .menu-card-image {
 	object-fit: cover;
 	transition: transform 0.9s ease-out;
-	height: 260px;
-	width: 240px;
+	height: 220px;
+	width: 100%;
 }
 .menu-card-image:hover {
 	transform: scale(1.2);
@@ -11,14 +11,12 @@
 	text-align: left;
 }
 .menu-card-title h3 {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	font-weight: 700;
 	line-height: 33px;
 	color: black;
 }
 .menu-card-article {
-	font-size: 18px;
-
 	line-height: 39px;
 	text-decoration: none;
 	color: #323334;
@@ -29,6 +27,6 @@
 .menu-card-image-container {
 	/* position: relative; */
 	overflow: hidden;
-	box-shadow: 1px 8px 8px rgba(0, 0, 0, 0.2);
-	width: 230px;
+	box-shadow: 2px 8px 8px rgba(8, 8, 8, 0.2);
+	width: 100%;
 }

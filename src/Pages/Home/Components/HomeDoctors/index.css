@@ -10,11 +10,11 @@
 	flex-direction: row;
 	align-items: center;
 	bottom: 0;
-	padding-bottom: 6rem;
-	padding-right: 10rem !important;
+	margin-bottom: 6rem;
+	margin-right: 6rem !important;
+	justify-content: end;
 	font-size: 1.5rem;
 	font-weight: bold;
-	justify-content: end;
 }
 @media only screen and (max-width: 880px) {
 	.home-doctors-animation-text-container {

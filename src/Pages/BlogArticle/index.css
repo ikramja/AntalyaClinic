@@ -1,0 +1,10 @@
+.blog-article-text {
+	text-align: justify;
+}
+.stars-section-blog {
+	display: flex;
+	justify-content: flex-end;
+}
+.blog-article .ant-rate {
+	color: #545454 !important;
+}

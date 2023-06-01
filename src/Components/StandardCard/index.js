@@ -6,18 +6,11 @@ const { Meta } = Card;
 
 const StandardCardTitle = (props) => {
 	return (
-		<h1 style={{ display: "flex", flexDirection: "column" }}>
-			<span
-				className="px-0 mb-2"
-				style={{
-					fontSize: "1.25rem",
-					maxWidth: "220px",
-					display: "block",
-					wordWrap: "break-word",
-				}}
-			>
-				{props.cardTitle}
-			</span>
+		<h1
+			style={{ display: "flex", flexDirection: "column" }}
+			className="center-div"
+		>
+			<span className="px-0 mb-2">{props.cardTitle}</span>
 
 			<span
 				style={{
@@ -35,22 +28,26 @@ const StandardCardTitle = (props) => {
 
 const StandardCard = (props) => {
 	const { height } = props;
+	const { width } = props;
 	return (
 		<Link className="link-no-text-decoration" to={props.link}>
 			<Card
-				className="standard-card"
+				style={{ width: `${width ? width : "240px"} ${width ? "%" : ""}` }}
+				className="standard-card "
 				cover={
 					<img
 						src={props.cardImage}
 						className="standard-card-image"
-						style={{ height: `${height}px` }}
+						style={{ height: `${height}px`, width: `${width}%` }}
 					/>
 				}
 			>
 				<Meta
 					title={
 						<StandardCardTitle
-							cardTitle={props.cardTitle}
+							cardTitle={
+								<div style={props.cardTitleStyle}>{props.cardTitle}</div>
+							}
 							cardTitle2={props.cardTitle2}
 						/>
 					}
