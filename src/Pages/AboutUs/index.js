@@ -23,8 +23,8 @@ import ContactForm from "../../Layouts/ContactForm";
 export default function AboutUs() {
 	const carouselRef = React.useRef(null);
 
-	const handleNext = () => carouselRef.current.next();
-	const handlePrev = () => carouselRef.current.prev();
+	// const handleNext = () => carouselRef.current.next();
+	// const handlePrev = () => carouselRef.current.prev();
 	const settings = {
 		dots: true,
 
@@ -57,8 +57,8 @@ export default function AboutUs() {
 			},
 		],
 		slidesToScroll: 1,
-		nextArrow: <BiRightArrowAlt style={{ fontSize: "2rem", color: "black" }} />,
-		prevArrow: <BiLeftArrowAlt style={{ fontSize: "2rem", color: "black" }} />,
+		// nextArrow: <BiRightArrowAlt style={{ fontSize: "2rem", color: "black" }} />,
+		// prevArrow: <BiLeftArrowAlt style={{ fontSize: "2rem", color: "black" }} />,
 	};
 	// const getSlidesToShow = () => {
 	// 	const screenWidth = window.innerWidth;
@@ -296,8 +296,8 @@ export default function AboutUs() {
 							/>
 						</div>
 					</Carousel>
-					<BiLeftArrowAlt className="about-left-arrow" onClick={handlePrev} />
-					<BiRightArrowAlt className="about-right-arrow" onClick={handleNext} />
+					{/* <BiLeftArrowAlt className="about-left-arrow" onClick={handlePrev} />
+					<BiRightArrowAlt className="about-right-arrow" onClick={handleNext} /> */}
 				</div>
 			</div>
 			{/* <ContactForm /> */}
