@@ -32,7 +32,7 @@ export default function AboutUs() {
 		touchMove: true,
 		responsive: [
 			{
-				breakpoint: 1610,
+				breakpoint: 1550,
 				settings: {
 					slidesToShow: 4,
 					slidesToScroll: 4,
