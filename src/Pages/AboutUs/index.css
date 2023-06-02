@@ -1,6 +1,6 @@
 .about-us-Block-1 {
-	max-height: 390px;
-	/* object-fit: cover; */
+	max-height: 498px;
+	object-fit: cover;
 	overflow: hidden;
 	border-top-right-radius: 100px;
 	border-bottom-left-radius: 250px;
@@ -13,14 +13,14 @@
 	font-size: 1.14rem;
 }
 .about-us-Block-2 {
-	max-height: 350px;
+	max-height: 689px;
 	border-top-left-radius: 250px;
 	border-bottom-right-radius: 100px;
 	object-fit: cover;
 	overflow: hidden;
 }
 .about-us-Block-3 {
-	max-height: 350px;
+	max-height: 486px;
 	border-top-left-radius: 100px;
 	border-bottom-right-radius: 220px;
 	object-fit: cover;
