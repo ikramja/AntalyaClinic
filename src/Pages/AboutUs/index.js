@@ -27,7 +27,6 @@ export default function AboutUs() {
 	// const handlePrev = () => carouselRef.current.prev();
 	const settings = {
 		dots: true,
-
 		slidesToShow: 5,
 		touchMove: true,
 		responsive: [
@@ -39,6 +38,8 @@ export default function AboutUs() {
 					infinite: true,
 					dots: true,
 				},
+			},
+			{
 				breakpoint: 1305,
 				settings: {
 					slidesToShow: 3,
