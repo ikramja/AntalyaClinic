@@ -138,7 +138,7 @@ export default function AboutUs() {
 										marginBottom: "0",
 									}}
 								>
-									01
+									011
 								</p>
 								<div className="about-us-Block-1-content">
 									<h1 style={{ fontWeight: "bold" }}>Переводчик</h1>
