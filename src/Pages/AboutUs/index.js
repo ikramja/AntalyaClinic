@@ -261,6 +261,7 @@ export default function AboutUs() {
 						backgroundImage: `url(${backgroundAbout2})`,
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
+						height: "40vh",
 						backgroundPositionY: "top",
 						paddingBottom: "35px",
 						position: "relative",
