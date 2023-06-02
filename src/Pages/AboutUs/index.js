@@ -138,7 +138,7 @@ export default function AboutUs() {
 										marginBottom: "0",
 									}}
 								>
-									011
+									01
 								</p>
 								<div className="about-us-Block-1-content">
 									<h1 style={{ fontWeight: "bold" }}>Переводчик</h1>
@@ -211,7 +211,10 @@ export default function AboutUs() {
 						</Row>
 					</div>
 					<div>
-						<Row className="about-block-space center-div">
+						<Row
+							className="about-block-space center-div"
+							style={{ paddingTop: "4rem" }}
+						>
 							<div className="d-flex ps-5">
 								<p
 									className="me-4"
@@ -258,8 +261,8 @@ export default function AboutUs() {
 						backgroundImage: `url(${backgroundAbout2})`,
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
-						height: "55vh",
-						paddingBottom: "3rem",
+						backgroundPositionY: "top",
+						paddingBottom: "35px",
 						position: "relative",
 					}}
 				>
