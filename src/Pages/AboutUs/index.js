@@ -17,6 +17,8 @@ import ImageCarouselAboutUs1 from "../../Assets/AboutUs/carousel1.png";
 import ImageCarouselAboutUs2 from "../../Assets/AboutUs/carousel2.png";
 import ImageCarouselAboutUs3 from "../../Assets/AboutUs/carousel3.png";
 import ImageCarouselAboutUs4 from "../../Assets/AboutUs/carousel4.png";
+import ImageCarouselAboutUs5 from "../../Assets/AboutUs/carousel5.jpg";
+import ImageCarouselAboutUs6 from "../../Assets/AboutUs/carousel6.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 import ContactForm from "../../Layouts/ContactForm";
 
@@ -34,7 +36,7 @@ export default function AboutUs() {
 				breakpoint: 1550,
 				settings: {
 					slidesToShow: 4,
-					slidesToScroll: 4,
+					slidesToScroll: 2,
 					infinite: true,
 					dots: true,
 				},
@@ -43,7 +45,7 @@ export default function AboutUs() {
 				breakpoint: 1305,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToScroll: 2,
 					infinite: true,
 					dots: true,
 				},
@@ -304,8 +306,15 @@ export default function AboutUs() {
 						<div>
 							<img
 								className="carousel-image_about-us"
-								src={ImageCarouselAboutUs3}
+								src={ImageCarouselAboutUs5}
 								alt="Slide 5"
+							/>
+						</div>
+						<div>
+							<img
+								className="carousel-image_about-us"
+								src={ImageCarouselAboutUs6}
+								alt="Slide 6"
 							/>
 						</div>
 					</Carousel>
