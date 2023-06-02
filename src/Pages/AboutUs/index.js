@@ -6,7 +6,7 @@ import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 import FrameParagraph from "../../Components/FrameParagraph";
 import AnalysesTableBackground from "../../Assets/ForPatients/iko.png";
 import GreyFrame from "./Components/AboutUsGreyFrame";
-import aboutUs from "../../Assets/AboutUs/aboutUs.png";
+import block1 from "../../Assets/AboutUs/block1.png";
 import backgroundAbout from "../../Assets/AboutUs/background.png";
 import Block2 from "../../Assets/AboutUs/block2.jpg";
 import Block3 from "../../Assets/AboutUs/block3.png";
@@ -118,7 +118,7 @@ export default function AboutUs() {
 					<Container>
 						<Row className="center-div about-block-space">
 							<Col lg={5}>
-								<img src={aboutUs} className="about-us-Block-1 w-100"></img>
+								<img src={block1} className="about-us-Block-1 w-100"></img>
 							</Col>
 							<Col lg={6}>
 								<p
