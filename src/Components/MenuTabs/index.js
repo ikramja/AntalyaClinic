@@ -196,7 +196,7 @@ const MenuTabs = (props) => {
 						<Card cardImage={service} cardTitle="ДЛЯ ПАЦИЕНТОВ" />
 						<Link
 							style={{ textDecoration: "none" }}
-							to=""
+							to="/Excursion"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -218,7 +218,7 @@ const MenuTabs = (props) => {
 		{
 			label: <div className="menu-tab-title">ГИД ПО ОТДЫХУ</div>,
 			key: "ГИД ПО ОТДЫХУ",
-			href: "/Excurtion",
+			href: "/Excursion",
 		},
 		{
 			label: (
@@ -266,8 +266,11 @@ const MenuTabs = (props) => {
 	};
 	const handleTabClick = (key, event) => {
 		event.stopPropagation(); // prevent the default tab behavior
-		props.setShowMenu(false);
-		props.setShowContent(true);
+		if (!(key === "О НАС" || key === "УСЛУГИ")) {
+			props.setShowMenu(false);
+			props.setShowContent(true);
+		}
+
 		const item = menuItems.find((item) => item.key === key);
 		if (item && item.href) {
 			window.location.href = item.href;
