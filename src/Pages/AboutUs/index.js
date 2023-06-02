@@ -120,6 +120,7 @@ export default function AboutUs() {
 						backgroundImage: `url(${backgroundAbout})`,
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
+						backgroundPositionY: "bottom",
 					}}
 				>
 					<Container>
