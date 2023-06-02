@@ -214,7 +214,7 @@ export default function AboutUs() {
 					<div>
 						<Row
 							className="about-block-space center-div"
-							style={{ paddingTop: "4rem" }}
+							style={{ paddingTop: "3.5rem" }}
 						>
 							<div className="d-flex ps-5">
 								<p
