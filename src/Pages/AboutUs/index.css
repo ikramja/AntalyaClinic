@@ -40,7 +40,9 @@
 .ant-carousel .slick-dots {
 	bottom: -1rem;
 }
-
+/* .carousel-about .ant-carousel .slick-dots{
+	position: relative;
+} */
 .carousel-about .ant-carousel .slick-dots li button:before {
 	font-size: 13px;
 	color: #050606 !important; /* Change this to your desired color */

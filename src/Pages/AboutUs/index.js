@@ -28,11 +28,18 @@ export default function AboutUs() {
 	const settings = {
 		dots: true,
 
-		slidesToShow: 4,
+		slidesToShow: 5,
 		touchMove: true,
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1610,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					infinite: true,
+					dots: true,
+				},
+				breakpoint: 1305,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 3,
