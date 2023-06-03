@@ -107,8 +107,8 @@ export default function HomeCarousel() {
 						<div className="image-Brief-description">
 							<p>{carouselData[currentSlide].text}</p>
 						</div>
-						<div className="w-100 d-flex justify-content-start ">
-							<Button className="brief-description-button px-3 py-4 my-4">
+						<div className="w-100 d-flex justify-content-end ">
+							<Button className="brief-description-button home-carousel-button px-3 py-4 my-4">
 								{carouselData[currentSlide].title}
 							</Button>
 						</div>

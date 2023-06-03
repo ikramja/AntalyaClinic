@@ -1,48 +1,86 @@
 .contact-form-paragraph {
-	text-align: justify;
-	hyphens: auto;
-	font-weight: 400;
+	text-align: left;
+	color: white;
+	font-size: 0.9rem;
 }
 .contact-form-header {
-	font-size: 2rem;
-	font-weight: 400;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: left;
+	color: white;
 }
 .contact-form {
-	background: #e9ebec;
+	position: relative;
+	background: rgba(1, 98, 69, 0.85);
+}
+.contact-form::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../../Assets/contactForm/contactForm.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: -1; /* This will put the image behind the content of the div */
+}
+.check-box-text {
+	color: white;
+	font-size: 0.8rem !important;
 }
 .form-contact-check-box {
 	text-align: left;
-	font-weight: 500;
+	color: white;
 }
 .form-contact-check-box a {
-	color: #000000;
-	border-bottom: 1.5px solid black;
+	color: white;
+	border-bottom: 1.5px solid white;
 	text-decoration: none;
 }
 .form-contact-check-box a:hover {
-	color: #1d6a6a;
+	color: white;
+}
+.ant-checkbox-input:hover {
+	color: white !important;
 }
 .contact-form-button {
-	border-radius: 12px;
 	display: flex;
-	background: #f5f4f4;
+	background: #323334;
 	font-weight: 500;
+	color: white;
+	border-radius: 0;
+	border: none;
 	align-items: center;
-	border: 1.5px solid #000000;
+}
+.ant-checkbox-inner:hover {
+	background-color: white;
 }
 .form-contact-check-box .ant-checkbox-checked .ant-checkbox-inner {
-	background-color: #1d6a6a !important;
+	background-color: white !important;
+	border-radius: 0 !important;
 }
+
 .form-contact-check-box .ant-checkbox .ant-checkbox-inner {
 	border-width: 1px;
-	border-color: black;
-	background-color: #e9ebec;
+	width: 12px; /* Adjust these values as per your need */
+	height: 12px;
+	border-color: white;
+	background-color: transparent;
+	border-radius: 0 !important;
+}
+.contact-form-input::placeholder {
+	color: white;
+	opacity: 1; /* Firefox */
 }
 .contact-form .contact-form-input {
 	background: rgba(245, 244, 244, 0.8);
-	border: 1px solid black;
-	box-shadow: 0px 1.2px 1px rgba(31, 31, 31, 0.5);
-	border-radius: 10px;
+	border: none;
+	outline: none;
+	border-radius: 0 !important;
+	border-bottom: 1px solid white;
+	background-color: transparent;
 }
 .contact-form-button-container {
 	display: flex;

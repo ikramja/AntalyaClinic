@@ -1,3 +1,21 @@
+.home-image-green {
+	position: relative;
+	background: rgba(1, 98, 69, 0.85);
+}
+.home-image-green::before {
+	content: ""; /* Necessary for the pseudo-element to be displayed */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../../../../Assets//Home/greenBackgroubd.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center center;
+	z-index: -1; /* This will put the image behind the content of the div */
+}
+
 .circle-button {
 	border-radius: 50%;
 	width: 50px;
@@ -59,7 +77,7 @@
 }
 
 .big-image {
-	height: 800px;
+	height: 750px;
 	object-fit: cover;
 }
 .home-image-animation-text-container {
@@ -78,14 +96,13 @@
 
 .big-image--white-frame-container {
 	background: #ffffff;
-
 	box-shadow: -3px 4px 8px rgba(0, 0, 0, 0.2);
 	border-radius: 8px;
 	padding-left: 3rem !important;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	position: absolute;
-	max-width: 700px !important;
+	max-width: 550px !important;
 	bottom: 0;
 	right: 0;
 	margin-right: 4rem !important;
@@ -97,8 +114,8 @@
 	content: "";
 	position: absolute;
 	bottom: 10%;
-	height: 3px;
-	background-color: #989999;
+	height: 4px;
+	background-color: #9ea1a1;
 }
 
 .big-image-list::before {
@@ -109,7 +126,9 @@
 .under-big-image-container-paragraph {
 	text-align: justify;
 	word-spacing: -0.1em;
-	font-size: 1.4rem;
+	font-size: 1.45rem;
+	color: white;
+	font-family: Montserrat;
 }
 
 .under-big-image-container-paragraph {
@@ -122,8 +141,18 @@
 	box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2);
 	border-radius: 12px;
 	color: #ffffff;
-	padding-left: 2rem !important;
-	padding-right: 2rem !important;
+}
+.home-image-green-header {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+.home-image-green-container {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+.under-big-image-container-paragraph {
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
 .big-image-list::after {
@@ -135,6 +164,17 @@
 .big-image-header {
 	font-weight: "bold";
 	font-size: "2.3rem";
+}
+/* @media only screen and (max-width: 768px) {
+	.home-image-green-header.under-big-image-container-paragraph.home-image-green-container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+} */
+@media only screen and (max-width: 650px) {
+	.big-image-header {
+		font-size: 1.8rem !important;
+	}
 }
 
 @media only screen and (max-width: 880px) {
@@ -161,5 +201,10 @@
 @media only screen and (max-width: 650px) {
 	.big-image-header {
 		font-size: 1.8rem !important;
+	}
+}
+@media (max-width: 881px) {
+	.alternate-context {
+		display: none !important;
 	}
 }

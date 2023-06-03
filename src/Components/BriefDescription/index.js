@@ -13,6 +13,7 @@ export default function BriefDescription({
 	source,
 	containerStyle,
 	headerStyle,
+	descriptionStyle,
 	text,
 }) {
 	return (
@@ -52,6 +53,7 @@ export default function BriefDescription({
 							<Col md={source ? 8 : 12}>
 								<div
 									className="Brief-description px-4 "
+									style={descriptionStyle ? descriptionStyle : {}}
 									dangerouslySetInnerHTML={{ __html: description }}
 								/>
 							</Col>

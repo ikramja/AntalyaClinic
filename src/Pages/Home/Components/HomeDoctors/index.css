@@ -1,16 +1,33 @@
 .card-doctor-home-container {
-	background-color: #ffffff;
-	box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
+	background-color: transparent;
+	border-radius: 0;
 }
 .card-doctor-home-row {
-	--bs-gutter-x: 0 !important;
+	/* --bs-gutter-x: 0 !important; */
+}
+
+.home-doctor .ant-card-body {
+	padding-bottom: 0 !important;
+}
+.progress-bar {
+	width: 60px !important;
+	background-color: #323334 !important;
+}
+.progress {
+	height: 6px !important;
+	background-color: #016245 !important;
+	border-radius: 0 !important;
+}
+.home-doctor-text-header {
+	font-size: 0.7rem;
+	text-align: left;
+	color: #5d5f6d;
 }
 .home-doctors-animation-text-container {
 	flex-direction: row;
 	align-items: center;
 	bottom: 0;
-	margin-bottom: 6rem;
+	padding-bottom: 1rem;
 	margin-right: 6rem !important;
 	justify-content: end;
 	font-size: 1.5rem;

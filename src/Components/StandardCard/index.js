@@ -29,6 +29,7 @@ const StandardCardTitle = (props) => {
 const StandardCard = (props) => {
 	const { height } = props;
 	const { width } = props;
+
 	return (
 		<Link className="link-no-text-decoration" to={props.link}>
 			<Card
@@ -38,7 +39,12 @@ const StandardCard = (props) => {
 					<img
 						src={props.cardImage}
 						className="standard-card-image"
-						style={{ height: `${height}px`, width: `${width}%` }}
+						style={{
+							height: `${height}px`,
+							width: `${width}%`,
+							borderRadius: props.imageBorderRadius,
+							borderRight: props.rightGreenBorder && "11px solid #016245",
+						}}
 					/>
 				}
 			>
@@ -46,7 +52,19 @@ const StandardCard = (props) => {
 					title={
 						<StandardCardTitle
 							cardTitle={
-								<div style={props.cardTitleStyle}>{props.cardTitle}</div>
+								<div>
+									<div style={props.cardTitleStyle}>{props.cardTitle}</div>
+									<div
+										className="mt-2"
+										style={{
+											color: " #016245",
+											fontWeight: "Bold",
+											fontSize: "0.7rem",
+										}}
+									>
+										{props.DoctorRate}
+									</div>
+								</div>
 							}
 							cardTitle2={props.cardTitle2}
 						/>

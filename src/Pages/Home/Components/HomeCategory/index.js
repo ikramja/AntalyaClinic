@@ -26,15 +26,10 @@ export default function HomeCategory() {
 	}, []);
 	return (
 		<div>
-			<h1 style={{ fontSize: "2.3rem", fontWeight: "bold" }}>
-				Достигните совершенства с клиникой EL ARTE
-			</h1>
-			<br />
-			<br />
-			<h1 style={{ fontSize: "2rem", fontWeight: "bold" }} className="mb-3">
+			<h1 style={{ fontSize: "6vw", fontWeight: "bold" }} className="my-4">
 				ПОПУЛЯРНЫЕ УСЛУГИ
 			</h1>
-			<div className="w-100 category-home-image-container py-4">
+			<div className="w-100 category-home-image-container pb-4">
 				<Container>
 					<Row className="w-100 center-div category-home-row">
 						{categoryData &&

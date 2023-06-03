@@ -1,0 +1,34 @@
+.home-blog-grey-container {
+	background-color: #d9d9d9;
+	border-radius: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+	padding: 2rem;
+	width: 100%;
+}
+.home-blog-grey-container-circle-image {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 200px;
+
+	height: 200px;
+	border-top-left-radius: 80px;
+	border-top-right-radius: 80px;
+	border-bottom-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+
+	overflow: hidden;
+	object-fit: cover;
+}
+
+.circle-image img {
+	width: 100%;
+	height: 100%;
+}

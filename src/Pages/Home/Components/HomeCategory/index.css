@@ -1,8 +1,9 @@
 .category-home-image {
-	height: 400px;
+	height: 390px;
 	object-fit: cover;
 	max-width: 240px;
 	transition: filter 0.3s;
+	filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.2));
 }
 
 .category-home-row {
@@ -10,7 +11,10 @@
 }
 
 .category-home-image-container {
-	background-color: #d9d9d9;
+	background-image: url(../../../../Assets/AboutUs/background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 }
 .category-home-image-container-column {
 	position: relative;
