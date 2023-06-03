@@ -17,10 +17,11 @@ export default function HomeDoctors() {
 	return (
 		doctors && (
 			<div className="home-doctor">
-				<Container className="px-5">
-					<Row className="px-5">
+				<Container>
+					<Row className="home-doctor-row">
 						<Col md={7}>
 							<h1
+								className="home-doctor-h"
 								style={{
 									fontSize: "4.5rem",
 									fontFamily: "Oswald",
@@ -92,87 +93,91 @@ export default function HomeDoctors() {
 								</div>
 							</div>
 						</div> */}
-						<div style={{ display: "flex" }} className="w-100">
-							<div className="me-3">
-								<h1
-									style={{
-										fontWeight: "bolder",
-										fontSize: "1.8rem",
-										textAlign: "left",
-									}}
-								>
-									900+
-								</h1>
-								<div class="progress-bar">
-									<div class="progress" style={{ width: "80%" }}></div>
+						<Row className="w-100">
+							<Col md={10} style={{ display: "flex" }}>
+								<div>
+									<h1
+										style={{
+											fontWeight: "bolder",
+											fontSize: "1.8rem",
+											textAlign: "left",
+										}}
+									>
+										900+
+									</h1>
+									<div class="progress-bar">
+										<div class="progress" style={{ width: "80%" }}></div>
+									</div>
+									<h1
+										className="mt-1"
+										style={{
+											fontSize: "0.7rem",
+											textAlign: "left",
+											fontWeight: "bolder",
+										}}
+									>
+										Операций
+									</h1>
 								</div>
-								<h1
-									className="mt-1"
-									style={{
-										fontSize: "0.7rem",
-										textAlign: "left",
-										fontWeight: "bolder",
-									}}
-								>
-									Операций
-								</h1>
-							</div>
-							<div className="ms-4">
-								<h1
-									style={{
-										fontSize: "1.8rem",
-										textAlign: "left",
-										fontWeight: "bolder",
-										width: "130px",
-									}}
-								>
-									550+
-								</h1>
-								<div class="progress-bar">
-									<div class="progress" style={{ width: "80%" }}></div>
+								<div className="ms-4">
+									<h1
+										style={{
+											fontSize: "1.8rem",
+											textAlign: "left",
+											fontWeight: "bolder",
+											width: "130px",
+										}}
+									>
+										550+
+									</h1>
+									<div class="progress-bar">
+										<div class="progress" style={{ width: "80%" }}></div>
+									</div>
+									<h1
+										className="mt-1"
+										style={{
+											fontSize: "0.7rem",
+											textAlign: "left",
+											fontWeight: "bolder",
+										}}
+									>
+										Довольных Клиентов
+									</h1>
 								</div>
-								<h1
-									className="mt-1"
-									style={{
-										fontSize: "0.7rem",
-										textAlign: "left",
-										fontWeight: "bolder",
-									}}
-								>
-									Довольных Клиентов
-								</h1>
-							</div>
-							<div className="w-100">
-								<h1
-									style={{
-										fontWeight: "bolder",
-										fontSize: "1.8rem",
-										textAlign: "left",
-									}}
-								>
-									15+
-								</h1>
+								<div className="w-100">
+									<h1
+										style={{
+											fontWeight: "bolder",
+											fontSize: "1.8rem",
+											textAlign: "left",
+										}}
+									>
+										15+
+									</h1>
 
-								<div class="progress-bar ">
-									<div class="progress" style={{ width: "60%" }}></div>
+									<div class="progress-bar ">
+										<div class="progress" style={{ width: "60%" }}></div>
+									</div>
+									<h1
+										className="mt-1"
+										style={{
+											fontSize: "0.7rem",
+											textAlign: "left",
+											fontWeight: "bolder",
+										}}
+									>
+										Лет в медицине
+									</h1>
 								</div>
-								<h1
-									className="mt-1"
-									style={{
-										fontSize: "0.7rem",
-										textAlign: "left",
-										fontWeight: "bolder",
-									}}
-								>
-									Лет в медицине
-								</h1>
-							</div>
-							<div className="w-100 contact-form-button-container my-3">
-								<Button className="contact-form-button  py-1 px-5 ">
-									Все врачи
-								</Button>
-							</div>
-						</div>
+							</Col>
+							<Col md={2}>
+								<div className="w-100 contact-form-button-container my-3">
+									<Button className="contact-form-button  py-1 px-5 ">
+										Все врачи
+									</Button>
+								</div>
+							</Col>
+						</Row>
 					</Row>
 				</Container>
 			</div>

@@ -62,10 +62,8 @@ export default function Home() {
 						}}
 						descriptionStyle={{ fontSize: "1.2rem", color: "#323334" }}
 						containerStyle={{
-							margin: "4rem",
 							background: "rgba(255, 255, 255)",
 							paddingTop: "1rem",
-
 							color: "black",
 							borderRadius: "10px",
 							boxShadow:

@@ -4,7 +4,7 @@
 	font-size: 0.9rem;
 }
 .contact-form-header {
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 	text-align: left;
 	color: white;
@@ -86,7 +86,7 @@
 	display: flex;
 	justify-content: flex-end;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 	.contact-form-button-container {
 		justify-content: center !important;
 	}

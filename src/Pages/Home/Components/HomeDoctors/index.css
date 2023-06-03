@@ -2,6 +2,10 @@
 	background-color: transparent;
 	border-radius: 0;
 }
+.home-doctor-row {
+	padding-left: 3rem !important;
+	padding-right: 3rem !important;
+}
 .card-doctor-home-row {
 	/* --bs-gutter-x: 0 !important; */
 }
@@ -19,7 +23,7 @@
 	border-radius: 0 !important;
 }
 .home-doctor-text-header {
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	text-align: left;
 	color: #5d5f6d;
 }
@@ -37,5 +41,19 @@
 	.home-doctors-animation-text-container {
 		padding-right: 0 !important;
 		justify-content: center;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.home-doctor-row {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.home-doctor-h {
+		font-size: 3rem !important;
+	}
+	.home-doctor-text-header {
+		font-size: 1.1rem;
+		text-align: left;
+		color: #5d5f6d;
 	}
 }

@@ -7,23 +7,24 @@ export default function BlogSection() {
 	return (
 		<Container>
 			<div>
-				<h1 style={{ fontSize: "6vw", fontWeight: "bolder" }}>БЛОГ</h1>
+				<h1 style={{ fontSize: "4rem", fontWeight: "bolder" }}>БЛОГ</h1>
 
 				<Row className="center-div pb-5 pt-4">
-					<Col md={6}>
+					<Col lg={6}>
 						<div
 							className="home-blog-grey-container"
 							style={{ transform: " rotate(1deg)" }}
 						>
 							<h1
 								style={{
-									fontSize: "1.3rem",
+									fontSize: "1rem",
 									fontWeight: "bold",
-									width: "300px",
+									maxWidth: "300px",
 									textAlign: "left",
+									marginRight: "13rem",
 								}}
 							>
-								Можно ли кормить грудью после маммопластики?
+								Варикоз у мужчин: миф или реальность?
 							</h1>
 							<h2
 								style={{
@@ -31,6 +32,7 @@ export default function BlogSection() {
 									fontWeight: "bold",
 									textAlign: "left",
 									color: "#016245",
+									marginRight: "13rem",
 								}}
 							>
 								Читать полностью
@@ -39,8 +41,8 @@ export default function BlogSection() {
 							<div
 								className="home-blog-grey-container-circle-image"
 								style={{
-									transform: " rotate(-9.28deg)",
-									marginRight: " 1.5rem",
+									transform: " rotate(-8.28deg)",
+									marginRight: " 1rem",
 									right: "0",
 									border: "7px double #323334",
 								}}
@@ -49,14 +51,14 @@ export default function BlogSection() {
 							</div>
 						</div>
 					</Col>
-					<Col md={6}>
+					<Col lg={6}>
 						<div
 							className="home-blog-grey-container "
 							style={{ transform: " rotate(-0.54deg)", marginTop: "3rem" }}
 						>
 							<h1
 								style={{
-									fontSize: "1.4rem",
+									fontSize: "1rem",
 									fontWeight: "bold",
 									maxWidth: "300px",
 									textAlign: "left",
@@ -89,16 +91,16 @@ export default function BlogSection() {
 					</Col>
 				</Row>
 				<Row className="center-div my-5">
-					<Col md={6}>
+					<Col lg={6} className="blog-section-last-col">
 						<div
 							className="home-blog-grey-container"
 							style={{ transform: " rotate(-9.68deg)" }}
 						>
 							<h1
 								style={{
-									fontSize: "1.4rem",
+									fontSize: "1rem",
 									fontWeight: "bold",
-									width: "300px",
+									maxWidth: "300px",
 									textAlign: "left",
 									marginLeft: "13rem",
 								}}
@@ -127,26 +129,28 @@ export default function BlogSection() {
 							</div>
 						</div>
 					</Col>
-					<Col md={6}>
+					<Col lg={6}>
 						<div
 							className="home-blog-grey-container"
 							style={{ transform: " rotate(-4deg)" }}
 						>
 							<h1
 								style={{
-									fontSize: "1.3rem",
+									fontSize: "1rem",
 									fontWeight: "bold",
-									width: "300px",
+									maxWidth: "300px",
 									textAlign: "left",
+									marginRight: "13rem",
 								}}
 							>
-								Можно ли кормить грудью после маммопластики?
+								Варикоз у мужчин: миф или реальность?
 							</h1>
 							<h2
 								style={{
 									fontSize: "1rem",
 									fontWeight: "bold",
 									textAlign: "left",
+									marginRight: "13rem",
 									color: "#016245",
 								}}
 							>
@@ -155,8 +159,8 @@ export default function BlogSection() {
 							<div
 								className="home-blog-grey-container-circle-image"
 								style={{
-									transform: " rotate(-12.3deg)",
-									marginRight: " 1.5rem",
+									transform: " rotate(-8.3deg)",
+									marginRight: " 1rem",
 									right: "0",
 									border: "7px double #323334",
 								}}

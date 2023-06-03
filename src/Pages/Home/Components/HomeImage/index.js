@@ -55,7 +55,7 @@ export default function HomeImage() {
 				</div>
 				<ContactForm
 					className="alternate-context contact-form"
-					formWidth="900px"
+					formWidth="950px"
 					formStyle={{ position: "absolute", top: "-100px" }}
 				/>
 			</div>
@@ -63,14 +63,7 @@ export default function HomeImage() {
 			<div className="home-image-green">
 				<Container className="py-5 home-image-green-container">
 					<Container>
-						<h1
-							style={{
-								color: "white",
-								fontFamily: "Arsenal",
-								fontSize: "2.2rem",
-							}}
-							className="pb-4  home-image-green-header"
-						>
+						<h1 className="pb-4  home-image-green-header">
 							Добро пожаловать в клинику пластической хирургии EL ARTE Здесь
 							красота встречается с опытом.
 						</h1>

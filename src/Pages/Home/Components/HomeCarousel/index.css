@@ -14,3 +14,9 @@
 .home-carousel-button {
 	font-size: 1.2rem !important;
 }
+@media only screen and (max-width: 450px) {
+	.home-carousel-text {
+		padding-left: 2rem !important;
+		padding-right: 0 !important;
+	}
+}
