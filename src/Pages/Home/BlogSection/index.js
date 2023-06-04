@@ -15,12 +15,12 @@ export default function BlogSection() {
 							className="home-blog-grey-container"
 							style={{ transform: " rotate(1deg)" }}
 						>
-							<div style={{ width: "50%" }}>
+							<div style={{ width: "60%" }}>
 								<h1
 									style={{
 										fontSize: "1rem",
 										fontWeight: "bold",
-										maxWidth: "300px",
+										// maxWidth: "300px",
 										textAlign: "left",
 									}}
 								>
@@ -45,7 +45,8 @@ export default function BlogSection() {
 									marginRight: " 1rem",
 									right: "0",
 									border: " 7px solid #323334" /* Thicker border */,
-									outline: " 3px solid #000000",
+									outline: " 3px solid #323334",
+									outlineOffset: "6px",
 								}}
 							>
 								<img src={testImage}></img>
@@ -83,7 +84,9 @@ export default function BlogSection() {
 								className="home-blog-grey-container-circle-image"
 								style={{
 									transform: " rotate(6.23deg)",
-									border: "7px double #016245",
+									border: " 7px solid #323334" /* Thicker border */,
+									outline: " 3px solid #323334",
+									outlineOffset: "6px",
 								}}
 							>
 								<img src={testImage}></img>
@@ -123,7 +126,9 @@ export default function BlogSection() {
 								className="home-blog-grey-container-circle-image"
 								style={{
 									transform: " rotate(-3.07deg)",
-									border: "7px double #016245",
+									border: " 7px solid #323334" /* Thicker border */,
+									outline: " 3px solid #323334",
+									outlineOffset: "6px",
 								}}
 							>
 								<img src={testImage}></img>
@@ -163,7 +168,9 @@ export default function BlogSection() {
 									transform: " rotate(-8.3deg)",
 									marginRight: " 1rem",
 									right: "0",
-									border: "7px double #323334",
+									border: " 7px solid #323334" /* Thicker border */,
+									outline: " 3px solid #323334",
+									outlineOffset: "6px",
 								}}
 							>
 								<img src={testImage}></img>
