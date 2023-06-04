@@ -19,10 +19,10 @@ export default function BlogSection() {
 								<h1
 									style={{
 										fontSize: "1rem",
-										fontWeight: "bold",
+										fontWeight: "800",
 										// maxWidth: "300px",
 										textAlign: "left",
-										marginRight: "13rem",
+										marginRight: "248px",
 									}}
 								>
 									Варикоз у мужчин: миф или реальность?
@@ -30,10 +30,10 @@ export default function BlogSection() {
 								<h2
 									style={{
 										fontSize: "1rem",
-										fontWeight: "bold",
+										fontWeight: "800",
 										textAlign: "left",
 										color: "#016245",
-										marginRight: "13rem",
+										marginRight: "248px",
 									}}
 								>
 									Читать полностью
@@ -44,7 +44,7 @@ export default function BlogSection() {
 								className="home-blog-grey-container-circle-image"
 								style={{
 									transform: " rotate(-8.28deg)",
-									marginRight: " 1rem",
+									marginRight: " 15px",
 									right: "0",
 									border: " 7px solid #323334" /* Thicker border */,
 									outline: " 3px solid #323334",
@@ -63,10 +63,10 @@ export default function BlogSection() {
 							<h1
 								style={{
 									fontSize: "1rem",
-									fontWeight: "bold",
-									maxWidth: "300px",
+									fontWeight: "800",
+
 									textAlign: "left",
-									marginLeft: "13rem",
+									marginLeft: "248px",
 								}}
 							>
 								Варикоз у мужчин: миф или реальность?
@@ -74,9 +74,9 @@ export default function BlogSection() {
 							<h2
 								style={{
 									fontSize: "1rem",
-									fontWeight: "bold",
+									fontWeight: "800",
 									textAlign: "left",
-									marginLeft: "13rem",
+									marginLeft: "248px",
 									color: "#016245",
 								}}
 							>
@@ -89,6 +89,8 @@ export default function BlogSection() {
 									border: " 7px solid #323334" /* Thicker border */,
 									outline: " 3px solid #323334",
 									outlineOffset: "6px",
+									left: "0",
+									marginLeft: "15px",
 								}}
 							>
 								<img src={testImage}></img>
@@ -105,10 +107,9 @@ export default function BlogSection() {
 							<h1
 								style={{
 									fontSize: "1rem",
-									fontWeight: "bold",
-									maxWidth: "300px",
+									fontWeight: "800",
 									textAlign: "left",
-									marginLeft: "13rem",
+									marginLeft: "248px",
 								}}
 							>
 								Варикоз у мужчин: миф или реальность?
@@ -116,9 +117,9 @@ export default function BlogSection() {
 							<h2
 								style={{
 									fontSize: "1rem",
-									fontWeight: "bold",
+									fontWeight: "800",
 									textAlign: "left",
-									marginLeft: "13rem",
+									marginLeft: "248px",
 									color: "#016245",
 								}}
 							>
@@ -131,6 +132,8 @@ export default function BlogSection() {
 									border: " 7px solid #323334" /* Thicker border */,
 									outline: " 3px solid #323334",
 									outlineOffset: "6px",
+									left: "0",
+									marginLeft: "15px",
 								}}
 							>
 								<img src={testImage}></img>
@@ -145,10 +148,10 @@ export default function BlogSection() {
 							<h1
 								style={{
 									fontSize: "1rem",
-									fontWeight: "bold",
+									fontWeight: "800",
 									maxWidth: "300px",
 									textAlign: "left",
-									marginRight: "13rem",
+									marginRight: "248px",
 								}}
 							>
 								Варикоз у мужчин: миф или реальность?
@@ -156,9 +159,9 @@ export default function BlogSection() {
 							<h2
 								style={{
 									fontSize: "1rem",
-									fontWeight: "bold",
+									fontWeight: "800",
 									textAlign: "left",
-									marginRight: "13rem",
+									marginRight: "248px",
 									color: "#016245",
 								}}
 							>
@@ -168,7 +171,7 @@ export default function BlogSection() {
 								className="home-blog-grey-container-circle-image"
 								style={{
 									transform: " rotate(-8.3deg)",
-									marginRight: " 1rem",
+									marginRight: " 15px",
 									right: "0",
 									border: " 7px solid #323334" /* Thicker border */,
 									outline: " 3px solid #323334",
