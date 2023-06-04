@@ -4,6 +4,7 @@ import StandardCard from "../../../../Components/StandardCard";
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 import { Link } from "react-router-dom";
 import { Button } from "antd";
 export default function HomeDoctors() {
@@ -172,9 +173,11 @@ export default function HomeDoctors() {
 							</Col>
 							<Col md={2}>
 								<div className="w-100 contact-form-button-container my-3">
-									<Button className="contact-form-button  py-1 px-5 ">
-										Все врачи
-									</Button>
+									<Link to="/our-doctors" style={{ textDecoration: "none" }}>
+										<Button className="contact-form-button  py-1 px-5 ">
+											Все врачи
+										</Button>
+									</Link>
 								</div>
 							</Col>
 						</Row>

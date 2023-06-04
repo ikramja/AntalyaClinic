@@ -2,6 +2,9 @@
 	position: relative;
 	background: rgba(1, 98, 69, 0.85);
 }
+.no-background {
+	background-image: none !important;
+}
 .home-image-green::before {
 	content: ""; /* Necessary for the pseudo-element to be displayed */
 	position: absolute;
@@ -168,6 +171,7 @@
 	font-weight: "bold";
 	font-size: "2.3rem";
 }
+
 /* @media only screen and (max-width: 768px) {
 	.home-image-green-header.under-big-image-container-paragraph.home-image-green-container {
 		padding-left: 0 !important;

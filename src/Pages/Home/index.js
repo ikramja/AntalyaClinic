@@ -5,7 +5,7 @@ import StandardCard from "../../Components/StandardCard";
 import { Container, Row } from "react-bootstrap";
 import ContactForm from "../../Layouts/ContactForm";
 import DescriptionBackground from "../../Assets/Home/descriptionBackground.png";
-import BlogSection from "./Components/BlogSection";
+import BlogSection from "./BlogSection";
 import HoverCard from "../../Components/HoverCard";
 import { Col } from "react-bootstrap";
 import HomeCover from "../../Assets/Home/HomeCover.png";

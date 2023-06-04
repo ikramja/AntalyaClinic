@@ -54,9 +54,12 @@ export default function HomeImage() {
 					</div> */}
 				</div>
 				<ContactForm
-					className="alternate-context contact-form"
-					formWidth="950px"
-					formStyle={{ position: "absolute", top: "-100px" }}
+					className="alternate-context contact-form no-background"
+					formWidth="1000px"
+					formStyle={{
+						position: "absolute",
+						top: "-100px",
+					}}
 				/>
 			</div>
 

@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./index.css";
-import testImage from "../../../../Assets/Home/HoverCardImage.png";
+import testImage from "../../../Assets/AboutUs/block1.png";
 import { Button } from "antd";
 
 export default function BlogSection() {

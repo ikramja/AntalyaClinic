@@ -3,12 +3,14 @@ import липосакциятела from "../../../../Assets/Home/липосак
 import подтяжкагуб from "../../../../Assets/Home/подтяжка губ.webp";
 import пластикатела from "../../../../Assets/Home/пластика тела.webp";
 import пластикагруди from "../../../../Assets/Home/пластика груди.webp";
+
 import операция_по_трансплонтации_волос from "../../../../Assets/Home/операция_по_трансплонтации_волос.webp";
 import "./index.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import ScrollSpyHome from "../ScrollSpySectionHome";
 import { useEffect, useState } from "react";
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 export default function HomeCarousel() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -108,9 +110,14 @@ export default function HomeCarousel() {
 							<p>{carouselData[currentSlide].text}</p>
 						</div>
 						<div className="w-100 d-flex justify-content-end ">
-							<Button className="brief-description-button home-carousel-button px-3 py-4 my-4">
-								{carouselData[currentSlide].title}
-							</Button>
+							<Link
+								style={{ textDecoration: "none" }}
+								to="/category/:categoryName"
+							>
+								<Button className="brief-description-button home-carousel-button px-3 py-4 my-4">
+									{carouselData[currentSlide].title}
+								</Button>
+							</Link>
 						</div>
 					</Col>
 				</Row>
