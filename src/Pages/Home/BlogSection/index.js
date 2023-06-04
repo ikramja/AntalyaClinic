@@ -17,23 +17,23 @@ export default function BlogSection() {
 						>
 							<div>
 								<h1
+									className="home-blog-header"
 									style={{
 										fontSize: "1rem",
 										fontWeight: "800",
 										// maxWidth: "300px",
 										textAlign: "left",
-										marginRight: "248px",
 									}}
 								>
 									Варикоз у мужчин: миф или реальность?
 								</h1>
 								<h2
+									className="home-blog-sub-header"
 									style={{
 										fontSize: "1rem",
 										fontWeight: "800",
 										textAlign: "left",
 										color: "#016245",
-										marginRight: "248px",
 									}}
 								>
 									Читать полностью
@@ -61,22 +61,21 @@ export default function BlogSection() {
 							style={{ transform: " rotate(-0.54deg)", marginTop: "3rem" }}
 						>
 							<h1
+								className="home-blog-header-left"
 								style={{
 									fontSize: "1rem",
 									fontWeight: "800",
-
 									textAlign: "left",
-									marginLeft: "248px",
 								}}
 							>
 								Варикоз у мужчин: миф или реальность?
 							</h1>
 							<h2
+								className="home-blog-sub-header-left"
 								style={{
 									fontSize: "1rem",
 									fontWeight: "800",
 									textAlign: "left",
-									marginLeft: "248px",
 									color: "#016245",
 								}}
 							>
@@ -105,21 +104,21 @@ export default function BlogSection() {
 							style={{ transform: " rotate(-9.68deg)" }}
 						>
 							<h1
+								className="home-blog-header-left"
 								style={{
 									fontSize: "1rem",
 									fontWeight: "800",
 									textAlign: "left",
-									marginLeft: "248px",
 								}}
 							>
 								Варикоз у мужчин: миф или реальность?
 							</h1>
 							<h2
+								className="home-blog-sub-header-left"
 								style={{
 									fontSize: "1rem",
 									fontWeight: "800",
 									textAlign: "left",
-									marginLeft: "248px",
 									color: "#016245",
 								}}
 							>
@@ -146,22 +145,22 @@ export default function BlogSection() {
 							style={{ transform: " rotate(-4deg)" }}
 						>
 							<h1
+								className="home-blog-header"
 								style={{
 									fontSize: "1rem",
 									fontWeight: "800",
-									maxWidth: "300px",
 									textAlign: "left",
-									marginRight: "248px",
 								}}
 							>
 								Варикоз у мужчин: миф или реальность?
 							</h1>
 							<h2
+								className="home-blog--sub-header"
 								style={{
 									fontSize: "1rem",
 									fontWeight: "800",
 									textAlign: "left",
-									marginRight: "248px",
+
 									color: "#016245",
 								}}
 							>
