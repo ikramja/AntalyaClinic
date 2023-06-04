@@ -1,6 +1,6 @@
 import "./index.css";
 import { Button } from "antd";
-import HomeCover from "../../../../Assets/Home/HomeCover.png";
+import HomeCoverVideo from "../../../../Assets/Home/cover-video.mp4";
 import Logo from "../../../../Assets/Logo/Logo.png";
 
 export default function CoverVideo() {
@@ -15,10 +15,14 @@ export default function CoverVideo() {
 				</div>
 			</div>
 			<div className="image-overlay-container">
-				<img
-					src={HomeCover}
+				<video
 					className="w-100 left-title-home-cover video-cover"
-				></img>
+					autoPlay
+					loop
+					muted
+				>
+					<source src={HomeCoverVideo} type="video/mp4"></source>
+				</video>
 			</div>
 			<img className="logo-right me-4 mb-2" src={Logo}></img>
 		</div>

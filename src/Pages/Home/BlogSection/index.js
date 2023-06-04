@@ -15,28 +15,28 @@ export default function BlogSection() {
 							className="home-blog-grey-container"
 							style={{ transform: " rotate(1deg)" }}
 						>
-							<h1
-								style={{
-									fontSize: "1rem",
-									fontWeight: "bold",
-									maxWidth: "300px",
-									textAlign: "left",
-									marginRight: "13rem",
-								}}
-							>
-								Варикоз у мужчин: миф или реальность?
-							</h1>
-							<h2
-								style={{
-									fontSize: "1rem",
-									fontWeight: "bold",
-									textAlign: "left",
-									color: "#016245",
-									marginRight: "13rem",
-								}}
-							>
-								Читать полностью
-							</h2>
+							<div style={{ width: "50%" }}>
+								<h1
+									style={{
+										fontSize: "1rem",
+										fontWeight: "bold",
+										maxWidth: "300px",
+										textAlign: "left",
+									}}
+								>
+									Варикоз у мужчин: миф или реальность?
+								</h1>
+								<h2
+									style={{
+										fontSize: "1rem",
+										fontWeight: "bold",
+										textAlign: "left",
+										color: "#016245",
+									}}
+								>
+									Читать полностью
+								</h2>
+							</div>
 
 							<div
 								className="home-blog-grey-container-circle-image"
@@ -44,7 +44,8 @@ export default function BlogSection() {
 									transform: " rotate(-8.28deg)",
 									marginRight: " 1rem",
 									right: "0",
-									border: "7px double #323334",
+									border: " 7px solid #323334" /* Thicker border */,
+									outline: " 3px solid #000000",
 								}}
 							>
 								<img src={testImage}></img>
