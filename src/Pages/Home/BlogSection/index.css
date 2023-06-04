@@ -16,9 +16,9 @@
 	justify-content: center;
 	align-items: center;
 
-	width: 14rem;
+	max-width: 273px;
 
-	max-height: 14rem;
+	max-height: 263px;
 	border-top-left-radius: 90px;
 	border-top-right-radius: 90px;
 	border-bottom-right-radius: 90px;

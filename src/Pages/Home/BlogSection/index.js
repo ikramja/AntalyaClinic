@@ -15,13 +15,14 @@ export default function BlogSection() {
 							className="home-blog-grey-container"
 							style={{ transform: " rotate(1deg)" }}
 						>
-							<div style={{ width: "60%" }}>
+							<div>
 								<h1
 									style={{
 										fontSize: "1rem",
 										fontWeight: "bold",
 										// maxWidth: "300px",
 										textAlign: "left",
+										marginRight: "13rem",
 									}}
 								>
 									Варикоз у мужчин: миф или реальность?
@@ -32,6 +33,7 @@ export default function BlogSection() {
 										fontWeight: "bold",
 										textAlign: "left",
 										color: "#016245",
+										marginRight: "13rem",
 									}}
 								>
 									Читать полностью

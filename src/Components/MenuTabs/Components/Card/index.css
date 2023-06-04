@@ -1,7 +1,7 @@
 .menu-card-image {
 	object-fit: cover;
 	transition: transform 0.9s ease-out;
-	height: 220px;
+	height: 364px;
 	width: 100%;
 }
 .menu-card-image:hover {

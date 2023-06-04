@@ -54,6 +54,7 @@ const MenuTabs = (props) => {
 												textAlign: "left",
 												color: "black",
 												fontSize: "1rem",
+												marginBottom: "1rem",
 											}}
 										>
 											{article.cover_header}
