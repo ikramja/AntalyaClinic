@@ -1,6 +1,6 @@
 import "./index.css";
 import { Select } from "antd";
-
+import { RightOutlined } from "@ant-design/icons";
 const handleChange = (value) => {
 	console.log(`selected ${value}`);
 };
@@ -13,7 +13,7 @@ export default function AnalysesTableButton(props) {
 		});
 	});
 	return (
-		<div className="analyses-table-button">
+		<div className="analyses-table-button ">
 			<Select
 				className="mb-3 select-icon-left"
 				defaultValue={props.surgeriesNames[0]}

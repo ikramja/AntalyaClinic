@@ -6,6 +6,7 @@ import BriefDescription from "../../Components/BriefDescription";
 import IconItemsList from "./Components/IconItemsList";
 import beforeLastBackground from "../../Assets/ServicesIcons/beforeLastBackground.png";
 import ResultsCarousel from "./Components/ResultsCarousel";
+import Footer from "../../Layouts/Footer";
 import RecoveryIconList from "./Components/RecoveryIconList";
 import ScrollSpySection from "./Components/ScrollSpySection";
 import PriceCover from "../../Assets/Covers/Price.png";
@@ -122,31 +123,33 @@ export default function Service() {
 					</div>
 					<ResultsCarousel id="section5" images={articleData.results_images} />
 
-					<Container
+					<div
 						className="pe-0"
 						style={{
 							paddingTop: "1rem",
 							backgroundImage: `url(${beforeLastBackground})`,
 							backgroundRepeat: "no-repeat",
-							backgroundSize: "auto 119% ",
+							backgroundSize: "cover",
 							backgroundPosition: "right center",
 						}}
 					>
-						<BriefDescription
-							id="section6"
-							title="ПРОТИВОПОКАЗАНИЯ"
-							headerStyle={{ color: "#016245" }}
-							description={articleData.side_effects}
-							containerStyle={{
-								background: "rgba(255, 255, 255, 0.79)",
+						<Container className="px-5">
+							<BriefDescription
+								id="section6"
+								title="ПРОТИВОПОКАЗАНИЯ"
+								headerStyle={{ color: "#016245" }}
+								description={articleData.side_effects}
+								containerStyle={{
+									background: "rgba(255, 255, 255, 0.79)",
 
-								color: "black",
-								borderRadius: "10px",
-								boxShadow:
-									" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
-							}}
-						/>
-					</Container>
+									color: "black",
+									borderRadius: "10px",
+									boxShadow:
+										" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
+								}}
+							/>
+						</Container>
+					</div>
 
 					<BriefDescription
 						id="section7"
@@ -156,6 +159,7 @@ export default function Service() {
 				</div>
 			)}
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

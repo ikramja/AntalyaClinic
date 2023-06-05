@@ -22,14 +22,16 @@ export default function DoctorsList() {
 					{doctors
 						.slice(0, showAllDoctors ? doctors.length : 3)
 						.map((doctor) => (
-							<Col md="4" className="center-div" key={doctor.id}>
+							<Col md="4" key={doctor.id}>
 								{/* <Link to=> */}
 								<StandardCard
-									height={320}
+									cardTitleStyle={{ fontSize: "1.3rem", fontWeight: "bold" }}
+									height={436}
+									width={90}
 									cardImage={doctor.image}
 									cardTitle={doctor.name_turkish}
 									cardTitle2={doctor.name_russian}
-									cardDescription={doctor.specialization.name}
+									// cardDescription={doctor.specialization.name}
 									link={`/doctor/${doctor.name_english}/`}
 								/>
 								{/* </Link> */}
@@ -38,7 +40,7 @@ export default function DoctorsList() {
 				</Row>
 				<div className="center-div m-4">
 					<Button
-						className="our-doctors-button"
+						className="our-doctors-button center-div p-4"
 						onClick={() => setShowAllDoctors(true)}
 					>
 						<div className="center-div">ПОСМОТРЕТЬ ВСЕХ ВРАЧЕЙ</div>

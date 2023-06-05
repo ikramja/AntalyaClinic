@@ -6,6 +6,7 @@ import { Container, Row } from "react-bootstrap";
 import ContactForm from "../../Layouts/ContactForm";
 import DescriptionBackground from "../../Assets/Home/descriptionBackground.png";
 import BlogSection from "./BlogSection";
+import Footer from "../../Layouts/Footer";
 import HoverCard from "../../Components/HoverCard";
 import { Col } from "react-bootstrap";
 import HomeCover from "../../Assets/Home/HomeCover.png";
@@ -76,6 +77,7 @@ export default function Home() {
 				<BlogSection />
 			</div>
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

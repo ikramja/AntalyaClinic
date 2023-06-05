@@ -6,8 +6,10 @@ import ForPatientsCover from "../../Assets/Covers/ForPatients.png";
 import AnalysesTableBackground from "../../Assets/ForPatients/AnalysesTableBackground.png";
 import { useEffect, useState } from "react";
 import ContactForm from "../../Layouts/ContactForm";
+import Footer from "../../Layouts/Footer";
 
 import axios from "axios";
+import { Container } from "react-bootstrap";
 export default function ForPatients() {
 	const [surgeriesData, setSurgeriesData] = useState(null);
 	useEffect(() => {
@@ -32,9 +34,9 @@ export default function ForPatients() {
 					<div
 						className="mb-5"
 						style={{
-							paddingTop: "8rem",
+							paddingTop: "4rem",
 							backgroundImage: `url(${AnalysesTableBackground})`,
-							backgroundSize: "auto 100%",
+							backgroundSize: "auto 130%",
 							backgroundRepeat: "no-repeat",
 							backgroundPosition: "left",
 						}}
@@ -46,7 +48,9 @@ export default function ForPatients() {
 					</div>
 				</div>
 			)}
+
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

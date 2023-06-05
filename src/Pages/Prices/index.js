@@ -2,6 +2,7 @@ import "./index.css";
 import PriceCategoryMenu from "./Components/PriceCategoryMenu";
 import axios from "axios";
 import PriceCover from "../../Assets/Covers/Price.png";
+import Footer from "../../Layouts/Footer";
 import React, { useState, useEffect } from "react";
 import TitleCover from "../../Components/TitleCover";
 import ContactForm from "../../Layouts/ContactForm";
@@ -29,6 +30,7 @@ export default function Prices() {
 				</div>
 			)}
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

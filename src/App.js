@@ -11,8 +11,6 @@ function App() {
 			<Header setShowContent={setShowContent} />
 
 			<div className="content">{showContent && <Main />}</div>
-
-			<Footer />
 		</div>
 	);
 }

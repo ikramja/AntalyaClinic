@@ -3,6 +3,7 @@ import SideImagSection from "../../Components/SideImageSection";
 import { Container } from "react-bootstrap";
 import { Button } from "antd";
 import { Rate } from "antd";
+import Footer from "../../Layouts/Footer";
 import NewsLetter from "../../Components/NewsLetter";
 
 export default function BlogArticle() {
@@ -80,6 +81,7 @@ export default function BlogArticle() {
 				</div>
 			</Container>
 			<NewsLetter />
+			<Footer />
 		</div>
 	);
 }

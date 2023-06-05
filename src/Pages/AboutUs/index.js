@@ -1,6 +1,7 @@
 import "./index.css";
 import TitleCover from "../../Components/TitleCover";
 import { List, Card } from "antd";
+import Footer from "../../Layouts/Footer";
 import AboutUsCover from "../../Assets/Covers/AboutUs.png";
 import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 import FrameParagraph from "../../Components/FrameParagraph";
@@ -323,6 +324,7 @@ export default function AboutUs() {
 				</div>
 			</div>
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

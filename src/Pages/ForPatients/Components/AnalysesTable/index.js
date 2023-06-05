@@ -22,13 +22,13 @@ export default function AnalysesTable(props) {
 				<Container>
 					<div className="my-4 w-100">
 						<div className="center-div">
-							<h1 className="for-patients-header mb-5">
+							<h1 className="for-patients-header mb-4">
 								Список анализов и диагностические исследования, срок их действия
 							</h1>
 						</div>
 						<div className="analyses-table-container">
-							<Row className="w-100 p-3">
-								<Col md={8}>
+							<Row className="w-100 p-3 mx-0">
+								<Col lg={8}>
 									<AnalysesTableButton
 										className="mb-4"
 										surgeriesNames={surgeriesNames}
@@ -51,7 +51,7 @@ export default function AnalysesTable(props) {
 											))}
 									</Table>
 								</Col>
-								<Col md={4}>
+								<Col lg={4}>
 									<img
 										className="w-100 table-analyses-cover"
 										src={TableAnalysesCover}
@@ -70,17 +70,28 @@ export default function AnalysesTable(props) {
 					УЗ-исследования вен нижних конечностей.
 				</div>
 			</Container>
+
 			<SurgeryPreparationParagraph
+				headerStyle={{ fontSize: "2.5rem" }}
 				containerStyle={{
 					backgroundImage: `url(${SurgeryPreparationBackgroundImage})`,
 					backgroundRepeat: "no-repeat",
-					backgroundPosition: "center right",
-					backgroundSize: "auto 100%",
+					backgroundPosition: "right",
+					backgroundSize: "auto 120%",
+					paddingTop: "1rem",
 				}}
-				title=<div style={{ display: "flex", flexDirection: "column" }}>
-					<span>Подготовка к операции:</span>
-					<span> рекомендации и ограничения</span>
-				</div>
+				title=<Container>
+					<div
+						style={{
+							display: "flex",
+							flexDirection: "column",
+							paddingBottom: "1rem",
+						}}
+					>
+						<span>Подготовка к операции:</span>
+						<span> рекомендации и ограничения</span>
+					</div>
+				</Container>
 				description={
 					props.surgeriesData.find(
 						(item) => item.cover_header === selectedSurgery
