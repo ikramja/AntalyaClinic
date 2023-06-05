@@ -11,12 +11,10 @@ import axios from "axios";
 export default function ForPatients() {
 	const [surgeriesData, setSurgeriesData] = useState(null);
 	useEffect(() => {
-		axios
-			.get('/get/services/')
-			.then((Response) => {
-				console.log(Response);
-				setSurgeriesData(Response.data);
-			});
+		axios.get("/get/services/").then((Response) => {
+			console.log(Response);
+			setSurgeriesData(Response.data);
+		});
 	}, []);
 	return (
 		<div>
@@ -48,7 +46,7 @@ export default function ForPatients() {
 					</div>
 				</div>
 			)}
-			<ContactForm />
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }

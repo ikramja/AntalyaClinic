@@ -94,6 +94,7 @@ const MenuTabs = (props) => {
 										style={{
 											textAlign: "left",
 											color: "black",
+											marginBottom: "1rem",
 										}}
 									>
 										{doctor.name_russian}
@@ -116,6 +117,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
+									marginBottom: "1rem",
 								}}
 							>
 								Новости
@@ -133,6 +135,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
+									marginBottom: "1rem",
 								}}
 							>
 								Статьи
@@ -153,6 +156,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
+									marginBottom: "1rem",
 								}}
 							>
 								Трансфер
@@ -170,6 +174,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
+									marginBottom: "1rem",
 								}}
 							>
 								Отели
@@ -187,6 +192,7 @@ const MenuTabs = (props) => {
 								style={{
 									textAlign: "left",
 									color: "black",
+									marginBottom: "1rem",
 								}}
 							>
 								Переводчик

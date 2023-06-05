@@ -2,6 +2,7 @@ import "./index.css";
 import { Layout } from "antd";
 import { Container, Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
 import {
 	LinkedinOutlined,
@@ -12,6 +13,8 @@ import {
 const { Footer } = Layout;
 
 const App = () => {
+	const location = useLocation();
+	const pathToExclude = "/path-to-exclude";
 	return (
 		<div>
 			<Footer className="text-dark footer">

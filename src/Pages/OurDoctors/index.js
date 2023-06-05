@@ -2,7 +2,7 @@ import "./index.css";
 import TitleCover from "../../Components/TitleCover";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import DoctorsList from "./Components/DoctorsList";
-
+import ContactForm from "../../Layouts/ContactForm";
 import Doctor_Cover from "../../Assets/AboutOurDoctors/doctor_cover.png";
 export default function OurDoctors() {
 	return (
@@ -14,6 +14,7 @@ export default function OurDoctors() {
 				Cover={Doctor_Cover}
 			/>
 			<DoctorsList />
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }

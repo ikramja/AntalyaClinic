@@ -322,7 +322,7 @@ export default function AboutUs() {
 					<BiRightArrowAlt className="about-right-arrow" onClick={handleNext} /> */}
 				</div>
 			</div>
-			{/* <ContactForm /> */}
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }

@@ -155,7 +155,7 @@ export default function Service() {
 					/>
 				</div>
 			)}
-			<ContactForm />
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }

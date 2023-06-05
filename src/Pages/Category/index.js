@@ -31,7 +31,7 @@ export default function Category() {
 					</>
 				)}
 			</div>
-			<ContactForm />
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }

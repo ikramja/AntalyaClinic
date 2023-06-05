@@ -53,7 +53,7 @@ export default function AboutOurDoctor() {
 					</Container>
 				</div>
 			)}
-			<ContactForm />
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }

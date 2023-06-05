@@ -3,6 +3,9 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import StandardCard from "../../../../Components/StandardCard";
 
+// Новости to news, статьи to blog. Сервис to service (about us)
+// .Трансфер, отели и переводчик don’t click, just go in service page(about us)
+// , для пациентов to “for patients”.
 export default function CategoryList(props) {
 	return (
 		<div>
@@ -17,10 +20,9 @@ export default function CategoryList(props) {
 									cardImage={article.article_category_image}
 									cardTitle={article.cover_header}
 									cardTitleStyle={{
-										fontSize: "1.15rem",
-										maxWidth: "200px",
+										fontSize: "1rem",
+										maxWidth: "220px",
 										display: "block",
-										wordWrap: "break-word",
 									}}
 									cardDescription={article.cover_sub_header}
 									cardDescriptionStyle={{

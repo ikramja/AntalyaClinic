@@ -28,7 +28,7 @@ export default function Prices() {
 					<PriceCategoryMenu PriceMenuData={PricesData} />
 				</div>
 			)}
-			<ContactForm />
+			<ContactForm className="contact-form" />
 		</div>
 	);
 }
