@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { Button } from "antd";
 import { Rate } from "antd";
 import NewsLetter from "../../Components/NewsLetter";
+import { Comments, Auth } from "react-vk";
 
 export default function BlogArticle() {
 	return (
@@ -70,6 +71,16 @@ export default function BlogArticle() {
 					<Rate allowClear={false} defaultValue={1} />
 					<span className="ant-rate-text "></span>
 				</div>
+				<Auth />
+				<Comments
+					pageId="1"
+					onNewComment={(num, last_comment, date, sign) =>
+						console.log("New comment posted")
+					}
+					onDeleteComment={(num, last_comment, date, sign) =>
+						console.log("Comment deleted")
+					}
+				/>
 				<div className="center-div m-5">
 					<Button
 						className="blog-articles-button center-div p-4 "

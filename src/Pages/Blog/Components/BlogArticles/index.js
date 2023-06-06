@@ -1,6 +1,5 @@
 import { Col, Row } from "react-bootstrap";
 import "./index.css";
-
 import Pic from "../../../../Assets/Blog/blog-articles.png";
 import StandardCard from "../../../../Components/StandardCard";
 import { Button } from "antd";
@@ -73,6 +72,7 @@ export default function BlogArticles() {
 					/>
 				</Col>
 			</Row>
+
 			<div className="center-div m-4">
 				<Button
 					className="blog-articles-button center-div p-4"
