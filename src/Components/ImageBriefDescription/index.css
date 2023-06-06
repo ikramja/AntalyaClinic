@@ -1,13 +1,22 @@
 .image-brief-description-header {
 	font-weight: bold;
 }
-
+.brief-image-description-row {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+.image-brief-description-section-container {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
 .image-brief-description-subtitle {
 	font-weight: 700;
 }
 .image-Brief-description {
-	text-align: justify;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
 	hyphens: auto;
+	text-align: justify;
 	font-weight: 400;
 }
 
@@ -26,5 +35,15 @@
 	.image-brief-description-text-column {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.brief-image-description-row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.image-brief-description-section-container {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 }

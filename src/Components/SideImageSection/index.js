@@ -14,7 +14,6 @@ export default function SideImagSection() {
 						<div>
 							<h1
 								style={{
-									textAlign: "left",
 									fontSize: "2rem",
 								}}
 								className="mb-4 blog-side-image-header mt-4"

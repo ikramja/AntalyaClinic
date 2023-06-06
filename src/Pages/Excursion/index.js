@@ -3,6 +3,7 @@ import { Button, Col, Row, Spin } from "antd";
 import ExcursionListItem from "./Components/ExcursionListItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./index.css";
 
 import Footer from "../../Layouts/Footer";
 import { Container } from "react-bootstrap";
@@ -58,10 +59,13 @@ export default function Excursion() {
 							sm={24}
 							key={i}
 							onMouseEnter={() => setCurrentBg(i)}
-							className="center-div"
+							// className="center-div"
 						>
 							<h2
-								style={{ fontWeight: "bold" }}
+								style={{
+									fontWeight: "bold",
+									textShadow: "4px 2px 10px rgba(255, 255, 255, 0.6)",
+								}}
 								className={`${currentBg === i ? "text-light" : "text-muted "}`}
 							>
 								{e.name}
@@ -77,7 +81,7 @@ export default function Excursion() {
 					/>
 				</Container>
 
-				<Row gutter={16} className="m-5">
+				<Row gutter={16} className="excursion-items-row">
 					{excursions
 						.slice(0, showAllExcursions ? excursions.length : 4)
 						.map((e, i) => (

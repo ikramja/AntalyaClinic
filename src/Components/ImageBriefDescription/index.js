@@ -4,7 +4,7 @@ import "./index.css";
 export default function ImageBriefDescription(props) {
 	return (
 		<div className=" my-5" style={props.borderRight ? props.borderRight : {}}>
-			<Row className="w-100 mx-5 ">
+			<Row className="w-100  brief-image-description-row">
 				<Col lg={4} className="px-0">
 					<img
 						className="image-Brief-description-image w-100"
@@ -14,7 +14,7 @@ export default function ImageBriefDescription(props) {
 				<Col lg={8} className="image-brief-description-text-column ">
 					<div
 						id={props.id}
-						className="section px-5 image-brief-description-section-container"
+						className="section  image-brief-description-section-container"
 					>
 						<h1 className="image-brief-description-header mt-2 mb-1 ">
 							{props.title}

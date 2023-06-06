@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { Button } from "antd";
 import NewsLetter from "../../Components/NewsLetter";
 import Footer from "../../Layouts/Footer";
+import { Link } from "react-router-dom";
 
 export default function NewsArticle() {
 	return (
@@ -61,12 +62,14 @@ export default function NewsArticle() {
 					</p>
 				</div>
 				<div className="center-div m-5">
-					<Button
-						className="blog-articles-button center-div p-4 mt-3"
-						// onClick={() => setShowAllDoctors(true)}
-					>
-						ВСЕ СТАТЬИ
-					</Button>
+					<Link to="/news" style={{ textDecoration: "none" }}>
+						<Button
+							className="blog-articles-button center-div p-4 mt-3"
+							// onClick={() => setShowAllDoctors(true)}
+						>
+							ВСЕ СТАТЬИ
+						</Button>
+					</Link>
 				</div>
 			</Container>
 			<NewsLetter />

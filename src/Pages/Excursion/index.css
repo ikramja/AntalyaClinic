@@ -1,0 +1,8 @@
+.excursion-items-row {
+	margin: 3rem !important;
+}
+@media only screen and (max-width: 998px) {
+	.excursion-items-row {
+		margin: 0rem !important;
+	}
+}

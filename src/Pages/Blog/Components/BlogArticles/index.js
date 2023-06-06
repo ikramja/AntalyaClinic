@@ -3,6 +3,7 @@ import "./index.css";
 import Pic from "../../../../Assets/Blog/blog-articles.png";
 import StandardCard from "../../../../Components/StandardCard";
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 export default function BlogArticles() {
 	return (
@@ -18,6 +19,7 @@ export default function BlogArticles() {
 							fontSize: "1.15rem",
 							display: "block",
 							wordWrap: "break-word",
+							fontWeight: "bold",
 						}}
 						cardDescription="Все мы хотим идеальное тело и вечно молодое лицо, но постоянный стресс, бесконечная работа, городской ритм и плохая экология берут свое."
 						cardDescriptionStyle={{
@@ -25,6 +27,7 @@ export default function BlogArticles() {
 							textAlign: "justify",
 							wordSpacing: "-0.1em",
 							color: "black",
+							fontWeight: "500",
 						}}
 						// link={`/service/${article.cover_header}/`}
 					/>
@@ -43,6 +46,7 @@ export default function BlogArticles() {
 						cardDescription="Все мы хотим идеальное тело и вечно молодое лицо, но постоянный стресс, бесконечная работа, городской ритм и плохая экология берут свое."
 						cardDescriptionStyle={{
 							fontSize: "1rem",
+							fontWeight: "700",
 							textAlign: "justify",
 							wordSpacing: "-0.1em",
 							color: "black",

@@ -10,7 +10,7 @@ export default function News() {
 		<div>
 			<Container>
 				<div className="blog-title-container">
-					<h1 className="blog-title mb-4">НОВОСТИ</h1>
+					<h1 className="news-title mb-4">НОВОСТИ</h1>
 				</div>
 			</Container>
 			<SideImagSection />

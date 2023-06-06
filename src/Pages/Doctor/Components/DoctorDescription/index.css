@@ -2,7 +2,10 @@
 	justify-content: center;
 }
 .doctor-info-content {
-	text-align: left;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	text-align: justify;
 }
 .doctor-image {
 	border-radius: 5px !important;

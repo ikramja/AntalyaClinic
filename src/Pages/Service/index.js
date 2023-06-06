@@ -53,7 +53,7 @@ export default function Service() {
 						id="section1"
 						borderRight={{
 							borderRight: " 50px solid #016245",
-							paddingRight: "3rem",
+							paddingRight: "2rem",
 						}}
 						subtitle="(ПОКАЗАНИЯ К ОПЕРАЦИИ)"
 						title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
@@ -134,7 +134,7 @@ export default function Service() {
 							backgroundPosition: "right center",
 						}}
 					>
-						<Container className="px-5">
+						<Container className="service-brief-description-before-last">
 							<BriefDescription
 								id="section6"
 								title="ПРОТИВОПОКАЗАНИЯ"

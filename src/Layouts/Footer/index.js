@@ -58,7 +58,7 @@ const App = () => {
 						</div>
 					</Col>
 					<Col sm="3">
-						<div style={{ display: "flex", justifyContent: "flex-end" }}>
+						<div className="footer-col2-container">
 							<div className="footer-col2">
 								<h1 style={{ display: "inline-block" }}>ГРАФИК РАБОТЫ</h1>
 								<p
