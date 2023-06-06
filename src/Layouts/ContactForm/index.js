@@ -25,21 +25,21 @@ const checkboxValidator = (rule, value, callback) => {
 
 export default function ContactForm(props) {
 	const handleSendFormData = (values) => {
-		axios
-			.post("post/news-letter/", { fullName: ,email: values.email, message: message })
-			.then((response) => {
-				if (response.status === 201) {
-					message.open({
-						type: "success",
-						content: "Successfully subscribed to newsletter!",
-					});
-				} else {
-					message.open({
-						type: "error",
-						content: "Failed to subscribe to newsletter.",
-					});
-				}
-			});
+		// axios
+		// 	.post("post/news-letter/", { fullName: ,email: values.email, message: message })
+		// 	.then((response) => {
+		// 		if (response.status === 201) {
+		// 			message.open({
+		// 				type: "success",
+		// 				content: "Successfully subscribed to newsletter!",
+		// 			});
+		// 		} else {
+		// 			message.open({
+		// 				type: "error",
+		// 				content: "Failed to subscribe to newsletter.",
+		// 			});
+		// 		}
+		// 	});
 	};
 	return (
 		<div
