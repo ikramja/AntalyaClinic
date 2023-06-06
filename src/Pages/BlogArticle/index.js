@@ -73,7 +73,7 @@ export default function BlogArticle() {
 					<span className="ant-rate-text "></span>
 				</div>
 				<Comments
-					pageId="1"
+					pageId="2"
 					onNewComment={(num, last_comment, date, sign) =>
 						console.log("New comment posted")
 					}
