@@ -72,7 +72,6 @@ export default function BlogArticle() {
 					<Rate allowClear={false} defaultValue={1} />
 					<span className="ant-rate-text "></span>
 				</div>
-				<Auth />
 				<Comments
 					pageId="1"
 					onNewComment={(num, last_comment, date, sign) =>
