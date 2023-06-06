@@ -29,7 +29,7 @@ const MenuTabs = (props) => {
 			label: <div className="menu-tab-title">УСЛУГИ</div>,
 			key: "УСЛУГИ",
 			children: (
-				<Row className="m-0 w-100  mb-5">
+				<Row className="m-0 w-100 mb-5">
 					{categoryData &&
 						categoryData.map((category) => (
 							<Col key={category.cover_sub_header} md={3}>
@@ -70,7 +70,7 @@ const MenuTabs = (props) => {
 			label: <div className="menu-tab-title ">О НАС</div>,
 			key: "О НАС",
 			children: (
-				<Row className="w-100 mx-1 mb-5">
+				<Row className="w-100 ps-3 mb-5">
 					<Col md={3}>
 						<Card
 							cardImage={about}
@@ -104,7 +104,13 @@ const MenuTabs = (props) => {
 					</Col>
 
 					<Col md={3}>
-						<Card cardImage={blog} cardTitle="БЛОГ" />
+						<Card
+							cardImage={blog}
+							cardTitle="БЛОГ"
+							cardLink={`/blog`}
+							setShowMenu={props.setShowMenu}
+							setShowContent={props.setShowContent}
+						/>
 						<Link
 							style={{ textDecoration: "none" }}
 							to="/news"
@@ -143,10 +149,16 @@ const MenuTabs = (props) => {
 						</Link>
 					</Col>
 					<Col md={3}>
-						<Card cardImage={forPatient} cardTitle="СЕРВИС" />
+						<Card
+							cardImage={forPatient}
+							cardTitle="СЕРВИС"
+							cardLink={`/about-us`}
+							setShowMenu={props.setShowMenu}
+							setShowContent={props.setShowContent}
+						/>
 						<Link
 							style={{ textDecoration: "none" }}
-							to=""
+							to="/about-us"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -164,7 +176,7 @@ const MenuTabs = (props) => {
 						</Link>
 						<Link
 							style={{ textDecoration: "none" }}
-							to=""
+							to="/about-us"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -182,7 +194,7 @@ const MenuTabs = (props) => {
 						</Link>
 						<Link
 							style={{ textDecoration: "none" }}
-							to=""
+							to="/about-us"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -200,10 +212,16 @@ const MenuTabs = (props) => {
 						</Link>
 					</Col>
 					<Col md={3}>
-						<Card cardImage={service} cardTitle="ДЛЯ ПАЦИЕНТОВ" />
+						<Card
+							cardImage={service}
+							cardTitle="ДЛЯ ПАЦИЕНТОВ"
+							cardLink={`/for-patients`}
+							setShowMenu={props.setShowMenu}
+							setShowContent={props.setShowContent}
+						/>
 						<Link
 							style={{ textDecoration: "none" }}
-							to="/Excursion"
+							to="/for-patients"
 							onClick={() => {
 								props.setShowMenu(false);
 								props.setShowContent(true);
@@ -285,7 +303,7 @@ const MenuTabs = (props) => {
 	};
 	return (
 		categoryData && (
-			<div>
+			<div className="w-100">
 				<div style={{ marginTop: "64px" }}>
 					<Tabs
 						onTabClick={handleTabClick}

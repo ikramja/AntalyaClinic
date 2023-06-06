@@ -4,6 +4,7 @@ import { ArrowRightOutlined } from "@ant-design/icons";
 import DoctorsList from "./Components/DoctorsList";
 import ContactForm from "../../Layouts/ContactForm";
 import Doctor_Cover from "../../Assets/AboutOurDoctors/doctor_cover.png";
+import Footer from "../../Layouts/Footer";
 export default function OurDoctors() {
 	return (
 		<div>
@@ -15,6 +16,7 @@ export default function OurDoctors() {
 			/>
 			<DoctorsList />
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

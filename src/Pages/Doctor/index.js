@@ -4,7 +4,7 @@ import TitleCover from "../../Components/TitleCover";
 import Doctor_Cover from "../../Assets/AboutOurDoctors/doctor_cover.png";
 import { Button } from "antd";
 import ContactForm from "../../Layouts/ContactForm";
-
+import Footer from "../../Layouts/Footer";
 import DoctorCertificatesCarousel from "./Components/DoctorCertificatesCarousel";
 import { Link, useParams } from "react-router-dom";
 import DoctorDescription from "./Components/DoctorDescription";
@@ -54,6 +54,7 @@ export default function AboutOurDoctor() {
 				</div>
 			)}
 			<ContactForm className="contact-form" />
+			<Footer />
 		</div>
 	);
 }

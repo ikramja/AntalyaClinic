@@ -3,6 +3,7 @@ import SideImagSection from "../../Components/SideImageSection";
 import { Container } from "react-bootstrap";
 import { Button } from "antd";
 import NewsLetter from "../../Components/NewsLetter";
+import Footer from "../../Layouts/Footer";
 
 export default function NewsArticle() {
 	return (
@@ -69,6 +70,7 @@ export default function NewsArticle() {
 				</div>
 			</Container>
 			<NewsLetter />
+			<Footer />
 		</div>
 	);
 }

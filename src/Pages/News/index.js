@@ -1,6 +1,6 @@
 import "./index.css";
 import SideImagSection from "../../Components/SideImageSection";
-
+import Footer from "../../Layouts/Footer";
 import BlogArticles from "../Blog/Components/BlogArticles";
 import { Container } from "react-bootstrap";
 import NewsLetter from "../../Components/NewsLetter";
@@ -18,6 +18,7 @@ export default function News() {
 				<BlogArticles />
 			</Container>
 			<NewsLetter />
+			<Footer />
 		</div>
 	);
 }

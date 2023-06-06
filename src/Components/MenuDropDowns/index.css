@@ -5,6 +5,13 @@
 .menu-drop-down .ant-collapse-header-text {
 	color: #575656;
 }
+.link-drop-down-menu-mobile {
+	text-decoration: none;
+	color: #575656;
+}
+.menu-drop-down-collapse {
+	min-height: 100vh !important;
+}
 .menu-drop-down .ant-collapse-content-box {
 	color: #575656;
 }

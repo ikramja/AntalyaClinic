@@ -2,6 +2,7 @@ import "./index.css";
 import SideImagSection from "../../Components/SideImageSection";
 import BlogArticles from "./Components/BlogArticles";
 import { Container } from "react-bootstrap";
+import Footer from "../../Layouts/Footer";
 import NewsLetter from "../../Components/NewsLetter";
 
 export default function Blog() {
@@ -18,6 +19,7 @@ export default function Blog() {
 				<BlogArticles />
 			</Container>
 			<NewsLetter />
+			<Footer />
 		</div>
 	);
 }

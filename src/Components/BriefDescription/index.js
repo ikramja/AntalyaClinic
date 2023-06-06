@@ -19,7 +19,7 @@ export default function BriefDescription({
 	return (
 		<div
 			style={containerStyle ? containerStyle : {}}
-			className="brief-description my-3"
+			className="brief-description"
 		>
 			<div>
 				<Container>

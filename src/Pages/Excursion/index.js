@@ -4,9 +4,12 @@ import ExcursionListItem from "./Components/ExcursionListItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import Footer from "../../Layouts/Footer";
+import { Container } from "react-bootstrap";
+
 export default function Excursion() {
 	const { brief_header: title, brief_description: description } = {
-		brief_header: "ЭКСКУРСИИ В АНТАЛИИ",
+		brief_header: "ЭКСКУРСИИ",
 		brief_description:
 			"Многие из наших пациентов предпочитают приезжать в Турцию не только из-за качества медицинского обслуживания, но и из-за исключительного культурного опыта.\n" +
 			"Турция – уникальная и красивая страна с богатой историей и невероятными природными ландшафтами: руины городов древнего Рима, византийские амфитеатры, песчаные пляжи, горнолыжные курорты и даже чудо света  — здесь каждый найдет что-то для себя. \n" +
@@ -43,29 +46,35 @@ export default function Excursion() {
 				<Row
 					gutter={16}
 					style={{
-						height: "25rem",
+						height: "75vh",
 						backgroundImage: `url(${excursions[currentBg].images[0]})`,
 						backgroundSize: "cover",
 					}}
-					className="p-5"
+					className="p-5 w-100 m-0 center-div"
 				>
 					{excursions.map((e, i) => (
 						<Col
 							sm={24}
 							key={i}
-							className="mt-3"
 							onMouseEnter={() => setCurrentBg(i)}
+							className="center-div"
 						>
 							<h2
-								className={`${currentBg === i ? "text-light" : "text-muted"}`}
+								style={{ fontWeight: "bold" }}
+								className={`${currentBg === i ? "text-light" : "text-muted "}`}
 							>
 								{e.name}
 							</h2>
 						</Col>
 					))}
 				</Row>
-
-				<BriefDescription title={title} description={description} />
+				<Container>
+					<BriefDescription
+						title={title}
+						description={description}
+						headerStyle={{ paddingTop: "1rem", paddingBottom: "1rem" }}
+					/>
+				</Container>
 
 				<Row gutter={16} className="m-5">
 					{excursions.map((e, i) => (
@@ -79,6 +88,7 @@ export default function Excursion() {
 						</Col>
 					))}
 				</Row>
+				<Footer />
 			</div>
 		)
 	);
