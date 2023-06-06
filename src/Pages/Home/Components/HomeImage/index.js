@@ -19,7 +19,7 @@ export default function HomeImage() {
 						<h1
 							style={{
 								textAlign: "left",
-								fontFamily: "Montserrat",
+								// fontFamily: "Montserrat",
 								fontWeight: "600",
 								fontSize: "1.5rem",
 							}}

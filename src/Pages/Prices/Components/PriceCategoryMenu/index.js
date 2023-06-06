@@ -25,6 +25,7 @@ const PriceCategoryMenu = (props) => {
 							mode="horizontal"
 							style={{
 								width: "100%",
+								background: " #C4C4C4",
 							}}
 							className="price-category-menu"
 						>
@@ -36,8 +37,14 @@ const PriceCategoryMenu = (props) => {
 										color: selectedKey === category ? "white" : "black",
 									}}
 								>
-									<div className="flex-container">
-										<p className="flex-element">{category}</p>
+									<div
+										className="flex-container"
+										style={{
+											filter:
+												" drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+										}}
+									>
+										<h1 className="flex-element py-3">{category}</h1>
 										<div className="center-div">
 											<ArrowRightOutlined
 												className={`custom-arrow-right ${

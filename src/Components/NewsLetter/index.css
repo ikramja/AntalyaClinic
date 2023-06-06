@@ -1,7 +1,8 @@
 .newsletter {
 	background-color: #e6e4e4;
-	font-family: Segoe UI Emoji, Segoe UI Symbol;
+	/* font-family: Segoe UI Emoji, Segoe UI Symbol; */
 }
+
 .newsletter-input-item {
 	max-width: 400px !important;
 	margin-left: 1rem;
@@ -34,4 +35,14 @@
 
 .newsletter .ant-form-item-required::before {
 	color: #636363 !important;
+}
+@media only screen and (max-width: 450px) {
+	.news-letter-header {
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+		text-align: justify;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }

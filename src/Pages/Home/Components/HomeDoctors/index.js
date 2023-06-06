@@ -25,7 +25,7 @@ export default function HomeDoctors() {
 								className="home-doctor-h"
 								style={{
 									fontSize: "4.5rem",
-									fontFamily: "Oswald",
+									// fontFamily: "Oswald",
 									fontWeight: "bold",
 									textAlign: "left",
 								}}
@@ -36,7 +36,7 @@ export default function HomeDoctors() {
 						<Col md={5}>
 							<h1
 								style={{
-									fontFamily: "Oswald",
+									// fontFamily: "Oswald",
 									textAlign: "left",
 									fontSize: "1.6rem",
 									fontWeight: "bold",
@@ -65,7 +65,7 @@ export default function HomeDoctors() {
 											cardTitleStyle={{
 												fontSize: "1.3rem",
 												fontWeight: "bold",
-												fontFamily: "Arsenal",
+												// fontFamily: "Arsenal",
 											}}
 											height={350}
 											width={100}

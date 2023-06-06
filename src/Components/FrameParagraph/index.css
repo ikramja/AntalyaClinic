@@ -7,8 +7,10 @@
 	font-size: 1.3rem;
 }
 .frame-paragraph-text {
-	text-align: justify;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
 	hyphens: auto;
+	text-align: justify;
 }
 
 @media only screen and (max-width: 1013px) {

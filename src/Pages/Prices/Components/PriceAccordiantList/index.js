@@ -39,7 +39,16 @@ export default function PriceAccordionList(props) {
 				>
 					{props.accordionData.map((servicePrices) => (
 						<Panel
-							header=<h1 className="my-header">{servicePrices.service_name}</h1>
+							header=<h1
+								style={{
+									filter:
+										" drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+									fontWeight: "bold",
+								}}
+								className="my-header"
+							>
+								{servicePrices.service_name}
+							</h1>
 							key={servicePrices.service_name}
 						>
 							<div className="panel-1">

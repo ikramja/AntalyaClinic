@@ -3,12 +3,8 @@ import { Layout } from "antd";
 import { Container, Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-
-import {
-	LinkedinOutlined,
-	TwitterOutlined,
-	InstagramOutlined,
-} from "@ant-design/icons";
+import { GrLinkedinOption } from "react-icons/gr";
+import { TwitterOutlined, InstagramOutlined } from "@ant-design/icons";
 
 const { Footer } = Layout;
 
@@ -18,7 +14,7 @@ const App = () => {
 	return (
 		<div>
 			<Footer className="text-dark footer">
-				<Row>
+				<Row className="footer-links-row">
 					<Col sm="3" className="mb-3">
 						<h1 className="footer-description-title">EL ARTE CLINIC</h1>
 						<p className="footer-description-paragraph">
@@ -62,15 +58,28 @@ const App = () => {
 						</div>
 					</Col>
 					<Col sm="3">
-						<div className="footer-col2">
-							<h1>ГРАФИК РАБОТЫ</h1>
-							<p style={{ fontWeight: "400", color: "#323334" }}>
-								<span>Понедельник - Пятница с 9:00 до 19:00 </span>
-								<br />
-								<span style={{ fontWeight: "400", color: "#323334" }}>
-									Суббота с 10:00 до 17:00
-								</span>
-							</p>
+						<div style={{ display: "flex", justifyContent: "flex-end" }}>
+							<div className="footer-col2">
+								<h1 style={{ display: "inline-block" }}>ГРАФИК РАБОТЫ</h1>
+								<p
+									style={{
+										display: "inline-block",
+										fontWeight: "400",
+										color: "#323334",
+									}}
+								>
+									<span className="footer-col2-span">
+										Понедельник - Пятница <br />с 9:00 до 19:00{" "}
+									</span>
+									<br />
+									<span
+										className="footer-col2-span"
+										style={{ fontWeight: "400", color: "#323334" }}
+									>
+										Суббота с 10:00 до 17:00
+									</span>
+								</p>
+							</div>
 						</div>
 					</Col>
 				</Row>
@@ -83,7 +92,7 @@ const App = () => {
 								</p>
 
 								<div className="footer-social-media-container d-flex justify-content-between px-1 ">
-									<LinkedinOutlined className="footer-social-media-icon " />
+									<GrLinkedinOption className="footer-social-media-icon " />
 									<TwitterOutlined className="footer-social-media-icon " />
 									<InstagramOutlined className="footer-social-media-icon " />
 								</div>

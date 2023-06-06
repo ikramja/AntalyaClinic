@@ -4,6 +4,10 @@
 	filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.2));
 	border-radius: 10px;
 }
+.carousel-home-border-right-container {
+	border-right: 50px solid #016245;
+	padding-right: 1rem;
+}
 .home-carousel-text {
 	padding-left: 4rem !important;
 	padding-right: 2rem !important;
@@ -18,5 +22,9 @@
 	.home-carousel-text {
 		padding-left: 2rem !important;
 		padding-right: 0 !important;
+	}
+	.carousel-home-border-right-container {
+		border-right: 30px solid #016245;
+		padding-right: 0.5rem;
 	}
 }

@@ -17,7 +17,7 @@ export default function NewsLetter() {
 			</h1>
 			<h1
 				style={{ fontSize: "1.3rem", fontWeight: "400", color: "#414042" }}
-				className="pb-4"
+				className="pb-4 news-letter-header"
 			>
 				Оставьте Ваш e-mail и мы будем уведомлять Вас только о самых важных
 				событиях

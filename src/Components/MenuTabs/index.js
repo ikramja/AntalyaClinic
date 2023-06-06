@@ -304,7 +304,7 @@ const MenuTabs = (props) => {
 	return (
 		categoryData && (
 			<div className="w-100">
-				<div style={{ marginTop: "64px" }}>
+				<div style={{ marginTop: "68px" }}>
 					<Tabs
 						onTabClick={handleTabClick}
 						defaultActiveKey="3"

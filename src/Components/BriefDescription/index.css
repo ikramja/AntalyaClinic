@@ -1,6 +1,8 @@
 .Brief-description {
-	text-align: justify;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
 	hyphens: auto;
+	text-align: justify;
 }
 .animation-text {
 	font-weight: 600;

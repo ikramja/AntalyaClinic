@@ -124,10 +124,10 @@ export default function ContactForm(props) {
 										]}
 									>
 										<Checkbox className="check-box-text">
-											Я даю согласие
-											<a href="#">на обработку персональных данных</a> в
-											соответствии с законом №152-ФЗ "О персональных данных" от
-											27.07.2006
+											<span>Я даю </span>
+											<a href="#">согласие на обработку персональных данных</a>
+											<span className="ps-1">в </span>соответствии с законом
+											№152-ФЗ "О персональных данных" от 27.07.2006
 										</Checkbox>
 										<div className="w-100 contact-form-button-container mb-1">
 											<Button

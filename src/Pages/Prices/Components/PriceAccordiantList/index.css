@@ -1,11 +1,13 @@
 .price-accordion-list {
-	background-image: url("../../../../Assets/Price/PriceCover.png");
+	background-image: url("../../../../Assets/Price/Untitled design (13).png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom, center;
+	background-size: cover; /* Adjust as necessary */
+	height: 500px;
 	min-height: 85vh;
 	padding-left: 3rem !important;
 	padding-right: 3rem;
 	position: relative;
-	background-size: cover;
-	background-position: center;
 }
 .price-accordion-list::before {
 	content: "";

@@ -24,7 +24,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	z-index: -2; /* This will put the image behind the content of the div */
+	z-index: -1; /* This will put the image behind the content of the div */
 }
 .check-box-text {
 	color: white;

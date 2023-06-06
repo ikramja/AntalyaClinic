@@ -61,7 +61,7 @@ export default function MenuDropDowns(props) {
 		border: "none",
 		fontSize: "1rem",
 		fontWeight: "600",
-		fontFamily: "'Oswald', sans-serif",
+		// fontFamily: "'Oswald', sans-serif",
 	};
 	return (
 		<div className="mb-3 w-100 menu-drop-down">
@@ -187,6 +187,7 @@ export default function MenuDropDowns(props) {
 						</Panel>
 						<Panel header="СЕРВИС" key="6" style={panelStyle}>
 							<Link
+								to="/about-us"
 								onClick={() => {
 									props.setShowMenu(false);
 									props.setShowContent(true);
@@ -196,6 +197,7 @@ export default function MenuDropDowns(props) {
 								<h1 style={{ marginBottom: "2rem" }}>Трансфер</h1>
 							</Link>
 							<Link
+								to="/about-us"
 								onClick={() => {
 									props.setShowMenu(false);
 									props.setShowContent(true);
@@ -205,6 +207,7 @@ export default function MenuDropDowns(props) {
 								<h1 style={{ marginBottom: "2rem" }}>Отели</h1>
 							</Link>
 							<Link
+								to="/about-us"
 								onClick={() => {
 									props.setShowMenu(false);
 									props.setShowContent(true);
@@ -216,6 +219,7 @@ export default function MenuDropDowns(props) {
 						</Panel>
 						<Panel header="ДЛЯ ПАЦИЕНТОВ" key="7" style={panelStyle}>
 							<Link
+								to="/for-patients"
 								onClick={() => {
 									props.setShowMenu(false);
 									props.setShowContent(true);
@@ -229,7 +233,7 @@ export default function MenuDropDowns(props) {
 				</Panel>
 				<div className="ps-3 py-2">
 					<Link
-						to="/for-patients"
+						to="/Excursion"
 						onClick={() => {
 							props.setShowMenu(false);
 							props.setShowContent(true);

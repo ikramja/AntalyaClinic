@@ -35,6 +35,8 @@
 	text-align: left;
 	padding-bottom: 0% !important;
 }
+.footer-col2 {
+}
 .footer-link {
 	text-decoration: none;
 	color: #323334;
@@ -46,6 +48,14 @@
 	font-weight: 700;
 	font-size: 1.4rem;
 }
+.footer-col2-span {
+	text-align: left;
+}
 .footer-description-paragraph {
 	font-weight: 700;
+}
+@media only screen and (max-width: 450px) {
+	.footer-col2 {
+		text-align: left;
+	}
 }

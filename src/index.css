@@ -1,10 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Montserrat:wght@100;200;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
 body {
 	margin: 0;
-	font-family: Arsenal, montserrat, oswald, sans-serif;
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.ant-tabs {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
+.ant-col {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
+.ant-layout-footer {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
+.ant-collapse {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
+.ant-card {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
+.ant-checkbox-wrapper {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
+.ant-btn {
+	font-family: "Arsenal", "montserrat", "oswald", sans-serif !important;
+}
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;

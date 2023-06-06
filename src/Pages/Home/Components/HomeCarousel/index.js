@@ -67,10 +67,11 @@ export default function HomeCarousel() {
 			</div>
 
 			<div
-				style={{
-					borderRight: " 50px solid #016245",
-					paddingRight: "1rem",
-				}}
+				className="carousel-home-border-right-container"
+				// style={{
+				// 	borderRight: " 50px solid #016245",
+				// 	paddingRight: "1rem",
+				// }}
 			>
 				<Row className="w-100">
 					<Col lg={4} className="px-0">

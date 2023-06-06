@@ -80,8 +80,10 @@
 }
 
 .big-image {
+	z-index: -99 !important;
 	height: 750px;
 	object-fit: cover;
+	position: relative;
 }
 .home-image-animation-text-container {
 	position: absolute;
@@ -131,7 +133,7 @@
 	/* font-size: calc(1vw + 1em); */
 	font-size: 1.45rem;
 	color: white;
-	font-family: Montserrat;
+	/* font-family: Montserrat; */
 }
 
 .under-big-image-container-paragraph {
@@ -149,7 +151,7 @@
 	padding-left: 3rem;
 	padding-right: 3rem;
 	color: white;
-	font-family: "Arsenal";
+	/* font-family: "Arsenal"; */
 	font-size: 2.2rem;
 }
 .home-image-green-container {
@@ -183,7 +185,7 @@
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 		color: white;
-		font-family: "Arsenal";
+		/* font-family: "Arsenal"; */
 		font-size: 2rem;
 	}
 	.under-big-image-container-paragraph {

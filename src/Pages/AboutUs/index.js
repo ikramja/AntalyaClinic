@@ -30,6 +30,7 @@ export default function AboutUs() {
 	// const handlePrev = () => carouselRef.current.prev();
 	const settings = {
 		dots: true,
+		draggable: true,
 		slidesToShow: 5,
 		touchMove: true,
 		responsive: [
