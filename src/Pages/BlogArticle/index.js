@@ -72,15 +72,7 @@ export default function BlogArticle() {
 					<Rate allowClear={false} defaultValue={1} />
 					<span className="ant-rate-text "></span>
 				</div>
-				<Comments
-					pageId="2"
-					onNewComment={(num, last_comment, date, sign) =>
-						console.log("New comment posted")
-					}
-					onDeleteComment={(num, last_comment, date, sign) =>
-						console.log("Comment deleted")
-					}
-				/>
+				<Comments pageId="1" />
 				<div className="center-div m-5">
 					<Button
 						className="blog-articles-button center-div p-4 "
