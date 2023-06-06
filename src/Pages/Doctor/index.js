@@ -26,10 +26,11 @@ export default function AboutOurDoctor() {
 			{doctorData && (
 				<div>
 					<TitleCover
+						type="image"
+						source={Doctor_Cover}
 						title={doctorData.name_turkish}
 						subtitle={doctorData.name_russian}
 						titleAlign="center"
-						Cover={Doctor_Cover}
 					/>
 
 					<Container>

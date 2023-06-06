@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./index.css";
-import testImage from "../../../Assets/AboutUs/block1.png";
+import testImage from "../../../../Assets/AboutUs/block1.png";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 

@@ -23,10 +23,11 @@ export default function Category() {
 				{categoryData && (
 					<>
 						<TitleCover
+							type="image"
+							source={categoryData.cover_image}
 							title={categoryData.cover_header}
 							subtitle={categoryData.cover_sub_header}
 							titleAlign="center"
-							Cover={categoryData.cover_image}
 						/>
 						<CategoryList category_articles={categoryData.category_articles} />
 					</>

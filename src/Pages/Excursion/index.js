@@ -1,5 +1,5 @@
 import BriefDescription from "../../Components/BriefDescription";
-import { Col, Row, Spin } from "antd";
+import { Button, Col, Row, Spin } from "antd";
 import ExcursionListItem from "./Components/ExcursionListItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -18,6 +18,7 @@ export default function Excursion() {
 
 	const [currentBg, setCurrentBg] = useState(0);
 	const [loading, setLoading] = useState(true);
+	const [showAllExcursions, setShowAllExcursions] = useState(false);
 	const [excursions, setExcursions] = useState([]);
 	useEffect(() => {
 		setLoading(true);
@@ -77,17 +78,34 @@ export default function Excursion() {
 				</Container>
 
 				<Row gutter={16} className="m-5">
-					{excursions.map((e, i) => (
-						<Col sm={12} className="my-2" key={i}>
-							<ExcursionListItem
-								name={e.name}
-								images={e.images}
-								panels={e.panels}
-								price={e.price}
-							/>
-						</Col>
-					))}
+					{excursions
+						.slice(0, showAllExcursions ? excursions.length : 4)
+						.map((e, i) => (
+							<Col sm={12} className="my-2" key={i}>
+								<ExcursionListItem
+									name={e.name}
+									images={e.images}
+									panels={e.panels}
+									price={e.price}
+								/>
+							</Col>
+						))}
 				</Row>
+				<div className="center-div m-4">
+					<Button
+						onClick={() => setShowAllExcursions(true)}
+						className=" center-div p-4"
+						style={{
+							borderRadius: "105px",
+							color: "#323334",
+							border: "2px solid #323334",
+							fontWeight: "bold",
+						}}
+						// onClick={() => setShowAllDoctors(true)}
+					>
+						ПОСМОТРЕТЬ ВСЕ ЭКСКУРСИИ
+					</Button>
+				</div>
 				<Footer />
 			</div>
 		)

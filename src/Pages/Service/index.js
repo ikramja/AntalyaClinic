@@ -34,10 +34,11 @@ export default function Service() {
 			{articleData && (
 				<div>
 					<TitleCover
+						type="image"
+						source={articleData.cover_image}
 						title={articleData.cover_header}
 						subtitle={articleData.cover_sub_header}
 						titleAlign="center"
-						Cover={articleData.cover_image}
 					/>
 					{articleData.brief_header && articleData.brief_description && (
 						<BriefDescription

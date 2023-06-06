@@ -99,7 +99,12 @@ export default function AboutUs() {
 	return (
 		<div>
 			<div className="about-us-services">
-				<TitleCover title="СЕРВИС" titleAlign="center" Cover={AboutUsCover} />
+				<TitleCover
+					title="СЕРВИС"
+					titleAlign="center"
+					type="image"
+					source={AboutUsCover}
+				/>
 				<Container>
 					<div
 						style={{

@@ -6,11 +6,7 @@ import Footer from "../../Layouts/Footer";
 export default function Contact() {
 	return (
 		<div>
-			<TitleCover
-				title="КОНТАКТЫ"
-				titleAlign="center"
-				Cover={ForPatientsCover}
-			/>
+			<TitleCover type="video" title="КОНТАКТЫ" titleAlign="center" />
 
 			<Row className="container py-5" align="middle">
 				<Col sm={24} md={8}>

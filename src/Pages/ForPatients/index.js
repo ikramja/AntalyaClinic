@@ -26,7 +26,8 @@ export default function ForPatients() {
 						title="ПАМЯТКА"
 						subtitle="ПАЦИЕНТА"
 						titleAlign="center"
-						Cover={ForPatientsCover}
+						type="image"
+						source={ForPatientsCover}
 					/>
 
 					<AnalysesTable surgeriesData={surgeriesData} />

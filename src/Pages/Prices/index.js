@@ -22,9 +22,10 @@ export default function Prices() {
 			{PricesData && (
 				<div>
 					<TitleCover
+						type="image"
+						source={PriceCover}
 						title="СТОИМОСТЬ"
 						titleAlign="center"
-						Cover={PriceCover}
 					/>
 					<PriceCategoryMenu PriceMenuData={PricesData} />
 				</div>

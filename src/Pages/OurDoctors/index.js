@@ -12,7 +12,8 @@ export default function OurDoctors() {
 				title="ВРАЧИ КЛИНИКИ"
 				titleAlign="center"
 				subtitle=""
-				Cover={Doctor_Cover}
+				type="image"
+				source={Doctor_Cover}
 			/>
 			<DoctorsList />
 			<ContactForm className="contact-form" />

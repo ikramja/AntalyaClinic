@@ -3,7 +3,7 @@ import { Button } from "antd";
 import HomeCoverVideo from "../../../../Assets/Home/cover-video.mp4";
 import Logo from "../../../../Assets/Logo/Logo.png";
 
-export default function CoverVideo() {
+export default function CoverVideo(props) {
 	return (
 		<div className="left-title-home-cover-container h-100">
 			<div className="left-title-home-cover-text  center-div mt-5">

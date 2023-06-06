@@ -1,5 +1,6 @@
 import { Card, Carousel, Collapse, Image } from "antd";
 import { useRef } from "react";
+import "./index.css";
 
 const { Panel } = Collapse;
 
@@ -26,8 +27,8 @@ export default function ExcursionListItem({
 					key={i}
 					src={i}
 					preview={false}
-					height={250}
-					width="90%"
+					height={380}
+					width="98%"
 					alt={name}
 				/>
 			))}
@@ -50,7 +51,11 @@ export default function ExcursionListItem({
 
 	return (
 		<Card
-			title={<h3 className="my-3">{name}</h3>}
+			title={
+				<h3 className="my-3" style={{ fontWeight: "800" }}>
+					{name}
+				</h3>
+			}
 			cover={carousel}
 			className="border border-1 border-dark"
 			onMouseEnter={() => carouselRef.current.autoPlay()}
@@ -67,14 +72,16 @@ export default function ExcursionListItem({
 					<Panel
 						header={<PanelHeader header={p.header} />}
 						key={i}
-						style={{ border: "none" }}
+						style={{ border: "none", textAlign: "center" }}
 					>
-						<p dangerouslySetInnerHTML={{ __html: p.text }} />
+						<div className="excursion-collapse-text">
+							<p dangerouslySetInnerHTML={{ __html: p.text }} />
+						</div>
 					</Panel>
 				))}
 			</Collapse>
 
-			<div className="mt-3 h5">
+			<div className="mt-3 h5" style={{ fontWeight: "700" }}>
 				СТОИМОСТЬ НА ЧЕЛОВЕКА{<span className="h3 mx-2">{price}$</span>}
 			</div>
 		</Card>
