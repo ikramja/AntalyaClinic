@@ -31,7 +31,11 @@ const StandardCard = (props) => {
 	const { width } = props;
 
 	return (
-		<Link className="link-no-text-decoration" to={props.link}>
+		<Link
+			className="link-no-text-decoration"
+			to={props.link}
+			style={{ width: props.linkWidth }}
+		>
 			<Card
 				style={{ width: `${width ? width : ""} ${width ? "%" : ""}` }}
 				className="standard-card "

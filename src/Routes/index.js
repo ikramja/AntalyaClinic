@@ -47,9 +47,9 @@ export default function Main() {
 			<Route exact path="/Contact" element={<Contact />} />
 			<Route exact path="/about-us" element={<AboutUs />} />
 			<Route exact path="/blog" element={<Blog />} />
-			<Route exact path="/blogArticle" element={<BlogArticle />} />
+			<Route exact path="/blog/:articleTitle" element={<BlogArticle />} />
 			<Route exact path="/news" element={<News />} />
-			<Route exact path="/newsArticleName" element={<NewsArticle />} />
+			<Route exact path="/news/:articleTitle" element={<NewsArticle />} />
 		</Routes>
 	);
 }

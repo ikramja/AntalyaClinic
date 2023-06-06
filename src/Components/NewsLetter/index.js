@@ -1,6 +1,7 @@
 import "./index.css";
 import { Button, Form, Input } from "antd";
-import { useState } from "react";
+import axios from "axios";
+import { message } from "antd";
 
 const validateMessages = {
 	required: "${label} is required!",
@@ -10,6 +11,23 @@ const validateMessages = {
 };
 
 export default function NewsLetter() {
+	const handleSendEmail = (values) => {
+		axios
+			.post("post/news-letter/", { email: values.email })
+			.then((response) => {
+				if (response.status === 201) {
+					message.open({
+						type: "success",
+						content: "Successfully subscribed to newsletter!",
+					});
+				} else {
+					message.open({
+						type: "error",
+						content: "Failed to subscribe to newsletter.",
+					});
+				}
+			});
+	};
 	return (
 		<div className="newsletter">
 			<h1 className="pt-4" style={{ fontSize: "1.7rem", fontWeight: "bold" }}>
@@ -27,6 +45,8 @@ export default function NewsLetter() {
 					className="newsletter-form center-div"
 					layout="vertical"
 					validateMessages={validateMessages}
+					onFinish={handleSendEmail}
+					onFinishFailed={(errorInfo) => console.log("Failed:", errorInfo)}
 				>
 					<Form.Item
 						className="newsletter-input-item w-100 "
@@ -40,19 +60,17 @@ export default function NewsLetter() {
 							},
 						]}
 					>
-						<Input className="newsletter-form-input " />
+						<Input className="newsletter-form-input" />
 					</Form.Item>
 					<Form.Item className="center-div my-0">
-						<Button className="newsletter-button mx-2 center-div">
+						<Button
+							htmlType="submit"
+							className="newsletter-button mx-2 center-div"
+						>
 							ОТПРАВИТЬ
 						</Button>
 					</Form.Item>
 				</Form>
-				{/* <div className="center-div">
-					<Button >
-						ОТПРАВИТЬ
-					</Button>
-				</div> */}
 			</div>
 		</div>
 	);

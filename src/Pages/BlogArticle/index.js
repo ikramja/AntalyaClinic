@@ -6,87 +6,64 @@ import { Rate } from "antd";
 import Footer from "../../Layouts/Footer";
 import NewsLetter from "../../Components/NewsLetter";
 import { Comments, Auth } from "react-vk";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function BlogArticle() {
+	const { articleTitle } = useParams();
+	const [articleData, setArticleData] = useState(null);
+	useEffect(() => {
+		axios.get(`get/blog/article/${articleTitle}/`).then((Response) => {
+			setArticleData(Response.data);
+		});
+	}, []);
 	return (
-		<div className="blog-article">
-			<Container>
-				<div className="blog-title-container">
-					<h1 className="blog-title mb-4">БЛОГ</h1>
-				</div>
-			</Container>
-			<SideImagSection />
-			<Container>
-				<div className="blog-article-text mt-5">
-					<p>
-						Все мы хотим идеальное тело и вечно молодое лицо, но постоянный
-						стресс, бесконечная работа, городской ритм и плохая экология берут
-						свое. Все мы хотим идеальное тело и вечно молодое лицо, но
-						постоянный стресс, бесконечная работа, городской ритм и плохая
-						экология берут свое. Все мы хотим идеальное тело и вечно молодое
-						лицо, но постоянный стресс, бесконечная работа, городской ритм и
-						плохая экология берут свое. Все мы хотим идеальное тело и вечно
-						молодое лицо, но постоянный стресс, бесконечная работа, городской
-						ритм и плохая экология берут свое. Все мы хотим идеальное тело и
-						вечно молодое лицо, но постоянный стресс, бесконечная работа,
-					</p>
-					<p>
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-					</p>
-					<p>
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое. Все мы хотим идеальное
-						тело и вечно молодое лицо, но постоянный стресс, бесконечная работа,
-						городской ритм и плохая экология берут свое.
-					</p>
-				</div>
-				<div className="stars-section-blog my-5">
-					<p
-						className="mb-0 me-4"
-						style={{ color: "#323334", fontWeight: "bold", fontSize: "1.2rem" }}
-					>
-						НАСКОЛЬКО ВАМ БЫЛА ПОЛЕЗНА СТАТЬЯ?
-					</p>
-					<Rate allowClear={false} defaultValue={1} />
-					<span className="ant-rate-text "></span>
-				</div>
-				<Comments pageId="1" />
-				<div className="center-div m-5">
-					<Link to="/blog" style={{ textDecoration: "none" }}>
-						<Button
-							className="blog-articles-button center-div p-4 "
-							// onClick={() => setShowAllDoctors(true)}
+		articleData && (
+			<div className="blog-article">
+				<Link to="/blog" style={{ textDecoration: "none", color: "#545454" }}>
+					<Container>
+						<div className="blog-title-container">
+							<h1 className="blog-title mb-4">БЛОГ</h1>
+						</div>
+					</Container>
+				</Link>
+
+				<SideImagSection articleData={articleData} clickable={false} />
+				<Container>
+					<div
+						className="blog-article-text mt-5"
+						dangerouslySetInnerHTML={{ __html: articleData.description }}
+					></div>
+					<div className="stars-section-blog my-5">
+						<p
+							className="mb-0 me-4"
+							style={{
+								color: "#323334",
+								fontWeight: "bold",
+								fontSize: "1.2rem",
+							}}
 						>
-							ВСЕ СТАТЬИ
-						</Button>
-					</Link>
-				</div>
-			</Container>
-			<NewsLetter />
-			<Footer />
-		</div>
+							НАСКОЛЬКО ВАМ БЫЛА ПОЛЕЗНА СТАТЬЯ?
+						</p>
+						<Rate allowClear={false} defaultValue={articleData.rating} />
+						<span className="ant-rate-text "></span>
+					</div>
+					<Comments pageId="1" />
+					<div className="center-div m-5">
+						<Link to="/blog" style={{ textDecoration: "none" }}>
+							<Button
+								className="blog-articles-button center-div p-4 "
+								// onClick={() => setShowAllDoctors(true)}
+							>
+								ВСЕ СТАТЬИ
+							</Button>
+						</Link>
+					</div>
+				</Container>
+				<NewsLetter />
+				<Footer />
+			</div>
+		)
 	);
 }

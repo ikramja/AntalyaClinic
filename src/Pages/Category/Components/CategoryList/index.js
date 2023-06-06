@@ -31,6 +31,7 @@ export default function CategoryList(props) {
 										color: "black",
 									}}
 									link={`/service/${article.cover_header}/`}
+									linkWidth={"70%"}
 								/>
 							</Col>
 						);

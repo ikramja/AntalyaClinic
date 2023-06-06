@@ -1,10 +1,8 @@
 import "./index.css";
-import ContactFormBackground from "../../Assets/contactForm/contactForm.png";
 import React from "react";
 import { Button, Form, Input } from "antd";
 import { Col, Container, Row } from "react-bootstrap";
 import { Checkbox } from "antd";
-import FormItem from "antd/es/form/FormItem";
 
 const onChange = (e) => {
 	console.log(`checked = ${e.target.checked}`);
@@ -26,6 +24,23 @@ const checkboxValidator = (rule, value, callback) => {
 };
 
 export default function ContactForm(props) {
+	const handleSendFormData = (values) => {
+		axios
+			.post("post/news-letter/", { fullName: ,email: values.email, message: message })
+			.then((response) => {
+				if (response.status === 201) {
+					message.open({
+						type: "success",
+						content: "Successfully subscribed to newsletter!",
+					});
+				} else {
+					message.open({
+						type: "error",
+						content: "Failed to subscribe to newsletter.",
+					});
+				}
+			});
+	};
 	return (
 		<div
 			className={"contact-form" + props.className ? props.className : ""}
@@ -49,14 +64,16 @@ export default function ContactForm(props) {
 							<Form
 								layout="horizontal"
 								name="nest-messages"
-								// onFinish={onFinish}
-								// style={{ maxWidth: 600 }}
 								validateMessages={validateMessages}
+								onFinish={handleSendFormData}
+								onFinishFailed={(errorInfo) =>
+									console.log("Failed:", errorInfo)
+								}
 							>
 								<Row>
 									<Col md={6}>
 										<Form.Item
-											name={["user", "name"]}
+											name="FullName"
 											rules={[
 												{
 													required: true,
@@ -129,23 +146,16 @@ export default function ContactForm(props) {
 											<span className="ps-1">в </span>соответствии с законом
 											№152-ФЗ "О персональных данных" от 27.07.2006
 										</Checkbox>
-										<div className="w-100 contact-form-button-container mb-1">
+										<Form.Item className="w-100 contact-form-button-container mb-1">
 											<Button
 												htmlType="submit"
 												className="contact-form-button  py-1 px-4 "
 											>
 												Отправить
 											</Button>
-										</div>
+										</Form.Item>
 									</Form.Item>
 								</Row>
-								{/* <Row>
-								<div className="w-100 contact-form-button-container">
-									<Button className="contact-form-button  py-4  my-4">
-										Отправить
-									</Button>
-								</div>
-							</Row> */}
 							</Form>
 						</div>
 					</Col>
