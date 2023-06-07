@@ -3,6 +3,8 @@ import React from "react";
 import { Button, Form, Input } from "antd";
 import { Col, Container, Row } from "react-bootstrap";
 import { Checkbox } from "antd";
+import { message } from "antd";
+import axios from "axios";
 
 const onChange = (e) => {
 	console.log(`checked = ${e.target.checked}`);
@@ -25,21 +27,30 @@ const checkboxValidator = (rule, value, callback) => {
 
 export default function ContactForm(props) {
 	const handleSendFormData = (values) => {
-		// axios
-		// 	.post("post/news-letter/", { fullName: ,email: values.email, message: message })
-		// 	.then((response) => {
-		// 		if (response.status === 201) {
-		// 			message.open({
-		// 				type: "success",
-		// 				content: "Successfully subscribed to newsletter!",
-		// 			});
-		// 		} else {
-		// 			message.open({
-		// 				type: "error",
-		// 				content: "Failed to subscribe to newsletter.",
-		// 			});
-		// 		}
-		// 	});
+		console.log({
+			fullName: values.fullName,
+			email: values.email,
+			message: values.message,
+		});
+		axios
+			.post("post/contact/", {
+				fullName: values.fullName,
+				email: values.email,
+				message: values.message,
+			})
+			.then((response) => {
+				if (response.status === 201) {
+					message.open({
+						type: "success",
+						content: "Ваше сообщение успешно отправлено!",
+					});
+				} else {
+					message.open({
+						type: "error",
+						content: "Ваше сообщение не было отправлено",
+					});
+				}
+			});
 	};
 	return (
 		<div
@@ -73,7 +84,7 @@ export default function ContactForm(props) {
 								<Row>
 									<Col md={6}>
 										<Form.Item
-											name="FullName"
+											name="fullName"
 											rules={[
 												{
 													required: true,
@@ -111,9 +122,17 @@ export default function ContactForm(props) {
 								</Row>
 								<Row>
 									<Col md={12}>
-										<Form.Item>
+										<Form.Item
+											name="message"
+											rules={[
+												{
+													required: true,
+													message: "Пожалуйста введите Сообщение!",
+												},
+											]}
+										>
 											<TextArea
-												className="contact-form-input "
+												className="contact-form-input"
 												placeholder="Сообщение"
 												rows={1}
 											/>
