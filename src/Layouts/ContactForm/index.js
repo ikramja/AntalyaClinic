@@ -146,14 +146,14 @@ export default function ContactForm(props) {
 											<span className="ps-1">в </span>соответствии с законом
 											№152-ФЗ "О персональных данных" от 27.07.2006
 										</Checkbox>
-										<Form.Item className="w-100 contact-form-button-container mb-1">
-											<Button
-												htmlType="submit"
-												className="contact-form-button  py-1 px-4 "
-											>
-												Отправить
-											</Button>
-										</Form.Item>
+									</Form.Item>
+									<Form.Item className="w-100 contact-form-button-container mb-1">
+										<Button
+											htmlType="submit"
+											className="contact-form-button  py-1 px-4 "
+										>
+											Отправить
+										</Button>
 									</Form.Item>
 								</Row>
 							</Form>

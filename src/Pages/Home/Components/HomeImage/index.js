@@ -38,6 +38,7 @@ export default function HomeImage() {
 							</li>
 						</ul>
 					</Container>
+
 					{/* <div className="w-100  mt-4">
 						<div className="button-text-container d-flex home-image-animation-text-container">
 							<Link
