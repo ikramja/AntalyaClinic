@@ -2,17 +2,29 @@ import "./index.css";
 import { Button } from "antd";
 import HomeCoverVideo from "../../../../Assets/Home/cover-video.mp4";
 import Logo from "../../../../Assets/Logo/Logo.png";
+import { motion } from "framer-motion";
+import FadeInUpAnimation from "../../../../Components/FadeInUp";
 
 export default function CoverVideo(props) {
 	return (
 		<div className="left-title-home-cover-container h-100">
 			<div className="left-title-home-cover-text  center-div mt-5">
-				<div>
-					<h1 className="clinic-name mt-5">The Clinic for Plastic Surgery</h1>
-					<h1 className="clinic-specialty">
-						Клиника Пластической Хирургии в Анталии
-					</h1>
-				</div>
+				<FadeInUpAnimation
+					duration={1}
+					elements={[
+						<h1 className="clinic-name mt-5">
+							The Clinic for Plastic Surgery
+						</h1>,
+					]}
+				/>
+				<FadeInUpAnimation
+					duration={1.6}
+					elements={[
+						<h1 className="clinic-specialty">
+							Клиника Пластической Хирургии в Анталии
+						</h1>,
+					]}
+				/>
 			</div>
 			<div className="image-overlay-container">
 				<video
