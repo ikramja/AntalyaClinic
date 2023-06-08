@@ -5,6 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Checkbox } from "antd";
 import { message } from "antd";
 import axios from "axios";
+import FadeInUpAnimation from "../../Components/FadeInUp";
 
 const onChange = (e) => {
 	console.log(`checked = ${e.target.checked}`);
@@ -60,15 +61,25 @@ export default function ContactForm(props) {
 			<Container>
 				<Row>
 					<Col md={5} className="mt-4">
-						<h1 className="contact-form-header">
-							Запланируйте онлайн или оффлайн консультацию сегодня
-						</h1>
-						<p className="contact-form-paragraph pt-2">
-							Наша клиника хочет помочь вам с выбором наилучшего пути для
-							исполнения вашего желания. Мы уверены, что вы будете чувствовать
-							себя более осведомленными и уверенными в своем решении после
-							общения с нашими врачами.
-						</p>
+						<FadeInUpAnimation
+							duration={1}
+							elements={[
+								<h1 className="contact-form-header">
+									Запланируйте онлайн или оффлайн консультацию сегодня
+								</h1>,
+							]}
+						/>
+						<FadeInUpAnimation
+							duration={1.2}
+							elements={[
+								<p className="contact-form-paragraph pt-2">
+									Наша клиника хочет помочь вам с выбором наилучшего пути для
+									исполнения вашего желания. Мы уверены, что вы будете
+									чувствовать себя более осведомленными и уверенными в своем
+									решении после общения с нашими врачами.
+								</p>,
+							]}
+						/>
 					</Col>
 					<Col md={7} className="center-div">
 						<div className="pt-4 contact-form-container">
@@ -92,9 +103,14 @@ export default function ContactForm(props) {
 												},
 											]}
 										>
-											<Input
-												className="contact-form-input"
-												placeholder="Имя Фамилия*"
+											<FadeInUpAnimation
+												duration={1.4}
+												elements={[
+													<Input
+														className="contact-form-input"
+														placeholder="Имя Фамилия*"
+													/>,
+												]}
 											/>
 										</Form.Item>
 									</Col>
@@ -113,9 +129,14 @@ export default function ContactForm(props) {
 												},
 											]}
 										>
-											<Input
-												className="contact-form-input"
-												placeholder="Email*"
+											<FadeInUpAnimation
+												duration={1.6}
+												elements={[
+													<Input
+														className="contact-form-input"
+														placeholder="Email*"
+													/>,
+												]}
 											/>
 										</Form.Item>
 									</Col>
@@ -131,20 +152,30 @@ export default function ContactForm(props) {
 												},
 											]}
 										>
-											<TextArea
-												className="contact-form-input"
-												placeholder="Сообщение"
-												rows={1}
+											<FadeInUpAnimation
+												duration={1.8}
+												elements={[
+													<TextArea
+														className="contact-form-input"
+														placeholder="Сообщение"
+														rows={1}
+													/>,
+												]}
 											/>
 										</Form.Item>
 									</Col>
 								</Row>
 								<Row className="form-contact-check-box">
 									<Form.Item className="mb-1">
-										<Checkbox className="check-box-text">
-											Хочу получать информацию о специальных предложениях и
-											акциях
-										</Checkbox>
+										<FadeInUpAnimation
+											duration={2}
+											elements={[
+												<Checkbox className="check-box-text">
+													Хочу получать информацию о специальных предложениях и
+													акциях
+												</Checkbox>,
+											]}
+										/>
 									</Form.Item>
 
 									<Form.Item
@@ -159,20 +190,32 @@ export default function ContactForm(props) {
 											},
 										]}
 									>
-										<Checkbox className="check-box-text">
-											<span>Я даю </span>
-											<a href="#">согласие на обработку персональных данных</a>
-											<span className="ps-1">в </span>соответствии с законом
-											№152-ФЗ "О персональных данных" от 27.07.2006
-										</Checkbox>
+										<FadeInUpAnimation
+											duration={2.2}
+											elements={[
+												<Checkbox className="check-box-text">
+													<span>Я даю </span>
+													<a href="#">
+														согласие на обработку персональных данных
+													</a>
+													<span className="ps-1">в </span>соответствии с законом
+													№152-ФЗ "О персональных данных" от 27.07.2006
+												</Checkbox>,
+											]}
+										/>
 									</Form.Item>
 									<Form.Item className="w-100 contact-form-button-container mb-1">
-										<Button
-											htmlType="submit"
-											className="contact-form-button  py-1 px-4 "
-										>
-											Отправить
-										</Button>
+										<FadeInUpAnimation
+											duration={2.4}
+											elements={[
+												<Button
+													htmlType="submit"
+													className="contact-form-button  py-1 px-4 "
+												>
+													Отправить
+												</Button>,
+											]}
+										/>
 									</Form.Item>
 								</Row>
 							</Form>

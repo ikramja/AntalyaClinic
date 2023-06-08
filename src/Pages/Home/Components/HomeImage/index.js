@@ -62,9 +62,7 @@ export default function HomeImage() {
 						</div>
 					</div> */}
 				</div>
-				{/* <FadeInUpAnimation
-					duration={1}
-					elements={[ */}
+
 				<ContactForm
 					className="alternate-context contact-form no-background"
 					formWidth="1000px"
@@ -73,9 +71,6 @@ export default function HomeImage() {
 						top: "-100px",
 					}}
 				/>
-				,
-				{/* ]}
-				/> */}
 			</div>
 
 			<div className="home-image-green">

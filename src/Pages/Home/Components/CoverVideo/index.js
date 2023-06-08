@@ -10,7 +10,7 @@ export default function CoverVideo(props) {
 		<div className="left-title-home-cover-container h-100">
 			<div className="left-title-home-cover-text  center-div mt-5">
 				<FadeInUpAnimation
-					duration={1}
+					duration={2}
 					elements={[
 						<h1 className="clinic-name mt-5">
 							The Clinic for Plastic Surgery
@@ -18,7 +18,7 @@ export default function CoverVideo(props) {
 					]}
 				/>
 				<FadeInUpAnimation
-					duration={1.6}
+					duration={2.6}
 					elements={[
 						<h1 className="clinic-specialty">
 							Клиника Пластической Хирургии в Анталии
