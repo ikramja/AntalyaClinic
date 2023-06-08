@@ -18,12 +18,12 @@ export default function NewsLetter() {
 				if (response.status === 201) {
 					message.open({
 						type: "success",
-						content: "Successfully subscribed to newsletter!",
+						content: "Вы успешно подписались на рассылку!",
 					});
 				} else {
 					message.open({
 						type: "error",
-						content: "Failed to subscribe to newsletter.",
+						content: "Не удалось подписаться на рассылку.",
 					});
 				}
 			});
