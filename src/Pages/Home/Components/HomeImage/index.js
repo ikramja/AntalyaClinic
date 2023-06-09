@@ -18,39 +18,39 @@ export default function HomeImage() {
 			>
 				<img src={BigImage} className="w-100 big-image"></img>
 				<div>
-					<Fade bottom cascade delay={100}>
-						<Container className="big-image--white-frame-container">
-							<Fade bottom delay={100}>
-								<h1
-									style={{
-										textAlign: "left",
-										// fontFamily: "Montserrat",
-										fontWeight: "600",
-										fontSize: "1.5rem",
-									}}
-								>
-									EL ARTE Анталия
-								</h1>
+					{/* <Fade bottom cascade delay={100}> */}
+					<Container className="big-image--white-frame-container">
+						<Fade bottom delay={100}>
+							<h1
+								style={{
+									textAlign: "left",
+									// fontFamily: "Montserrat",
+									fontWeight: "600",
+									fontSize: "1.5rem",
+								}}
+							>
+								EL ARTE Анталия
+							</h1>
+						</Fade>
+						<ul className="big-image-list">
+							<Fade bottom cascade delay={90}>
+								<li style={{ textAlign: "left", fontSize: "1.2rem" }}>
+									Пластическая хирургияTelegram (ссылка)
+								</li>
 							</Fade>
-							<ul className="big-image-list">
-								<Fade bottom cascade delay={90}>
-									<li style={{ textAlign: "left", fontSize: "1.2rem" }}>
-										Пластическая хирургияTelegram (ссылка)
-									</li>
-								</Fade>
-								<Fade bottom cascade delay={80}>
-									<li style={{ textAlign: "left", fontSize: "1.2rem" }}>
-										ул. Мустафа Кемаль, Телефон:+7 (495) 181-10-83
-									</li>
-								</Fade>
-								<Fade bottom cascade delay={70}>
-									<li style={{ textAlign: "left", fontSize: "1.2rem" }}>
-										График работы: с 9:00 до 21:00
-									</li>
-								</Fade>
-							</ul>
-						</Container>
-					</Fade>
+							<Fade bottom cascade delay={80}>
+								<li style={{ textAlign: "left", fontSize: "1.2rem" }}>
+									ул. Мустафа Кемаль, Телефон:+7 (495) 181-10-83
+								</li>
+							</Fade>
+							<Fade bottom cascade delay={70}>
+								<li style={{ textAlign: "left", fontSize: "1.2rem" }}>
+									График работы: с 9:00 до 21:00
+								</li>
+							</Fade>
+						</ul>
+					</Container>
+					{/* </Fade> */}
 					{/* <div className="w-100  mt-4">
 						<div className="button-text-container d-flex home-image-animation-text-container">
 							<Link
