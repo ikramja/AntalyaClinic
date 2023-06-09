@@ -1,9 +1,10 @@
 import { Col, Row } from "react-bootstrap";
 import липосакциятела from "../../../../Assets/Home/липосакция тела.webp";
 import подтяжкагуб from "../../../../Assets/Home/подтяжка губ.webp";
+import Fade from "react-reveal/Fade";
 import пластикатела from "../../../../Assets/Home/пластика тела.webp";
 import пластикагруди from "../../../../Assets/Home/пластика груди.webp";
-
+import Pulse from "react-reveal/Pulse";
 import операция_по_трансплонтации_волос from "../../../../Assets/Home/операция_по_трансплонтации_волос.webp";
 import "./index.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
@@ -91,11 +92,13 @@ export default function HomeCarousel() {
 			>
 				<Row className="w-100">
 					<Col lg={4} className="px-0">
-						<img
-							className="home-carousel-image w-100"
-							src={carouselData[currentSlide].img}
-							alt="carousel"
-						/>
+						<Pulse delay={1000} duration={3000}>
+							<img
+								className="home-carousel-image w-100"
+								src={carouselData[currentSlide].img}
+								alt="carousel"
+							/>
+						</Pulse>
 					</Col>
 					<Col lg={8} className="home-carousel-text">
 						<div
@@ -111,35 +114,38 @@ export default function HomeCarousel() {
 								style={{ fontSize: "30px", cursor: "pointer" }}
 								onClick={prevSlide}
 							/>
-							<h1
-								style={{ fontSize: "3rem", fontWeight: "bold" }}
-								className="mx-3"
-							>
-								{carouselData[currentSlide].title}
-							</h1>
+							<Fade bottom>
+								<h1
+									style={{ fontSize: "3rem", fontWeight: "bold" }}
+									className="mx-3"
+								>
+									{carouselData[currentSlide].title}
+								</h1>
+							</Fade>
 							<AiOutlineArrowRight
 								style={{ fontSize: "30px", cursor: "pointer" }}
 								onClick={nextSlide}
 							/>
 						</div>
+						<Fade bottom cascade>
+							<div className="image-Brief-description">
+								<p style={{ fontWeight: "bold" }}>
+									{carouselData[currentSlide].textBold}
+								</p>
 
-						<div className="image-Brief-description">
-							<p style={{ fontWeight: "bold" }}>
-								{carouselData[currentSlide].textBold}
-							</p>
-
-							<p>{carouselData[currentSlide].text}</p>
-						</div>
-						<div className="w-100 d-flex justify-content-end ">
-							<Link
-								style={{ textDecoration: "none" }}
-								to={`/category/${carouselData[currentSlide].link}`}
-							>
-								<Button className="brief-description-button home-carousel-button px-3 py-4 my-4">
-									{carouselData[currentSlide].title}
-								</Button>
-							</Link>
-						</div>
+								<p>{carouselData[currentSlide].text}</p>
+							</div>
+							<div className="w-100 d-flex justify-content-end ">
+								<Link
+									style={{ textDecoration: "none" }}
+									to={`/category/${carouselData[currentSlide].link}`}
+								>
+									<Button className="brief-description-button home-carousel-button px-3 py-4 my-4">
+										{carouselData[currentSlide].title}
+									</Button>
+								</Link>
+							</div>
+						</Fade>
 					</Col>
 				</Row>
 			</div>

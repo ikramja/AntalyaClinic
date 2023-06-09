@@ -1,11 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Pulse from "react-reveal/Pulse";
+import Fade from "react-reveal/Fade";
 import categoryhome1 from "../../../../Assets/Home/categoryhome1.png";
 import categoryhome3 from "../../../../Assets/Home/categoryhome3.png";
 import пластическаяоперацияживота from "../../../../Assets/Home/пластическая операция живота.webp";
 import трансплантацияволос from "../../../../Assets/Home/трансплантация волос.webp";
-
 import { Link } from "react-router-dom";
 import "./index.css";
 
@@ -26,9 +27,11 @@ export default function HomeCategory() {
 	}, []);
 	return (
 		<div>
-			<h1 style={{ fontSize: "6vw", fontWeight: "bold" }} className="my-4">
-				ПОПУЛЯРНЫЕ УСЛУГИ
-			</h1>
+			<Fade top delay={1000}>
+				<h1 style={{ fontSize: "6vw", fontWeight: "bold" }} className="my-4">
+					ПОПУЛЯРНЫЕ УСЛУГИ
+				</h1>
+			</Fade>
 			<div className="w-100 category-home-image-container pb-4">
 				<Container>
 					<Row className="w-100 center-div category-home-row">
@@ -43,10 +46,11 @@ export default function HomeCategory() {
 
 										<div className="home-category-links-container h-100 w-100 center-div">
 											<div>
-												{category.category_articles.map(
-													(article) =>
+												{category.category_articles.map((article, index) => {
+													return (
 														article.popular && (
 															<Link
+																className="i"
 																style={{
 																	textDecoration: "none",
 																	color: "white",
@@ -54,16 +58,19 @@ export default function HomeCategory() {
 																to={`/service/${article.cover_header}/`}
 															>
 																<h1
+																	className="fade-up"
 																	style={{
 																		fontSize: "1rem",
 																		fontWeight: "600",
+																		transitionDelay: `${index * 0.1}s`,
 																	}}
 																>
 																	{article.cover_header}
 																</h1>
 															</Link>
 														)
-												)}
+													);
+												})}
 											</div>
 										</div>
 									</div>

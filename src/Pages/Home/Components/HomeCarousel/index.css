@@ -1,3 +1,11 @@
+@keyframes slide-in {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: auto;
+	}
+}
 .home-carousel-image {
 	object-fit: cover;
 	max-height: 800px;
@@ -8,6 +16,7 @@
 	border-right: 50px solid #016245;
 	padding-right: 1rem;
 }
+
 .home-carousel-text {
 	padding-left: 4rem !important;
 	padding-right: 2rem !important;
