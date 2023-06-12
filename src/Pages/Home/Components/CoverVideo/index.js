@@ -1,7 +1,7 @@
 import "./index.css";
 import { Button } from "antd";
 import Fade from "react-reveal/Fade";
-import HomeCoverVideo from "../../../../Assets/Home/cover-video.mp4";
+import HomeCoverVideo from "../../../../videos/cover-video.mp4";
 import Logo from "../../../../Assets/Logo/Logo.png";
 import { motion } from "framer-motion";
 import FadeInUpAnimation from "../../../../Components/FadeInUp";
@@ -21,9 +21,9 @@ export default function CoverVideo(props) {
 			<div className="image-overlay-container">
 				<video
 					className="w-100 left-title-home-cover video-cover"
-					autoplay
 					loop
 					muted
+					autoPlay
 				>
 					<source
 						src={HomeCoverVideo}
@@ -31,7 +31,7 @@ export default function CoverVideo(props) {
 							HomeCoverVideo.split("/").pop().split(".")[0]
 						)}
 						type="video/mp4"
-					></source>
+					/>
 				</video>
 			</div>
 			<img className="logo-right me-4 mb-2" src={Logo}></img>

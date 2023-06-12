@@ -1,6 +1,6 @@
 import "./index.css";
 import Logo from "../../Assets/Logo/Logo.png";
-import HomeCoverVideo from "../../Assets/Home/cover-video.mp4";
+import HomeCoverVideo from "../../videos/cover-video.mp4";
 
 export default function CenterTitleCover({
 	title,
