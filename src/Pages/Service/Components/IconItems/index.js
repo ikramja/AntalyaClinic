@@ -11,9 +11,15 @@ export default function IconItems(props) {
 				borderRadius: "10px",
 			}}
 		>
-			<img className="icon-image" src={props.icon}></img>
+			<img
+				className="icon-image"
+				src={props.icon}
+				alt={decodeURIComponent(props.icon.split("/").pop().split(".")[0])}
+			></img>
 			<div className="icon-title">
-				<h6 className="fw-bold">{props.title}</h6>
+				<h4 style={{ fontSize: "1rem" }} className="fw-bold">
+					{props.title}
+				</h4>
 				<div className="icon-text">
 					<p className="my-0">{props.description}</p>
 				</div>

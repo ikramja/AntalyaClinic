@@ -7,7 +7,7 @@ export default function GreyFrame(props) {
 		>
 			<h1 className="about-us-grey-frame-head">
 				{props.subtitle && (
-					<h5 className="about-us-grey-frame-title pt-4">{props.subtitle}</h5>
+					<h2 className="about-us-grey-frame-title pt-4">{props.subtitle}</h2>
 				)}
 				<span className="about-us-grey-frame-subtitle ">{props.title}</span>
 			</h1>

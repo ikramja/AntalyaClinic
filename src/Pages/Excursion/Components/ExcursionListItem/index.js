@@ -29,7 +29,7 @@ export default function ExcursionListItem({
 					preview={false}
 					height={380}
 					width="98%"
-					alt={name}
+					alt={decodeURIComponent(i.split("/").pop().split(".")[0])}
 				/>
 			))}
 		</Carousel>
@@ -52,17 +52,20 @@ export default function ExcursionListItem({
 	return (
 		<Card
 			title={
-				<h3 className="my-3" style={{ fontWeight: "800" }}>
+				<h2
+					className="my-3"
+					style={{ fontWeight: "800", fontSize: "calc(1.3rem + .6vw)" }}
+				>
 					{name}
-				</h3>
+				</h2>
 			}
 			cover={carousel}
-			className="border border-1 border-dark"
+			className="border border-1 border-dark "
 			onMouseEnter={() => carouselRef.current.autoPlay()}
 			onMouseLeave={() => carouselRef.current.innerSlider.pause()}
 		>
 			<Collapse
-				className="mt-3"
+				className="mt-3 "
 				bordered={false}
 				expandIcon={() => false}
 				ghost

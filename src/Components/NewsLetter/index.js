@@ -33,13 +33,13 @@ export default function NewsLetter() {
 			<h1 className="pt-4" style={{ fontSize: "1.7rem", fontWeight: "bold" }}>
 				БУДЬТЕ В КУРСЕ НАШИХ НОВОСТЕЙ И АКЦИЙ
 			</h1>
-			<h1
+			<h2
 				style={{ fontSize: "1.3rem", fontWeight: "400", color: "#414042" }}
 				className="pb-4 news-letter-header"
 			>
 				Оставьте Ваш e-mail и мы будем уведомлять Вас только о самых важных
 				событиях
-			</h1>
+			</h2>
 			<div>
 				<Form
 					className="newsletter-form center-div"

@@ -136,7 +136,13 @@ export default function AboutUs() {
 					<Container>
 						<Row className="center-div about-block-space">
 							<Col lg={5}>
-								<img src={block1} className="about-us-Block-1 w-100"></img>
+								<img
+									src={block1}
+									className="about-us-Block-1 w-100"
+									alt={decodeURIComponent(
+										block1.split("/").pop().split(".")[0]
+									)}
+								></img>
 							</Col>
 							<Col lg={6}>
 								<p
@@ -182,7 +188,13 @@ export default function AboutUs() {
 								</div>
 							</Col>
 							<Col lg={5}>
-								<img src={Block2} className="about-us-Block-2 w-100"></img>
+								<img
+									src={Block2}
+									alt={decodeURIComponent(
+										Block2.split("/").pop().split(".")[0]
+									)}
+									className="about-us-Block-2 w-100"
+								></img>
 							</Col>
 						</Row>
 					</Container>
@@ -194,7 +206,13 @@ export default function AboutUs() {
 							style={{ paddingTop: "5rem" }}
 						>
 							<Col lg={5}>
-								<img src={Block3} className="about-us-Block-3 w-100"></img>
+								<img
+									src={Block3}
+									alt={decodeURIComponent(
+										Block3.split("/").pop().split(".")[0]
+									)}
+									className="about-us-Block-3 w-100"
+								></img>
 							</Col>
 							<Col lg={6}>
 								<p

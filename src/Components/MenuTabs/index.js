@@ -49,7 +49,7 @@ const MenuTabs = (props) => {
 											props.setShowContent(true);
 										}}
 									>
-										<h6
+										<h2
 											style={{
 												textAlign: "left",
 												color: "black",
@@ -58,7 +58,7 @@ const MenuTabs = (props) => {
 											}}
 										>
 											{article.cover_header}
-										</h6>
+										</h2>
 									</Link>
 								))}
 							</Col>
@@ -90,15 +90,16 @@ const MenuTabs = (props) => {
 										props.setShowContent(true);
 									}}
 								>
-									<h6
+									<h2
 										style={{
 											textAlign: "left",
 											color: "black",
 											marginBottom: "1rem",
+											fontSize: "1rem",
 										}}
 									>
 										{doctor.name_russian}
-									</h6>
+									</h2>
 								</Link>
 							))}
 					</Col>
@@ -119,15 +120,16 @@ const MenuTabs = (props) => {
 								props.setShowContent(true);
 							}}
 						>
-							<h6
+							<h2
 								style={{
 									textAlign: "left",
 									color: "black",
 									marginBottom: "1rem",
+									fontSize: "1rem",
 								}}
 							>
 								Новости
-							</h6>
+							</h2>
 						</Link>
 						<Link
 							style={{ textDecoration: "none" }}
@@ -137,15 +139,16 @@ const MenuTabs = (props) => {
 								props.setShowContent(true);
 							}}
 						>
-							<h6
+							<h2
 								style={{
 									textAlign: "left",
 									color: "black",
 									marginBottom: "1rem",
+									fontSize: "1rem",
 								}}
 							>
 								Статьи
-							</h6>
+							</h2>
 						</Link>
 					</Col>
 					<Col md={3}>
@@ -164,15 +167,16 @@ const MenuTabs = (props) => {
 								props.setShowContent(true);
 							}}
 						>
-							<h6
+							<h2
 								style={{
 									textAlign: "left",
 									color: "black",
 									marginBottom: "1rem",
+									fontSize: "1rem",
 								}}
 							>
 								Трансфер
-							</h6>
+							</h2>
 						</Link>
 						<Link
 							style={{ textDecoration: "none" }}
@@ -182,15 +186,16 @@ const MenuTabs = (props) => {
 								props.setShowContent(true);
 							}}
 						>
-							<h6
+							<h2
 								style={{
 									textAlign: "left",
 									color: "black",
 									marginBottom: "1rem",
+									fontSize: "1rem",
 								}}
 							>
 								Отели
-							</h6>
+							</h2>
 						</Link>
 						<Link
 							style={{ textDecoration: "none" }}
@@ -200,15 +205,16 @@ const MenuTabs = (props) => {
 								props.setShowContent(true);
 							}}
 						>
-							<h6
+							<h2
 								style={{
 									textAlign: "left",
 									color: "black",
 									marginBottom: "1rem",
+									fontSize: "1rem",
 								}}
 							>
 								Переводчик
-							</h6>
+							</h2>
 						</Link>
 					</Col>
 					<Col md={3}>
@@ -227,14 +233,15 @@ const MenuTabs = (props) => {
 								props.setShowContent(true);
 							}}
 						>
-							<h6
+							<h2
 								style={{
 									textAlign: "left",
 									color: "black",
+									fontSize: "1rem",
 								}}
 							>
 								Памятки пациентам
-							</h6>
+							</h2>
 						</Link>
 					</Col>
 				</Row>

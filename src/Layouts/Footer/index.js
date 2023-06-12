@@ -3,7 +3,9 @@ import { Layout } from "antd";
 import { Container, Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 import { GrLinkedinOption } from "react-icons/gr";
+import { AiFillInstagram } from "react-icons/ai";
 import { TwitterOutlined, InstagramOutlined } from "@ant-design/icons";
 
 const { Footer } = Layout;
@@ -14,75 +16,77 @@ const App = () => {
 	return (
 		<div>
 			<Footer className="text-dark footer">
-				<Row className="footer-links-row">
-					<Col sm="3" className="mb-3">
-						<h1 className="footer-description-title">EL ARTE CLINIC</h1>
-						<p className="footer-description-paragraph">
-							contact @здесь будет почта
-						</p>
-					</Col>
-					<Col sm="6" className="mb-3">
-						<div className="footer-col1">
-							<h1>ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ</h1>
-							<div
-								className="footer-list"
-								style={{
-									listStyle: "none !important",
-								}}
-							>
-								<p
-									className="my-2 "
-									style={{ fontWeight: "400", color: "#323334" }}
-								>
-									<a className="footer-link" href="#">
-										Соглашение об обработке персональных данных
-									</a>
-								</p>
-								<p
-									className="my-2"
-									style={{ fontWeight: "400", color: "#323334" }}
-								>
-									<a className="footer-link" href="#">
-										Публичная Оферта
-									</a>
-								</p>
-								<p
-									className="my-2"
-									style={{ fontWeight: "400", color: "#323334" }}
-								>
-									<a className="footer-link" href="#">
-										Политика Конфиденциальности
-									</a>
-								</p>
-							</div>
-						</div>
-					</Col>
-					<Col sm="3">
-						<div className="footer-col2-container">
-							<div className="footer-col2">
-								<h1 style={{ display: "inline-block" }}>ГРАФИК РАБОТЫ</h1>
-								<p
+				<Fade bottom cascade>
+					<Row className="footer-links-row">
+						<Col sm="3" className="mb-3">
+							<h3 className="footer-description-title">EL ARTE CLINIC</h3>
+							<p className="footer-description-paragraph">
+								contact @здесь будет почта
+							</p>
+						</Col>
+						<Col sm="6" className="mb-3">
+							<div className="footer-col1">
+								<h3>ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ</h3>
+								<div
+									className="footer-list"
 									style={{
-										display: "inline-block",
-										fontWeight: "400",
-										color: "#323334",
+										listStyle: "none !important",
 									}}
 								>
-									<span className="footer-col2-span">
-										Понедельник - Пятница <br />с 9:00 до 19:00{" "}
-									</span>
-									<br />
-									<span
-										className="footer-col2-span"
+									<p
+										className="my-2 "
 										style={{ fontWeight: "400", color: "#323334" }}
 									>
-										Суббота с 10:00 до 17:00
-									</span>
-								</p>
+										<a className="footer-link" href="#">
+											Соглашение об обработке персональных данных
+										</a>
+									</p>
+									<p
+										className="my-2"
+										style={{ fontWeight: "400", color: "#323334" }}
+									>
+										<a className="footer-link" href="#">
+											Публичная Оферта
+										</a>
+									</p>
+									<p
+										className="my-2"
+										style={{ fontWeight: "400", color: "#323334" }}
+									>
+										<a className="footer-link" href="#">
+											Политика Конфиденциальности
+										</a>
+									</p>
+								</div>
 							</div>
-						</div>
-					</Col>
-				</Row>
+						</Col>
+						<Col sm="3">
+							<div className="footer-col2-container">
+								<div className="footer-col2">
+									<h3 style={{ display: "inline-block" }}>ГРАФИК РАБОТЫ</h3>
+									<p
+										style={{
+											display: "inline-block",
+											fontWeight: "400",
+											color: "#323334",
+										}}
+									>
+										<p className="footer-col2-span">
+											Понедельник - Пятница <br />с 9:00 до 19:00
+										</p>
+										<br />
+										<p
+											className="footer-col2-span"
+											style={{ fontWeight: "400", color: "#323334" }}
+										>
+											Суббота с 10:00 до 17:00
+										</p>
+									</p>
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</Fade>
 				<Row>
 					<Col sm="3">
 						<div>
@@ -94,7 +98,7 @@ const App = () => {
 								<div className="footer-social-media-container d-flex justify-content-between px-1 ">
 									<GrLinkedinOption className="footer-social-media-icon " />
 									<TwitterOutlined className="footer-social-media-icon " />
-									<InstagramOutlined className="footer-social-media-icon " />
+									<AiFillInstagram className="footer-social-media-icon " />
 								</div>
 							</div>
 						</div>

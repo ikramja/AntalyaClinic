@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 
 export default function HomeCarousel() {
 	const [currentSlide, setCurrentSlide] = useState(0);
+	const [direction, setDirection] = useState("next");
 	const carouselData = [
 		{
 			title: "Пластика Груди",
@@ -60,6 +61,7 @@ export default function HomeCarousel() {
 	];
 
 	const nextSlide = () => {
+		setDirection("next");
 		setCurrentSlide((oldSlide) => {
 			let newSlide = oldSlide + 1;
 			if (newSlide >= carouselData.length) newSlide = 0;
@@ -68,6 +70,7 @@ export default function HomeCarousel() {
 	};
 
 	const prevSlide = () => {
+		setDirection("prev");
 		setCurrentSlide((oldSlide) => {
 			let newSlide = oldSlide - 1;
 			if (newSlide < 0) newSlide = carouselData.length - 1;
@@ -90,15 +93,21 @@ export default function HomeCarousel() {
 				// 	paddingRight: "1rem",
 				// }}
 			>
-				<Row className="w-100">
+				<Row className="w-100 carousel-home-border-right-container-row">
 					<Col lg={4} className="px-0">
-						<Pulse delay={1000} duration={3000}>
+						<Fade
+							key={currentSlide}
+							left={direction === "next"}
+							right={direction === "prev"}
+						>
 							<img
 								className="home-carousel-image w-100"
 								src={carouselData[currentSlide].img}
-								alt="carousel"
+								alt={decodeURIComponent(
+									carouselData[currentSlide].img.split("/").pop().split(".")[0]
+								)}
 							/>
-						</Pulse>
+						</Fade>
 					</Col>
 					<Col lg={8} className="home-carousel-text">
 						<div
@@ -111,41 +120,54 @@ export default function HomeCarousel() {
 							}}
 						>
 							<AiOutlineArrowLeft
+								className="animate-arrow"
 								style={{ fontSize: "30px", cursor: "pointer" }}
 								onClick={prevSlide}
 							/>
+
 							<Fade bottom>
-								<h1
+								<h3
 									style={{ fontSize: "3rem", fontWeight: "bold" }}
 									className="mx-3"
 								>
 									{carouselData[currentSlide].title}
-								</h1>
+								</h3>
 							</Fade>
+
 							<AiOutlineArrowRight
+								className="animate-arrow"
 								style={{ fontSize: "30px", cursor: "pointer" }}
 								onClick={nextSlide}
 							/>
 						</div>
-						<Fade bottom cascade>
+						<Fade
+							key={currentSlide}
+							left={direction === "next"}
+							right={direction === "prev"}
+						>
 							<div className="image-Brief-description">
 								<p style={{ fontWeight: "bold" }}>
 									{carouselData[currentSlide].textBold}
 								</p>
-
 								<p>{carouselData[currentSlide].text}</p>
 							</div>
-							<div className="w-100 d-flex justify-content-end ">
-								<Link
-									style={{ textDecoration: "none" }}
-									to={`/category/${carouselData[currentSlide].link}`}
+						</Fade>
+						<div className="w-100 d-flex justify-content-end ">
+							<Link
+								style={{ textDecoration: "none" }}
+								to={`/category/${carouselData[currentSlide].link}`}
+							>
+								<Fade
+									key={currentSlide}
+									left={direction === "next"}
+									right={direction === "prev"}
 								>
 									<Button className="brief-description-button home-carousel-button px-3 py-4 my-4">
 										{carouselData[currentSlide].title}
 									</Button>
-								</Link>
-							</div>
-						</Fade>
+								</Fade>
+							</Link>
+						</div>
 					</Col>
 				</Row>
 			</div>

@@ -11,7 +11,13 @@ export default function Card(props) {
 						props.setShowContent(true);
 					}}
 				>
-					<img src={props.cardImage} className="menu-card-image " />
+					<img
+						src={props.cardImage}
+						alt={decodeURIComponent(
+							props.cardImage.split("/").pop().split(".")[0]
+						)}
+						className="menu-card-image "
+					/>
 				</div>
 				<div
 					className="menu-card-title my-1 "
@@ -20,7 +26,16 @@ export default function Card(props) {
 						props.setShowContent(true);
 					}}
 				>
-					<h3>{props.cardTitle}</h3>
+					<h1
+						style={{
+							fontSize: "1.2rem",
+							fontWeight: "700",
+							lineHeight: "33px",
+							color: "black",
+						}}
+					>
+						{props.cardTitle}
+					</h1>
 				</div>
 			</Link>
 		</div>

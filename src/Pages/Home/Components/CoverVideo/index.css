@@ -47,6 +47,8 @@
 .clinic-specialty {
 	font-size: 3.5rem;
 	font-weight: bolder;
+	margin-left: 30px;
+	text-align: left;
 }
 /* .image-overlay-container {
 	position: relative;
@@ -98,7 +100,7 @@
 	}
 	.clinic-name,
 	.clinic-specialty {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 	.left-title-home-cover-text {
 		max-width: 300px;

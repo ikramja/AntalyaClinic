@@ -55,6 +55,9 @@ export default function AnalysesTable(props) {
 									<img
 										className="w-100 table-analyses-cover"
 										src={TableAnalysesCover}
+										alt={decodeURIComponent(
+											TableAnalysesCover.split("/").pop().split(".")[0]
+										)}
 									/>
 								</Col>
 							</Row>
@@ -88,8 +91,8 @@ export default function AnalysesTable(props) {
 							paddingBottom: "1rem",
 						}}
 					>
-						<span>Подготовка к операции:</span>
-						<span> рекомендации и ограничения</span>
+						<p>Подготовка к операции:</p>
+						<p> рекомендации и ограничения</p>
 					</div>
 				</Container>
 				description={

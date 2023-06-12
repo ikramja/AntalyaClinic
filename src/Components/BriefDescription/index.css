@@ -4,6 +4,7 @@
 	hyphens: auto;
 	text-align: justify;
 }
+
 .animation-text {
 	font-weight: 600;
 	font-size: 1rem;
@@ -29,4 +30,9 @@
 } */
 .font-weight-bold {
 	font-size: 1.8rem;
+}
+@media only screen and (max-width: 450px) {
+	.Brief-description ul {
+		padding-left: 0 !important;
+	}
 }

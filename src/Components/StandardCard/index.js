@@ -1,19 +1,20 @@
 import "./index.css";
 import { Card } from "antd";
 import { Link } from "react-router-dom";
+import Pulse from "react-reveal/Pulse";
 import Fade from "react-reveal/Fade";
 
 const { Meta } = Card;
 
 const StandardCardTitle = (props) => {
 	return (
-		<h1
+		<div
 			style={{ display: "flex", flexDirection: "column" }}
 			className="center-div"
 		>
-			<span className="px-0 mb-2">{props.cardTitle}</span>
+			<h3 className="px-0 mb-2">{props.cardTitle}</h3>
 
-			<span
+			<h4
 				style={{
 					fontSize: "1rem",
 					display: "block",
@@ -22,8 +23,8 @@ const StandardCardTitle = (props) => {
 				}}
 			>
 				{props.cardTitle2}
-			</span>
-		</h1>
+			</h4>
+		</div>
 	);
 };
 
@@ -41,7 +42,7 @@ const StandardCard = (props) => {
 				style={{ width: `${width ? width : ""} ${width ? "%" : ""}` }}
 				className="standard-card "
 				cover={
-					<Fade top delay={500}>
+					<Pulse top delay={500}>
 						<img
 							src={props.cardImage}
 							className="standard-card-image"
@@ -51,8 +52,11 @@ const StandardCard = (props) => {
 								borderRadius: props.imageBorderRadius,
 								borderRight: props.rightGreenBorder && "11px solid #016245",
 							}}
+							alt={decodeURIComponent(
+								props.cardImage.split("/").pop().split(".")[0]
+							)}
 						/>
-					</Fade>
+					</Pulse>
 				}
 			>
 				<Meta

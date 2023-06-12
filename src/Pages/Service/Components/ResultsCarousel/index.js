@@ -33,8 +33,15 @@ export default function ResultsCarousel(props) {
 		<div>
 			{props.images.length > 0 && (
 				<div id={props.id} className="section">
-					<h1 className="results-carousel-header mt-5">РЕЗУЛЬТАТ</h1>
-					<h2 className="mb-5">До/После</h2>
+					<h3
+						style={{ fontSize: "calc(1.375rem + 1.5vw)" }}
+						className="results-carousel-header mt-5"
+					>
+						РЕЗУЛЬТАТ
+					</h3>
+					<h4 style={{ fontSize: "calc(1.325rem + .9vw)" }} className="mb-5">
+						До/После
+					</h4>
 					<div className="w-100 center-div my-5">
 						<div className="result-carousel-image-container">
 							<LeftOutlined
@@ -57,7 +64,9 @@ export default function ResultsCarousel(props) {
 										<Image
 											className="result-carousel-image"
 											src={image.image}
-											alt={getFilenameWithoutExtension(image.image)}
+											alt={decodeURIComponent(
+												image.image.split("/").pop().split(".")[0]
+											)}
 										/>
 									</div>
 								))}

@@ -9,10 +9,18 @@ export default function DoctorDescription(props) {
 			<Row className="my-5 w-100 mx-0">
 				<Col md={8}>
 					<Container className="px-4">
-						<h2 className="doctor-info-name ">{props.nameTurkish}</h2>
-						<h4 className="pb-4 doctor-info-name-russian">
+						<h1
+							style={{ fontSize: "calc(1.325rem + .9vw)" }}
+							className="doctor-info-name "
+						>
+							{props.nameTurkish}
+						</h1>
+						<h2
+							style={{ fontSize: "calc(1.275rem + .3vw)" }}
+							className="pb-4 doctor-info-name-russian"
+						>
 							{props.nameRussian}
-						</h4>
+						</h2>
 						<div
 							className="doctor-info-content"
 							dangerouslySetInnerHTML={{ __html: props.aboutDoctor }}
@@ -21,7 +29,11 @@ export default function DoctorDescription(props) {
 				</Col>
 
 				<Col md={4} className="p-0 d-flex flex-column align-items-end m-0">
-					<img src={props.image} className="doctor-image w-100"></img>
+					<img
+						src={props.image}
+						alt={decodeURIComponent(props.image.split("/").pop().split(".")[0])}
+						className="doctor-image w-100"
+					></img>
 				</Col>
 			</Row>
 		</div>

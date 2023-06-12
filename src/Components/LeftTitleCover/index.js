@@ -10,7 +10,13 @@ export default function LeftTitleCover(props) {
 					<h5 className="doctor-specialty">{props.subtitle}</h5>
 				</div>
 			</div>
-			<img className="w-100 left-title-cover" src={LeftTitleCoverDoctor} />
+			<img
+				className="w-100 left-title-cover"
+				src={LeftTitleCoverDoctor}
+				alt={decodeURIComponent(
+					LeftTitleCoverDoctor.split("/").pop().split(".")[0]
+				)}
+			/>
 		</div>
 	);
 }

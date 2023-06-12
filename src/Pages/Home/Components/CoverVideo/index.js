@@ -13,19 +13,25 @@ export default function CoverVideo(props) {
 				<Fade top cascade delay={1000}>
 					<h1 className="clinic-name mt-5">The Clinic for Plastic Surgery</h1>
 
-					<h1 className="clinic-specialty">
+					<h2 className="clinic-specialty">
 						Клиника Пластической Хирургии в Анталии
-					</h1>
+					</h2>
 				</Fade>
 			</div>
 			<div className="image-overlay-container">
 				<video
 					className="w-100 left-title-home-cover video-cover"
-					autoPlay
+					autoplay
 					loop
 					muted
 				>
-					<source src={HomeCoverVideo} type="video/mp4"></source>
+					<source
+						src={HomeCoverVideo}
+						alt={decodeURIComponent(
+							HomeCoverVideo.split("/").pop().split(".")[0]
+						)}
+						type="video/mp4"
+					></source>
 				</video>
 			</div>
 			<img className="logo-right me-4 mb-2" src={Logo}></img>

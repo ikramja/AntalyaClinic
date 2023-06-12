@@ -3,7 +3,7 @@
 	background-repeat: no-repeat, no-repeat;
 	background-position: bottom, center;
 	background-size: cover; /* Adjust as necessary */
-	height: 500px;
+	height: auto;
 	min-height: 85vh;
 	padding-left: 3rem !important;
 	padding-right: 3rem;
@@ -31,13 +31,14 @@
 }
 
 .my-header {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	text-align: left;
 }
 .price-accordion-text {
 	text-align: left;
 	color: white;
+	font-size: 1.2rem;
 }
 .price-accordion-list .ant-collapse-header {
 	max-width: 200px;

@@ -11,7 +11,7 @@ export default function ParagraphSection(props) {
 			}}
 		>
 			<Container className="paragraph-section-container">
-				<h2>{props.title}</h2>
+				<h1>{props.title}</h1>
 				<p className="paragraph-section">{props.description}</p>
 			</Container>
 		</div>

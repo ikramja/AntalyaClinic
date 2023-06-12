@@ -13,6 +13,15 @@ export default function HomeDoctors() {
 	useEffect(() => {
 		axios.get("/get/doctors/").then(({ data }) => {
 			setDoctors(data);
+			// const url =
+			// 	"https://antalya-clinic.s3.amazonaws.com/doctors/Feridun%20Elmas/image/ikram.webp";
+
+			// const imageNameDecoded = decodeURIComponent(
+			// 	url.split("/").pop().split(".")[0]
+			// );
+
+			// console.log(imageNameDecoded);
+			// console.log("gfd", data);
 		});
 	}, []);
 	return (
@@ -22,7 +31,7 @@ export default function HomeDoctors() {
 					<Row className="home-doctor-row">
 						<Col md={7}>
 							<Fade top delay={1000}>
-								<h1
+								<h3
 									className="home-doctor-h"
 									style={{
 										fontSize: "4.5rem",
@@ -32,12 +41,12 @@ export default function HomeDoctors() {
 									}}
 								>
 									Наши доктора
-								</h1>
+								</h3>
 							</Fade>
 						</Col>
 						<Col md={5}>
 							<Fade bottom delay={1000}>
-								<h1
+								<h4
 									style={{
 										// fontFamily: "Oswald",
 										textAlign: "left",
@@ -47,7 +56,7 @@ export default function HomeDoctors() {
 									}}
 								>
 									Наша Философия
-								</h1>
+								</h4>
 								<p className="home-doctor-text-header mb-4">
 									Мы не только гордимся квалификацией наших врачей, но и
 									уверены, что их заботливое и внимательное отношение к каждому
@@ -100,10 +109,14 @@ export default function HomeDoctors() {
 							</div>
 						</div> */}
 						<Row className="w-100">
-							<Col md={10} style={{ display: "flex" }}>
-								<Fade top delay={500} cascade duration={4000}>
+							<Col
+								md={10}
+								style={{ display: "flex" }}
+								className="home-doctors-progress-col"
+							>
+								<Fade top delay={500} cascade>
 									<div>
-										<h1
+										<h5
 											style={{
 												fontWeight: "bolder",
 												fontSize: "1.8rem",
@@ -111,12 +124,12 @@ export default function HomeDoctors() {
 											}}
 										>
 											900+
-										</h1>
+										</h5>
 										<div class="progress-bar">
 											<div class="progress" style={{ width: "80%" }}></div>
 										</div>
-										<h1
-											className="mt-1"
+										<h4
+											className="mt-1 first-progress-text"
 											style={{
 												fontSize: "0.7rem",
 												textAlign: "left",
@@ -124,24 +137,25 @@ export default function HomeDoctors() {
 											}}
 										>
 											Операций
-										</h1>
+										</h4>
 									</div>
 									<div className="ms-4">
-										<h1
+										<h5
+											className="second-progress-text-width"
 											style={{
 												fontSize: "1.8rem",
 												textAlign: "left",
 												fontWeight: "bolder",
-												width: "130px",
+												width: "120px",
 											}}
 										>
 											550+
-										</h1>
+										</h5>
 										<div class="progress-bar">
 											<div class="progress" style={{ width: "80%" }}></div>
 										</div>
-										<h1
-											className="mt-1"
+										<h4
+											className="mt-1 second-progress-text"
 											style={{
 												fontSize: "0.7rem",
 												textAlign: "left",
@@ -149,10 +163,10 @@ export default function HomeDoctors() {
 											}}
 										>
 											Довольных Клиентов
-										</h1>
+										</h4>
 									</div>
-									<div className="w-100">
-										<h1
+									<div>
+										<h5
 											style={{
 												fontWeight: "bolder",
 												fontSize: "1.8rem",
@@ -160,13 +174,13 @@ export default function HomeDoctors() {
 											}}
 										>
 											15+
-										</h1>
+										</h5>
 
 										<div class="progress-bar ">
 											<div class="progress" style={{ width: "60%" }}></div>
 										</div>
-										<h1
-											className="mt-1"
+										<h4
+											className="mt-1 third-progress-text "
 											style={{
 												fontSize: "0.7rem",
 												textAlign: "left",
@@ -174,14 +188,14 @@ export default function HomeDoctors() {
 											}}
 										>
 											Лет в медицине
-										</h1>
+										</h4>
 									</div>
 								</Fade>
 							</Col>
 							<Col md={2}>
 								<div className="w-100 contact-form-button-container my-3">
 									<Link to="/our-doctors" style={{ textDecoration: "none" }}>
-										<Fade top delay={500} cascade duration={4000}>
+										<Fade top delay={500} cascade>
 											<Button className="contact-form-button  py-1 px-5 ">
 												Все врачи
 											</Button>

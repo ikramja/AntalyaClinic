@@ -48,7 +48,7 @@ const ScrollSpy = () => {
 			style={{
 				...style,
 				fontSize: "30px",
-				color: "black",
+				color: "white",
 				position: "absolute",
 				top: "50%",
 				left: "5",
@@ -65,7 +65,7 @@ const ScrollSpy = () => {
 			style={{
 				...style,
 				fontSize: "30px",
-				color: "black",
+				color: "white",
 				position: "absolute",
 				top: "50%",
 				right: "5",

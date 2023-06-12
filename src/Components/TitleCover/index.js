@@ -39,12 +39,16 @@ export default function CenterTitleCover({
 					style={{ textAlign: "center" }}
 					className="center-title-cover-text"
 				>
-					<h1>
-						<span className="center-title-cover-name">{title}</span>
-						<span className="center-title-cover-specialty">{subtitle}</span>
-					</h1>
+					<div>
+						<h1 className="center-title-cover-name">{title}</h1>
+						<h2 className="center-title-cover-specialty">{subtitle}</h2>
+					</div>
 				</div>
-				<img className="logo-left" src={Logo}></img>
+				<img
+					className="logo-left"
+					src={Logo}
+					alt={decodeURIComponent(Logo.split("/").pop().split(".")[0])}
+				></img>
 			</div>
 			{type === "image" ? (
 				<img className="w-100 title-cover" src={source} />
@@ -52,6 +56,9 @@ export default function CenterTitleCover({
 				<video
 					className="w-100 title-cover"
 					src={HomeCoverVideo}
+					alt={decodeURIComponent(
+						HomeCoverVideo.split("/").pop().split(".")[0]
+					)}
 					type="video/mp4"
 					autoPlay
 					loop

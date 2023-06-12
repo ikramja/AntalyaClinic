@@ -1,8 +1,9 @@
 import BriefDescription from "../../Components/BriefDescription";
-import { Button, Col, Row, Spin } from "antd";
+import { Button, Carousel, Col, Row, Spin } from "antd";
 import ExcursionListItem from "./Components/ExcursionListItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 import "./index.css";
 
 import Footer from "../../Layouts/Footer";
@@ -52,7 +53,8 @@ export default function Excursion() {
 						backgroundImage: `url(${excursions[currentBg].images[0]})`,
 						backgroundSize: "cover",
 					}}
-					className="p-5 w-100 m-0 center-div"
+					className="p-5 w-100 m-0 center-div "
+					// excurtion-desctop
 				>
 					{excursions.map((e, i) => (
 						<Col
@@ -61,7 +63,7 @@ export default function Excursion() {
 							onMouseEnter={() => setCurrentBg(i)}
 							// className="center-div"
 						>
-							<h2
+							<h1
 								style={{
 									fontWeight: "bold",
 									textShadow: "4px 2px 10px rgba(255, 255, 255, 0.6)",
@@ -69,7 +71,7 @@ export default function Excursion() {
 								className={`${currentBg === i ? "text-light" : "text-muted "}`}
 							>
 								{e.name}
-							</h2>
+							</h1>
 						</Col>
 					))}
 				</Row>

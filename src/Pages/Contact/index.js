@@ -11,16 +11,16 @@ export default function Contact() {
 			<Row className="container py-5" align="middle">
 				<Col sm={24} md={8}>
 					<h1 style={{ fontSize: "1.5rem", fontWeight: "800" }}>Телефон:</h1>
-					<h4 style={{ fontSize: "1.2rem", fontWeight: "400" }}>
+					<h2 style={{ fontSize: "1.2rem", fontWeight: "400" }}>
 						+7 (495) 181-10-83
-					</h4>
+					</h2>
 					<a
 						href="mailto:info@elarte.clinic"
 						style={{
 							textDecoration: "none",
 						}}
 					>
-						<h5
+						<h3
 							style={{
 								fontSize: "1.4rem",
 								fontWeight: "400",
@@ -28,7 +28,7 @@ export default function Contact() {
 							}}
 						>
 							info@elarte.clinic
-						</h5>
+						</h3>
 					</a>
 
 					<h1
@@ -37,9 +37,9 @@ export default function Contact() {
 					>
 						График работы:
 					</h1>
-					<h4 style={{ fontSize: "1.2rem", fontWeight: "400" }}>
+					<h2 style={{ fontSize: "1.2rem", fontWeight: "400" }}>
 						с 9:00 до 21:00
-					</h4>
+					</h2>
 				</Col>
 				<Col sm={24} md={16}>
 					<iframe

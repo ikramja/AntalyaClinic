@@ -6,9 +6,6 @@
 	padding-left: 3rem !important;
 	padding-right: 3rem !important;
 }
-.card-doctor-home-row {
-	/* --bs-gutter-x: 0 !important; */
-}
 
 .home-doctor .ant-card-body {
 	padding-bottom: 0 !important;
@@ -52,12 +49,36 @@
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+	.home-doctors-progress-col {
+		align-items: center !important;
+		justify-content: center !important;
+	}
 	.home-doctor-h {
 		font-size: 3rem !important;
+	}
+	.second-progress-text {
+		width: 50px;
+	}
+	.react-reveal {
+		/* width: auto !important; */
 	}
 	.home-doctor-text-header {
 		font-size: 1.1rem;
 		text-align: left;
 		color: #5d5f6d;
+	}
+	.second-progress-text {
+		font-size: 1rem;
+	}
+	.first-progress-text {
+		margin-bottom: 20px !important;
+		padding-top: 3px;
+	}
+	.third-progress-text {
+		width: 50px !important;
+	}
+
+	.second-progress-text-width {
+		width: 80px !important;
 	}
 }

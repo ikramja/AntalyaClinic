@@ -28,9 +28,9 @@ export default function HomeCategory() {
 	return (
 		<div>
 			<Fade top delay={1000}>
-				<h1 style={{ fontSize: "6vw", fontWeight: "bold" }} className="my-4">
+				<h3 style={{ fontSize: "6vw", fontWeight: "bold" }} className="my-4">
 					ПОПУЛЯРНЫЕ УСЛУГИ
-				</h1>
+				</h3>
 			</Fade>
 			<div className="w-100 category-home-image-container pb-4">
 				<Container>
@@ -39,11 +39,21 @@ export default function HomeCategory() {
 							categoryData.map((category) => (
 								<Col lg={3} className="center-div mb-2">
 									<div className="category-home-image-container-column h-100">
-										<img
-											className="category-home-image"
-											src={categoryImages[category["category_name_in_menu"]]}
-										></img>
-
+										<div className="image-and-text-container">
+											<img
+												className="category-home-image"
+												src={categoryImages[category["category_name_in_menu"]]}
+												alt={decodeURIComponent(
+													categoryImages[category["category_name_in_menu"]]
+														.split("/")
+														.pop()
+														.split(".")[0]
+												)}
+											></img>
+											<div className="overlay-text">
+												{category["category_name_in_menu"]}
+											</div>
+										</div>
 										<div className="home-category-links-container h-100 w-100 center-div">
 											<div>
 												{category.category_articles.map((article, index) => {
@@ -57,16 +67,16 @@ export default function HomeCategory() {
 																}}
 																to={`/service/${article.cover_header}/`}
 															>
-																<h1
+																<h4
 																	className="fade-up"
 																	style={{
 																		fontSize: "1rem",
 																		fontWeight: "600",
-																		transitionDelay: `${index * 0.1}s`,
+																		transitionDelay: `${index * 0.05}s`,
 																	}}
 																>
 																	{article.cover_header}
-																</h1>
+																</h4>
 															</Link>
 														)
 													);

@@ -53,7 +53,9 @@ export default function DoctorCertificatesCarousel(props) {
 
 							<Image
 								src={certificate.image}
-								alt={"slide" + certificate.id}
+								alt={decodeURIComponent(
+									certificate.image.split("/").pop().split(".")[0]
+								)}
 								className="swiper-zoom-container"
 							/>
 						</SwiperSlide>

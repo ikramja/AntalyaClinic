@@ -56,14 +56,15 @@ export default function Service() {
 							id="section1"
 							borderRight={{
 								borderRight: " 50px solid #016245",
-								paddingRight: "2rem",
+								paddingRight: "1rem",
 							}}
 							subtitle="(ПОКАЗАНИЯ К ОПЕРАЦИИ)"
 							title="КОМУ ПОДХОДИТ ПРОЦЕДУРА"
 							description={articleData.surgery_for_whom}
 							source={articleData.surgery_for_whom_left_image}
 						/>
-
+					</Fade>
+					<Fade bottom>
 						<div
 							className="my-5 py-2"
 							style={{
@@ -92,79 +93,76 @@ export default function Service() {
 								}}
 							/>
 						</div>
-
-						<div
-							style={{
-								// paddingTop: "2rem",
-								backgroundImage: `url(${articleLeftTree})`,
-								backgroundRepeat: "no-repeat",
-								backgroundSize: "auto 70%",
-								backgroundPosition: "left top",
-
-								// backgroundPosition: "right top",
-							}}
-						>
-							<IconItemsList
-								id="section3"
-								hospitalization={articleData.day_of_surgery_hospitalization}
-								preparation={articleData.surgery_preparation}
-								anesthesia={articleData.anesthesia}
-								duration={articleData.surgery_duration}
-								description={articleData.day_of_surgery_description}
-							/>
-
-							<RecoveryIconList
-								id="section4"
-								recoveryPeriod={articleData.recovery_period}
-								hospitalization={articleData.recovery_hospitalization}
-								stitchesRemovalPeriod={articleData.stitches_removal_period}
-								numberOfPostSurgeryVisits={
-									articleData.number_of_post_surgery_visits
-								}
-								medicines={articleData.medicines}
-								attention={articleData.attention}
-								description={articleData.recovery_description}
-							/>
-						</div>
-						<ResultsCarousel
-							id="section5"
-							images={articleData.results_images}
-						/>
-
-						<div
-							className="pe-0"
-							style={{
-								paddingTop: "1rem",
-								backgroundImage: `url(${beforeLastBackground})`,
-								backgroundRepeat: "no-repeat",
-								backgroundSize: "cover",
-								backgroundPosition: "right center",
-							}}
-						>
-							<Container className="service-brief-description-before-last">
-								<BriefDescription
-									id="section6"
-									title="ПРОТИВОПОКАЗАНИЯ"
-									headerStyle={{ color: "#016245" }}
-									description={articleData.side_effects}
-									containerStyle={{
-										background: "rgba(255, 255, 255, 0.79)",
-
-										color: "black",
-										borderRadius: "10px",
-										boxShadow:
-											" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
-									}}
-								/>
-							</Container>
-						</div>
-
-						<BriefDescription
-							id="section7"
-							title="ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ"
-							description={articleData.faq}
-						/>
 					</Fade>
+
+					<div
+						style={{
+							// paddingTop: "2rem",
+							backgroundImage: `url(${articleLeftTree})`,
+							backgroundRepeat: "no-repeat",
+							backgroundSize: "auto 70%",
+							backgroundPosition: "left top",
+
+							// backgroundPosition: "right top",
+						}}
+					>
+						<IconItemsList
+							id="section3"
+							hospitalization={articleData.day_of_surgery_hospitalization}
+							preparation={articleData.surgery_preparation}
+							anesthesia={articleData.anesthesia}
+							duration={articleData.surgery_duration}
+							description={articleData.day_of_surgery_description}
+						/>
+
+						<RecoveryIconList
+							id="section4"
+							recoveryPeriod={articleData.recovery_period}
+							hospitalization={articleData.recovery_hospitalization}
+							stitchesRemovalPeriod={articleData.stitches_removal_period}
+							numberOfPostSurgeryVisits={
+								articleData.number_of_post_surgery_visits
+							}
+							medicines={articleData.medicines}
+							attention={articleData.attention}
+							description={articleData.recovery_description}
+						/>
+					</div>
+					<ResultsCarousel id="section5" images={articleData.results_images} />
+
+					<div
+						className="pe-0"
+						style={{
+							paddingTop: "1rem",
+							backgroundImage: `url(${beforeLastBackground})`,
+							backgroundRepeat: "no-repeat",
+							backgroundSize: "cover",
+							backgroundPosition: "right center",
+						}}
+					>
+						<Container className="service-brief-description-before-last">
+							<BriefDescription
+								id="section6"
+								title="ПРОТИВОПОКАЗАНИЯ"
+								headerStyle={{ color: "#016245" }}
+								description={articleData.side_effects}
+								containerStyle={{
+									background: "rgba(255, 255, 255, 0.79)",
+
+									color: "black",
+									borderRadius: "10px",
+									boxShadow:
+										" -2px 5px 8px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.2)",
+								}}
+							/>
+						</Container>
+					</div>
+
+					<BriefDescription
+						id="section7"
+						title="ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ"
+						description={articleData.faq}
+					/>
 				</div>
 			)}
 			<ContactForm className="contact-form" />

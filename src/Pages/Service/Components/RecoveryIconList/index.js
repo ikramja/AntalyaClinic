@@ -21,7 +21,12 @@ export default function RecoveryIconList(props) {
 						borderRadius: "10px",
 					}}
 				>
-					<h1 className="mb-5 pt-3 icon-items-list-header">ВОССТАНОВЛЕНИЕ</h1>
+					<h3
+						style={{ fontSize: "calc(1.325rem + .9vw)" }}
+						className="mb-5 pt-3 icon-items-list-header"
+					>
+						ВОССТАНОВЛЕНИЕ
+					</h3>
 					<div className="mx-5 icon-items-list">
 						<Row>
 							<Col lg="6" className="my-2 ps-md-2">
@@ -83,9 +88,9 @@ export default function RecoveryIconList(props) {
 						color: "#FFFFFF",
 					}}
 				>
-					<h6 className="icon-description-header mt-5 pt-2 mb-2">
+					<h4 className="icon-description-header mt-5 pt-2 mb-2">
 						ОСОБЕННОСТИ РЕАБИЛИТАЦИИ
-					</h6>
+					</h4>
 					<div
 						className="text-under-icon mx-4 "
 						dangerouslySetInnerHTML={{ __html: props.description }}

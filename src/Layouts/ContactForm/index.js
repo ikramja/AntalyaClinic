@@ -64,9 +64,9 @@ export default function ContactForm(props) {
 						<FadeInUpAnimation
 							duration={1}
 							elements={[
-								<h1 className="contact-form-header">
+								<h3 className="contact-form-header">
 									Запланируйте онлайн или оффлайн консультацию сегодня
-								</h1>,
+								</h3>,
 							]}
 						/>
 						<FadeInUpAnimation

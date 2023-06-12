@@ -19,7 +19,12 @@ export default function IconItemsList(props) {
 					}}
 				>
 					<div className="my-5 py-2">
-						<h1 className="mb-5 pt-3 icon-items-list-header">ДЕНЬ ОПЕРАЦИИ</h1>
+						<h3
+							style={{ fontSize: "calc(1.325rem + .9vw)" }}
+							className="mb-5 pt-3 icon-items-list-header"
+						>
+							ДЕНЬ ОПЕРАЦИИ
+						</h3>
 						<div className="mx-5 icon-items-list">
 							<Row>
 								<Col lg="6" className="my-2 ps-md-2">
@@ -31,7 +36,7 @@ export default function IconItemsList(props) {
 								</Col>
 								<Col lg="6" className="my-2 ps-md-2">
 									<IconItems
-										title="ПОДГОТОВКА К ОПЕРАЦИИ"
+										title="КОЛИЧЕСТВО ПОСЛЕОПЕРАЦИОННЫХ ПОСЕЩЕНИЙ"
 										description={props.preparation}
 										icon={PreparationIcon}
 									/>
