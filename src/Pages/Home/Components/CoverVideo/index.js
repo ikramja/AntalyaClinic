@@ -21,7 +21,7 @@ export default function CoverVideo(props) {
 			<div className="image-overlay-container">
 				<video
 					className="w-100 left-title-home-cover video-cover"
-					playsinline
+					playsInline
 					autoPlay
 					muted
 					loop
