@@ -14,7 +14,7 @@ import Prices from "../Pages/Prices";
 import BlogArticle from "../Pages/BlogArticle";
 import AboutUs from "../Pages/AboutUs";
 import ForPatients from "../Pages/ForPatients";
-import PrivacyPolicy from "../Pages/PrivacyPolicy";
+import PrivacyPolicy from "../Pages/PrivacyPolicyPage";
 import TermsOfUse from "../Pages/TermsOfUse";
 export default function Main() {
 	const { pathname, hash, key } = useLocation();

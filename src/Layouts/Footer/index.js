@@ -7,7 +7,6 @@ import Fade from "react-reveal/Fade";
 import { GrLinkedinOption } from "react-icons/gr";
 import { AiFillInstagram } from "react-icons/ai";
 import { TwitterOutlined, InstagramOutlined } from "@ant-design/icons";
-
 const { Footer } = Layout;
 
 const App = () => {
@@ -37,7 +36,7 @@ const App = () => {
 										className="my-2 "
 										style={{ fontWeight: "400", color: "#323334" }}
 									>
-										<a className="footer-link" href="#">
+										<a className="footer-link" href="/terms-of-use">
 											Соглашение об обработке персональных данных
 										</a>
 									</p>
@@ -53,7 +52,7 @@ const App = () => {
 										className="my-2"
 										style={{ fontWeight: "400", color: "#323334" }}
 									>
-										<a className="footer-link" href="#">
+										<a className="footer-link" href="/privacy-policy">
 											Политика Конфиденциальности
 										</a>
 									</p>

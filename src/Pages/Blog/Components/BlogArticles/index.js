@@ -11,11 +11,11 @@ export default function BlogArticles(props) {
 	const [articlesToSHow, setArticlesToSHow] = useState(6);
 	return (
 		<div>
-			<Row className="my-5 mx-0 center-div">
+			<Row className="my-5 mx-0">
 				{allArticles
 					.slice(0, Math.min(articlesToSHow, allArticles.length))
 					.map((article) => (
-						<Col md="4" className="center-div p-0">
+						<Col md="4" className=" p-0">
 							<StandardCard
 								height={200}
 								width={90}

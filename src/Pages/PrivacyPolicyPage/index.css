@@ -1,0 +1,82 @@
+.privacy-policy {
+	font-weight: 500;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	text-align: justify;
+	font-size: 1.6rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+.Privacy-cover {
+	height: 100vh;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	color: #323334;
+	text-shadow: 6px 7px 6px rgba(0, 0, 0, 0.29);
+}
+.Privacy-cover h1 {
+	font-size: 5rem;
+	line-height: 93px;
+	margin-bottom: 7rem;
+	font-weight: bold;
+}
+.Privacy-logo {
+	position: relative;
+	height: 50vh;
+}
+
+.privacy-logo-left {
+	/* z-index: -1; */
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 20%;
+}
+@media only screen and (max-width: 912px) {
+	.Privacy-cover h1 {
+		font-size: 4rem;
+		margin-top: 200px;
+		margin-bottom: 3rem;
+	}
+	.Privacy-cover {
+		height: auto;
+	}
+	.Privacy-logo {
+		height: 20vh;
+	}
+}
+@media only screen and (max-width: 873px) {
+	.Privacy-cover h1 {
+		font-size: 4rem;
+		margin-top: 100px;
+		margin-bottom: 2rem;
+	}
+	.Privacy-cover {
+		height: auto;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.Privacy-cover h1 {
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width: 521px) {
+	.Privacy-cover h1 {
+		font-size: 2rem;
+		line-height: 50px;
+		margin-top: 100px;
+		margin-bottom: 2rem;
+	}
+	.privacy-policy {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.Privacy-cover {
+		height: auto;
+	}
+	.Privacy-logo {
+		height: 15vh;
+	}
+}
