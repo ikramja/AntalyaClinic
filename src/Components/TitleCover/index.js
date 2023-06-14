@@ -9,6 +9,7 @@ export default function CenterTitleCover({
 	Cover,
 	type,
 	source,
+	titleStyle,
 }) {
 	return (
 		<div className="h-100 d-flex align-items-end">
@@ -40,7 +41,9 @@ export default function CenterTitleCover({
 					className="center-title-cover-text"
 				>
 					<div>
-						<h1 className="center-title-cover-name">{title}</h1>
+						<h1 className="center-title-cover-name" style={{ titleStyle }}>
+							{title}
+						</h1>
 						<h2 className="center-title-cover-specialty">{subtitle}</h2>
 					</div>
 				</div>

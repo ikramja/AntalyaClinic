@@ -77,7 +77,11 @@
 @media only screen and (max-width: 450px) {
 	.home-carousel-text {
 		padding-left: 2rem !important;
-		padding-right: 0 !important;
+		padding-right: 1rem !important;
+
+		/* display: flex;
+		justify-content: center;
+		align-items: center; */
 	}
 	.carousel-home-border-right-container {
 		border-right: none !important;

@@ -14,7 +14,8 @@ import Prices from "../Pages/Prices";
 import BlogArticle from "../Pages/BlogArticle";
 import AboutUs from "../Pages/AboutUs";
 import ForPatients from "../Pages/ForPatients";
-
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
+import TermsOfUse from "../Pages/TermsOfUse";
 export default function Main() {
 	const { pathname, hash, key } = useLocation();
 	useEffect(() => {
@@ -38,6 +39,8 @@ export default function Main() {
 		<Routes>
 			<Route exact path="/" element={<Home />} />
 			<Route exact path="/doctor/:doctorName" element={<Doctor />} />
+			<Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+			<Route exact path="/terms-of-use" element={<TermsOfUse />} />
 			<Route exact path="/our-doctors" element={<OurDoctors />} />
 			<Route exact path="/service/:serviceName" element={<Service />} />
 			<Route exact path="/category/:categoryName" element={<Category />} />
