@@ -22,7 +22,7 @@ export default function CoverVideo(props) {
 				<video
 					className="w-100 left-title-home-cover video-cover"
 					playsinline
-					autoplay
+					autoPlay
 					muted
 					loop
 				>
