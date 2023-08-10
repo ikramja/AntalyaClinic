@@ -1,21 +1,22 @@
 import "./index.css";
 import ParagraphSection from "../../Components/ParagraphSection";
-import Paragraph_Section from "../../Assets/Home/ParagraphSection.png";
+import Paragraph_Section from "../../Assets/Home/ParagraphSection.webp";
 import StandardCard from "../../Components/StandardCard";
 import { Container, Row } from "react-bootstrap";
 import ContactForm from "../../Layouts/ContactForm";
-import DescriptionBackground from "../../Assets/Home/descriptionBackground.png";
+import DescriptionBackground from "../../Assets/Home/descriptionBackground.webp";
 import BlogSection from "./Components/BlogSection";
 import Footer from "../../Layouts/Footer";
 import HoverCard from "../../Components/HoverCard";
 import { Col } from "react-bootstrap";
 import HomeCover from "../../Assets/Home/HomeCover.png";
 import { Link } from "react-router-dom";
-import HoverCardImage from "../../Assets/Home/HoverCardImage.png";
+import HoverCardImage from "../../Assets/Home/HoverCardImage.webp";
 import Doctor_1_Image from "../../Assets/AboutOurDoctors/Doctor_1.png";
 import BriefDescription from "../../Components/BriefDescription";
 import HomeImage from "./Components/HomeImage";
 import HomeCategory from "./Components/HomeCategory";
+import HomeExcursions from "./Components/HomeExcursions";
 import HomeDoctors from "./Components/HomeDoctors";
 import HomeCarousel from "./Components/HomeCarousel";
 import CoverVideo from "./Components/CoverVideo";
@@ -26,19 +27,21 @@ export default function Home() {
 	return (
 		<div className="home">
 			<CoverVideo />
-			<HomeImage />
-			<div className="mb-4">
-				<HomeCategory />
+			{/* <HomeImage /> */}
+			<div className="mt-3 mb-5">
+				<HomeExcursions />
 			</div>
-			<div className="mb-5">
+			<div className="mb-5 ">
 				<HomeCarousel />
 			</div>
 
 			<div className="mb-2 pt-3">
 				<HomeDoctors />
 			</div>
-
-			<div
+			<div className="mb-5">
+				<HomeCategory />
+			</div>
+			{/* <div
 				className="container-description "
 				style={{
 					// position:"relative",
@@ -75,8 +78,8 @@ export default function Home() {
 						/>
 					</Container>
 				</Slide>
-			</div>
-			<div className="mt-3" style={{ marginBottom: "5rem" }}>
+			</div> */}
+			<div className="mt-3">
 				<BlogSection />
 			</div>
 			<Fade bottom cascade delay={300}>

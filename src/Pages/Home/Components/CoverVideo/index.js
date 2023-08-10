@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade";
 import HomeCoverVideo from "../../../../videos/cover-video.mp4";
 import Logo from "../../../../Assets/Logo/Logo.png";
 import { motion } from "framer-motion";
+import HomeImageCover from "../../../../Assets/Home/homeImageCover.png";
 import FadeInUpAnimation from "../../../../Components/FadeInUp";
 
 export default function CoverVideo(props) {
@@ -19,7 +20,7 @@ export default function CoverVideo(props) {
 				</Fade>
 			</div>
 			<div className="image-overlay-container">
-				<video
+				{/* <video
 					className="w-100 left-title-home-cover video-cover"
 					playsInline
 					autoPlay
@@ -33,7 +34,14 @@ export default function CoverVideo(props) {
 						)}
 						type="video/mp4"
 					/>
-				</video>
+				</video> */}
+				<img
+					className="w-100 left-title-home-cover video-cover"
+					src={HomeImageCover}
+					alt={decodeURIComponent(
+						HomeCoverVideo.split("/").pop().split(".")[0]
+					)}
+				></img>
 			</div>
 			<img className="logo-right me-4 mb-2" src={Logo}></img>
 		</div>

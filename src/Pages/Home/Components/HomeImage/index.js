@@ -71,14 +71,14 @@ export default function HomeImage() {
 					</div> */}
 				</div>
 
-				<ContactForm
+				{/* <ContactForm
 					className="alternate-context contact-form no-background"
 					formWidth="1000px"
 					formStyle={{
 						position: "absolute",
 						top: "-100px",
 					}}
-				/>
+				/> */}
 			</div>
 
 			<div className="home-image-green">

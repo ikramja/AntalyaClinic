@@ -6,10 +6,10 @@ import "./index.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import about from "../../Assets/MenuTab/about.PNG";
-import service from "../../Assets/MenuTab/service.png";
-import forPatient from "../../Assets/MenuTab/forPatient.png";
-import blog from "../../Assets/MenuTab/blog.png";
+import about from "../../Assets/MenuTab/about.webp";
+import service from "../../Assets/MenuTab/service.webp";
+import forPatient from "../../Assets/MenuTab/forPatient.webp";
+import blog from "../../Assets/MenuTab/blog.webp";
 
 const MenuTabs = (props) => {
 	const [doctors, setDoctors] = useState(null);
@@ -311,7 +311,7 @@ const MenuTabs = (props) => {
 	return (
 		categoryData && (
 			<div className="w-100">
-				<div style={{ marginTop: "68px" }}>
+				<div style={{ marginTop: "81px" }}>
 					<Tabs
 						onTabClick={handleTabClick}
 						defaultActiveKey="3"

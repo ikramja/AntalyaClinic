@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import липосакциятела from "../../../../Assets/Home/липосакция тела.webp";
 import подтяжкагуб from "../../../../Assets/Home/подтяжка губ.webp";
 import Fade from "react-reveal/Fade";
@@ -7,6 +7,7 @@ import пластикагруди from "../../../../Assets/Home/пластика
 import Pulse from "react-reveal/Pulse";
 import операция_по_трансплонтации_волос from "../../../../Assets/Home/операция_по_трансплонтации_волос.webp";
 import "./index.css";
+
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import ScrollSpyHome from "../ScrollSpySectionHome";
 import { useEffect, useState } from "react";
@@ -79,12 +80,17 @@ export default function HomeCarousel() {
 	};
 	return (
 		<div>
-			<div className="mb-5">
-				<ScrollSpyHome
-					currentSlide={currentSlide}
-					setCurrentSlide={(slideIndex) => setCurrentSlide(slideIndex)}
-				/>
-			</div>
+			<Row className="my-5 w-100">
+				<Col md={1} style={{ display: "flex", alignItems: "center" }}>
+					<div className="small-green-text ps-2">НАПРАВЛЕНИЯ</div>
+				</Col>
+				<Col md={11}>
+					<ScrollSpyHome
+						currentSlide={currentSlide}
+						setCurrentSlide={(slideIndex) => setCurrentSlide(slideIndex)}
+					/>
+				</Col>
+			</Row>
 
 			<div
 				className="carousel-home-border-right-container"
@@ -170,6 +176,29 @@ export default function HomeCarousel() {
 						</div>
 					</Col>
 				</Row>
+			</div>
+			<div className="home-image-green mt-3">
+				<div className="pt-4">
+					<p className="small-white-text px-2">О клинике</p>
+				</div>
+				<Fade top cascade delay={70}>
+					<Container className="py-5 home-image-green-container">
+						<Container>
+							<h3 className="pb-4  home-image-green-header">
+								Добро пожаловать в клинику пластической хирургии EL ARTE Здесь
+								красота встречается с опытом.
+							</h3>
+						</Container>
+
+						<p className="under-big-image-container-paragraph">
+							Клиника эстетической медицины «LE ARTE» открыла свои двери в
+							Турции. Современное инновационное оборудование клиники позволяет
+							гостям получить комплексную эффективную диагностику, преображение
+							и лечение. Команда врачей нашей клиники - профессионалы высокого
+							класса, имеющие признанною сертификацию.
+						</p>
+					</Container>
+				</Fade>
 			</div>
 		</div>
 	);

@@ -1,5 +1,5 @@
 import { Col, Container, Row, Table } from "react-bootstrap";
-import TableAnalysesCover from "../../../../Assets/ForPatients/AnalysesTable.png";
+import TableAnalysesCover from "../../../../Assets/ForPatients/AnalysesTable.webp";
 import "./index.css";
 import SurgeryPreparationParagraph from "../../../../Components/BriefDescription";
 import SurgeryPreparationBackgroundImage from "../../../../Assets/ForPatients/SurgeryPreparationBackgroundImage.png";

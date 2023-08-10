@@ -60,18 +60,39 @@ export default function Header(props) {
 				<div className={`header px-4 py-2  ${small ? "scroller" : ""}`}>
 					<Link to="/" className="link-no-text-decoration">
 						<div className="h-100 header-text-background">
-							<h1 className="header-text pt-2">EL ARTE CLINIC</h1>
+							<h1 className="header-text  mb-0">EL ARTE CLINIC</h1>
+							<h2
+								className={`under-header-text mb-0 ${
+									small ? "under-header-text-scroll" : ""
+								}`}
+							>
+								ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+							</h2>
 						</div>
 					</Link>
 					{/* () => {
 							setShowMenu(!showMenu);
 							props.setShowContent(showMenu);
 						} */}
-					<Hamburger
-						className="menu-icon"
-						toggle={handleToggle}
-						toggled={showMenu}
-					/>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "flex-end",
+							alignItems: "center",
+						}}
+					>
+						<Hamburger
+							className="menu-icon"
+							toggle={handleToggle}
+							toggled={showMenu}
+						/>
+						<h2
+							className="mb-0"
+							style={{ fontSize: "2rem", fontWeight: "700" }}
+						>
+							МЕНЮ
+						</h2>
+					</div>
 				</div>
 			</header>
 			{showMenu && isMobile && (

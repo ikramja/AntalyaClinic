@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Pulse from "react-reveal/Pulse";
 import Fade from "react-reveal/Fade";
-import categoryhome1 from "../../../../Assets/Home/categoryhome1.png";
-import categoryhome3 from "../../../../Assets/Home/categoryhome3.png";
+import categoryhome1 from "../../../../Assets/Home/categoryhome1.webp";
+import categoryhome3 from "../../../../Assets/Home/categoryhome3.webp";
 import пластическаяоперацияживота from "../../../../Assets/Home/пластическая операция живота.webp";
 import трансплантацияволос from "../../../../Assets/Home/трансплантация волос.webp";
 import { Link } from "react-router-dom";
@@ -28,18 +28,22 @@ export default function HomeCategory() {
 	return (
 		<div>
 			<Fade top delay={1000}>
-				<h3 style={{ fontSize: "6vw", fontWeight: "bold" }} className="my-4">
-					ПОПУЛЯРНЫЕ УСЛУГИ
+				<h3
+					className="home-category-header mt-5 mb-4"
+					style={{ fontSize: "5vw" }}
+				>
+					<span style={{ fontSize: "5vw" }}>Ваша красота - наша забота:</span>
+					<br /> самые популярные пластические услуги
 				</h3>
 			</Fade>
-			<div className="w-100 category-home-image-container pb-4">
+			<div className="w-100 category-home-image-container">
 				<Container>
 					<Row className="w-100 center-div category-home-row">
 						{categoryData &&
 							categoryData.map((category) => (
 								<Col lg={3} className="center-div mb-2">
 									<div className="category-home-image-container-column h-100">
-										<div className="image-and-text-container">
+										<div className="image-and-text-container image-overlay-container">
 											<img
 												className="category-home-image"
 												src={categoryImages[category["category_name_in_menu"]]}

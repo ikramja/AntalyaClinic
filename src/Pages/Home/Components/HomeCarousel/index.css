@@ -40,6 +40,27 @@
 		transform: scale(1) rotate(0);
 	}
 }
+.small-white-text {
+	display: flex;
+	justify-content: flex-start;
+	font-weight: 600;
+	color: #016245;
+	width: 100.42px;
+	letter-spacing: 3px;
+	font-size: 11px;
+	background-color: white;
+}
+.small-green-text {
+	display: flex;
+	justify-content: flex-start;
+	font-weight: 600;
+	width: 132.42px;
+	color: white;
+	letter-spacing: 3px;
+	font-size: 11px;
+	background-color: #016245;
+}
+
 .animate-arrow:active {
 	box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
 	border-radius: 50%;

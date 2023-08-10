@@ -1,6 +1,6 @@
 import "./index.css";
-import privacyCover from "../../Assets/privacy/privacyBackground.png";
-import privacyBackground from "../../Assets/privacy/privacyCover.png";
+import privacyCover from "../../Assets/privacy/privacyBackground.webp";
+import privacyBackground from "../../Assets/privacy/privacyCover.webp";
 import Footer from "../../Layouts/Footer";
 import Logo from "../../Assets/Logo/Logo.png";
 import Fade from "react-reveal/Fade";

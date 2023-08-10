@@ -1,7 +1,7 @@
 import "./index.css";
 import PriceCategoryMenu from "./Components/PriceCategoryMenu";
 import axios from "axios";
-import PriceCover from "../../Assets/Covers/Price.png";
+import PriceCover from "../../Assets/Covers/Price.webp";
 import Footer from "../../Layouts/Footer";
 import React, { useState, useEffect } from "react";
 import TitleCover from "../../Components/TitleCover";
